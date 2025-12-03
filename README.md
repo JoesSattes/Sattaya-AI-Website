@@ -1,70 +1,375 @@
-# Getting Started with Create React App
+# 🚀 React CV Website with SEO & AI Chat Widget
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive CV/Portfolio website built with React, featuring SEO optimization and an interactive Gemini AI chat widget. Perfect for showcasing your professional profile with free GitHub Pages hosting.
 
-## Available Scripts
+![React](https://img.shields.io/badge/React-19.2.1-61DAFB?logo=react)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.1-38B2AC?logo=tailwind-css)
+![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Deployed-222222?logo=github)
 
-In the project directory, you can run:
+## ✨ Features
 
-### `npm start`
+- 🎨 **Modern UI/UX** - Beautiful, responsive design with Tailwind CSS
+- 🔍 **SEO Optimized** - Meta tags, Open Graph, Twitter Cards, and JSON-LD structured data
+- 🤖 **AI Chat Widget** - Interactive Gemini AI assistant for visitor engagement
+- 📱 **Fully Responsive** - Works seamlessly on desktop, tablet, and mobile
+- ⚡ **Fast Performance** - Optimized React build with code splitting
+- 🌐 **Free Hosting** - Easy deployment to GitHub Pages
+- 🎯 **Accessible** - Built with accessibility best practices
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📋 Table of Contents
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Quick Start](#quick-start)
+- [Project Structure](#project-structure)
+- [Customization](#customization)
+- [SEO Optimization](#seo-optimization)
+- [Gemini AI Widget Setup](#gemini-ai-widget-setup)
+- [Deployment to GitHub Pages](#deployment-to-github-pages)
+- [Features Explained](#features-explained)
+- [Troubleshooting](#troubleshooting)
 
-### `npm test`
+## 🚀 Quick Start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- Node.js (v14 or higher)
+- npm or yarn
+- A GitHub account (for free hosting)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Clone or fork this repository**
+   ```bash
+   git clone https://github.com/yourusername/Sattaya-AI-Website.git
+   cd Sattaya-AI-Website
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+3. **Start development server**
+   ```bash
+   npm start
+   ```
+   The app will open at [http://localhost:3000](http://localhost:3000)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📁 Project Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+Sattaya-AI-Website/
+├── public/
+│   ├── index.html          # Main HTML template
+│   └── ...
+├── src/
+│   ├── App.js              # Main portfolio component
+│   ├── App.css             # Global styles
+│   ├── index.js            # React entry point
+│   └── ...
+├── package.json            # Dependencies and scripts
+├── tailwind.config.js      # Tailwind CSS configuration
+└── README.md               # This file
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🎨 Customization
 
-## Learn More
+### 1. Update Personal Information
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Edit `src/App.js` and modify:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Personal Details**: Name, title, location, contact info
+- **Bio Section**: Your professional summary
+- **Experience Data**: `experienceData` object (lines ~368-474)
+- **Education Data**: `educationData` object (lines ~476-567)
+- **Publications**: `allPublications` array (lines ~742-827)
+- **Skills**: Update skill groups in the Skills section
 
-### Code Splitting
+### 2. Update Social Links
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Find the social media links in the Hero section (around line 915) and footer (around line 1264):
 
-### Analyzing the Bundle Size
+```jsx
+<a href="https://github.com/yourusername" target="_blank" rel="noreferrer">
+  <Github size={20} />
+  <span>GitHub</span>
+</a>
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 3. Customize Colors
 
-### Making a Progressive Web App
+Edit `tailwind.config.js` to change the color scheme. The current theme uses:
+- Cyan (#06b6d4) - Primary accent
+- Emerald (#10b981) - Secondary accent
+- Slate (#0f172a) - Background
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🔍 SEO Optimization
 
-### Advanced Configuration
+This project includes comprehensive SEO optimization:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Meta Tags
+- Title and description tags
+- Open Graph tags for social media sharing
+- Twitter Card tags
+- Canonical URLs
+- Keywords and author information
 
-### Deployment
+### Structured Data (JSON-LD)
+- Person schema for Google Knowledge Graph
+- Organization information
+- Education and work history
+- Social profiles
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Implementation
 
-### `npm run build` fails to minify
+The SEO component is in `src/App.js` (lines 36-89). To enable it:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Uncomment the SEO component in the Portfolio component (line 839):
+   ```jsx
+   <SEO />
+   ```
+
+2. Update the SEO data:
+   ```jsx
+   const siteUrl = "https://yourusername.github.io/your-repo-name";
+   const siteTitle = "Your Name - Your Title";
+   const siteDescription = "Your professional description";
+   ```
+
+3. Update the JSON-LD schema data with your information (lines 42-67)
+
+### Testing SEO
+
+- Use [Google Rich Results Test](https://search.google.com/test/rich-results)
+- Check with [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/)
+- Validate with [Twitter Card Validator](https://cards-dev.twitter.com/validator)
+
+## 🤖 Gemini AI Widget Setup
+
+The AI chat widget uses Google's Gemini API to answer questions about your CV.
+
+### Setup Steps
+
+1. **Get a Gemini API Key**
+   - Visit [Google AI Studio](https://makersuite.google.com/app/apikey)
+   - Create a new API key
+
+2. **Add API Key to Environment**
+   
+   **Option A: Environment Variable (Recommended for Production)**
+   
+   Create a `.env` file in the root directory:
+   ```env
+   REACT_APP_GEMINI_API_KEY=your_api_key_here
+   ```
+   
+   Then update `src/App.js` line 132:
+   ```jsx
+   const apiKey = process.env.REACT_APP_GEMINI_API_KEY || "";
+   ```
+   
+   **Option B: Direct Configuration (For Testing)**
+   
+   Update `src/App.js` line 132:
+   ```jsx
+   const apiKey = "your_api_key_here";
+   ```
+   
+   ⚠️ **Security Note**: Never commit API keys directly to GitHub. Use environment variables or GitHub Secrets.
+
+3. **Customize the AI Context**
+   
+   Update the `RESUME_CONTEXT` constant (lines 93-128) with your information:
+   ```jsx
+   const RESUME_CONTEXT = `
+   NAME: Your Name
+   ROLE: Your Role
+   ...
+   `;
+   ```
+
+4. **Customize System Prompt**
+   
+   Modify the system prompt in `AIChatWidget` component (lines 196-202) to change how the AI responds.
+
+### For GitHub Pages Deployment
+
+Since GitHub Pages serves static files, you'll need to:
+
+1. Use GitHub Secrets for API keys (if using GitHub Actions)
+2. Or use a serverless function (Vercel, Netlify Functions) as a proxy
+3. Or configure the API key through environment variables during build
+
+## 🌐 Deployment to GitHub Pages
+
+Deploy your CV website for free using GitHub Pages in just a few steps:
+
+### Step 1: Update package.json
+
+Ensure your `package.json` has the correct homepage URL:
+
+```json
+{
+  "homepage": "https://yourusername.github.io/your-repo-name"
+}
+```
+
+### Step 2: Install gh-pages
+
+```bash
+npm install --save-dev gh-pages
+```
+
+(Already included in this project)
+
+### Step 3: Deploy
+
+```bash
+npm run deploy
+```
+
+This command will:
+1. Build your React app (`npm run build`)
+2. Deploy the `build` folder to the `gh-pages` branch
+3. Make your site available at `https://yourusername.github.io/your-repo-name`
+
+### Step 4: Enable GitHub Pages
+
+1. Go to your repository on GitHub
+2. Navigate to **Settings** → **Pages**
+3. Under **Source**, select the `gh-pages` branch
+4. Your site will be live in a few minutes!
+
+### Alternative: Manual Deployment
+
+If you prefer manual deployment:
+
+```bash
+npm run build
+git checkout -b gh-pages
+git add -f build
+git commit -m "Deploy to GitHub Pages"
+git push origin gh-pages
+```
+
+### Custom Domain (Optional)
+
+1. Add a `CNAME` file in the `public` folder with your domain:
+   ```
+   yourdomain.com
+   ```
+2. Configure DNS settings with your domain provider
+3. Update the `homepage` in `package.json` to your custom domain
+
+## 📚 Features Explained
+
+### 1. Responsive Navigation
+- Sticky navbar that changes on scroll
+- Mobile-friendly hamburger menu
+- Smooth scroll to sections
+
+### 2. Experience Timeline
+- Tabbed interface (Full-Time, Contract, Internships)
+- Visual timeline with company logos
+- Achievement highlights and tags
+
+### 3. Interactive Bio Rewriter
+- AI-powered bio rewriting in different styles
+- Options: Original, Recruiter Friendly, ELI5, Pirate, Poetic
+
+### 4. Publications Section
+- Expandable list of research papers
+- Color-coded by journal/conference rank
+- Links to Google Scholar
+
+### 5. Skills Showcase
+- Organized by categories
+- Color-coded skill groups
+- Hover effects
+
+### 6. AI Chat Widget
+- Floating chat button
+- Context-aware responses about your CV
+- Retry logic for API failures
+- Loading states and animations
+
+## 🛠️ Troubleshooting
+
+### Build Errors
+
+**Error: Cannot find module 'react-helmet'**
+```bash
+npm install react-helmet
+```
+
+**Error: Tailwind CSS not working**
+```bash
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
+
+### GitHub Pages Issues
+
+**404 Error on GitHub Pages**
+- Ensure `homepage` in `package.json` matches your repository URL
+- Check that the `gh-pages` branch exists and contains the `build` folder
+- Wait a few minutes after deployment for changes to propagate
+
+**Styles not loading**
+- Ensure all paths use relative URLs (not absolute)
+- Check that CSS files are in the `build/static/css` folder
+
+### Gemini API Issues
+
+**API Key not working**
+- Verify your API key is correct
+- Check API quota limits in Google AI Studio
+- Ensure the API key has proper permissions
+
+**CORS Errors**
+- The Gemini API should handle CORS, but if issues persist, consider using a proxy server
+
+## 📝 Available Scripts
+
+- `npm start` - Runs the app in development mode
+- `npm test` - Launches the test runner
+- `npm run build` - Builds the app for production
+- `npm run deploy` - Builds and deploys to GitHub Pages
+- `npm run eject` - Ejects from Create React App (one-way operation)
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to:
+- Report bugs
+- Suggest new features
+- Submit pull requests
+- Share your own CV website built with this template
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🙏 Acknowledgments
+
+- Built with [Create React App](https://create-react-app.dev/)
+- Styled with [Tailwind CSS](https://tailwindcss.com/)
+- Icons from [Lucide React](https://lucide.dev/)
+- SEO with [React Helmet](https://github.com/nfl/react-helmet)
+- AI powered by [Google Gemini](https://deepmind.google/technologies/gemini/)
+
+## 📞 Support
+
+If you have questions or need help:
+- Open an issue on GitHub
+- Check the [Create React App documentation](https://create-react-app.dev/docs/getting-started)
+- Review the [Tailwind CSS documentation](https://tailwindcss.com/docs)
+
+---
+
+**Made with ❤️ for the developer community**
+
+Happy coding! 🚀
