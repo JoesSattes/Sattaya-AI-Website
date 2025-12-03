@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Helmet } from "react-helmet"; // UNCOMMENT THIS LINE FOR PRODUCTION (requires npm install react-helmet)
 import { 
   Github, 
   Linkedin, 
@@ -30,6 +31,63 @@ import {
   Globe,
   Mic
 } from 'lucide-react';
+
+// --- SEO & STRUCTURED DATA COMPONENT ---
+const SEO = () => {
+  const siteUrl = "https://JoesSattes.github.io/portfolio"; 
+  const siteTitle = "Sattaya Singkul - Specialist, AI Research & Solution Engineer";
+  const siteDescription = "Portfolio of Sattaya Singkul, an AI Specialist in NLP, Speech Recognition, and LLMs. Currently working at True Digital Group.";
+
+  // JSON-LD for Google Knowledge Graph
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sattaya Singkul",
+    "url": siteUrl,
+    "jobTitle": "Specialist, AI Research & Solution Engineer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "True Digital Group"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "King Mongkut's Institute of Technology Ladkrabang"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/sattaya-singkul",
+      "https://github.com/JoesSattes",
+      "https://scholar.google.com/citations?user=kJI-LQAAAAJ&hl=en"
+    ],
+    "knowsAbout": ["Artificial Intelligence", "Natural Language Processing", "Speech Recognition", "Agentic LLMs", "Machine Learning", "Deep Learning"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bangkok",
+      "addressCountry": "Thailand"
+    }
+  };
+
+  return (
+    <Helmet>
+      <title>{siteTitle}</title>
+      <meta name="description" content={siteDescription} />
+      <meta name="keywords" content="Sattaya Singkul, AI Engineer, NLP, Speech Recognition, LLM, Thailand, True Digital Group, KBTG, AI Portfolio" />
+      <meta name="author" content="Sattaya Singkul" />
+      <link rel="canonical" href={siteUrl} />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={siteUrl} />
+      <meta property="og:title" content={siteTitle} />
+      <meta property="og:description" content={siteDescription} />
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content={siteUrl} />
+      <meta property="twitter:title" content={siteTitle} />
+      <meta property="twitter:description" content={siteDescription} />
+      <script type="application/ld+json">
+        {JSON.stringify(schemaData)}
+      </script>
+    </Helmet>
+  );
+};
+
 
 // --- DATA CONTEXT FOR AI AGENT ---
 const RESUME_CONTEXT = `
@@ -778,6 +836,7 @@ const Portfolio = () => {
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-200 selection:bg-cyan-500/30 font-sans">
+      {/* <SEO /> */} {/* Temporarily commented out SEO component to avoid build errors in preview */}
       {/* Navigation */}
       <nav className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled ? 'bg-slate-950/80 backdrop-blur-md border-b border-white/10 py-2' : 'bg-transparent py-4'
@@ -789,7 +848,7 @@ const Portfolio = () => {
                 <span className="text-white font-bold text-xl">S</span>
               </div>
               <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-emerald-400">
-                Sattaya.AI
+                Sattaya.AIxGemini
               </span>
             </div>
 
@@ -842,10 +901,11 @@ const Portfolio = () => {
               </div>
               <h1 className="text-5xl md:text-7xl font-bold leading-tight">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-teal-400 to-emerald-400">
-                  Sattaya Singkul
+                  Sattaya Singkul <br />
                 </span>
-                <br />Pioneering <br />
-                  Tomorrow's AI Today
+                Pioneering <br />
+                  Tomorrow's AI
+                <br /> Today
               </h1>
               <p className="text-lg text-gray-400 max-w-xl">
                 Specializing in NLP, Speech Processing, and Large Language Models. 
