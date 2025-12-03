@@ -217,7 +217,7 @@ const AIChatWidget = () => {
             </div>
             <div className="text-center mt-2">
                <span className="text-[10px] text-gray-500 uppercase tracking-widest flex items-center justify-center gap-1">
-                 Powered by Gemini <Sparkles size={8} />
+                 Powered by Sattaya.AI <Sparkles size={8} />
                </span>
             </div>
           </div>
@@ -841,11 +841,11 @@ const Portfolio = () => {
                 AI Research & Solution Engineer
               </div>
               <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-                Pioneering <br />
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-teal-400 to-emerald-400">
-                  Tomorrow's AI
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-teal-400 to-emerald-400">
+                  Sattaya Singkul
                 </span>
-                <br /> Today
+                <br />Pioneering <br />
+                  Tomorrow's AI Today
               </h1>
               <p className="text-lg text-gray-400 max-w-xl">
                 Specializing in NLP, Speech Processing, and Large Language Models. 
