@@ -275,7 +275,7 @@ const AIChatWidget = () => {
             </div>
             <div className="text-center mt-2">
                <span className="text-[10px] text-gray-500 uppercase tracking-widest flex items-center justify-center gap-1">
-                 Powered by Sattaya.AI <Sparkles size={8} />
+                 Powered by Sattaya.AIxGemini <Sparkles size={8} />
                </span>
             </div>
           </div>
@@ -848,7 +848,7 @@ const Portfolio = () => {
                 <span className="text-white font-bold text-xl">S</span>
               </div>
               <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-emerald-400">
-                Sattaya.AIxGemini
+                Sattaya.AI
               </span>
             </div>
 
