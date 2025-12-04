@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Sattaya-AI-Website/static/css/main.4a71d165.css",
-    "main.js": "/Sattaya-AI-Website/static/js/main.fa51bd90.js",
+    "main.js": "/Sattaya-AI-Website/static/js/main.b9678864.js",
     "static/js/453.97e1b6a1.chunk.js": "/Sattaya-AI-Website/static/js/453.97e1b6a1.chunk.js",
     "index.html": "/Sattaya-AI-Website/index.html",
     "main.4a71d165.css.map": "/Sattaya-AI-Website/static/css/main.4a71d165.css.map",
-    "main.fa51bd90.js.map": "/Sattaya-AI-Website/static/js/main.fa51bd90.js.map",
+    "main.b9678864.js.map": "/Sattaya-AI-Website/static/js/main.b9678864.js.map",
     "453.97e1b6a1.chunk.js.map": "/Sattaya-AI-Website/static/js/453.97e1b6a1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4a71d165.css",
-    "static/js/main.fa51bd90.js"
+    "static/js/main.b9678864.js"
   ]
 }
