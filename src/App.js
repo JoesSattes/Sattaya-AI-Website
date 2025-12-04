@@ -92,39 +92,82 @@ const SEO = () => {
 // --- DATA CONTEXT FOR AI AGENT ---
 const RESUME_CONTEXT = `
 NAME: Sattaya Singkul
-ROLE: AI Research & Solution Engineer | Specialist in NLP & Speech Processing
+ROLE: Specialist, AI Engineer / AI Solution Hub at True Digital Group
 LOCATION: Bangkok, Thailand
-CONTACT: joeysattaya@hotmail.com, +66 80 199 5935, www.linkedin.com/in/sattaya-singkul
-SUMMARY: Passionate about unlocking the power of voice and text (NLP). Deep expertise in speech recognition (ASR), synthesis (TTS), emotion recognition, and Large Language Models (LLMs). Focus on multimodal agents and virtual assistants.
+CONTACT: joeysattaya@hotmail.com, www.linkedin.com/in/sattaya-singkul, github.com/JoesSattes
+
+PROFESSIONAL SUMMARY:
+Specialist AI Engineer spearheading the design and optimization of state-of-the-art NLP, ASR, TTS, and LLM architectures. Currently at True Digital Group, architecting Voice IoT Multi-Agent systems using Model Context Protocol (MCP). Deep expertise in building scalable AI solutions (deployed to 800k MAU), optimizing customer journeys, and bridging the gap between cutting-edge research and production. 
+
+CORE SKILLS:
+- Languages: Python, SQL, C, R, Bash/Shell
+- Frameworks: PyTorch, TensorFlow, HuggingFace, Nemo, Opik, Pipecat, LightRAG, n8n, FastAPI, MCP
+- GenAI & LLM: LangChain, Llama.cpp, Gradio, Chainlit, Multi-Agent Systems
+- Deployment: Docker, ONNX, TorchScript, Quantization, GPU-accelerated computing
+- Domain Expertise: Voice IoT, Speech Processing (ASR/TTS), Emotion Recognition, HCI, Financial NLP
+
+WORK EXPERIENCE (FULL-TIME):
+1. True Digital Group (May 2025 - Present) | Specialist, AI Engineer / AI Solution Hub
+   - Architected Voice IoT Multi-Agent using MCP for dynamic IoT control.
+   - Deployed solutions to 800k Monthly Active Users (MAU) on TrueX app, achieving 4.4/5.0 rating.
+   - Engineered lightweight embedded AI models for customer journey optimization.
+   - Implemented scalable pipelines using FastAPI, Docker, and GPU.
+
+2. KASIKORN Business-Technology Group (KBTG) (Apr 2024 - Apr 2025) | Research Engineer (B2: HCI Expert)
+   - Designed Call Center LLM solution covering 93% of chatbot use cases (search & reasoning).
+   - Showcased Virtual Assistant/Speech-to-Text innovations at 2 public and 3 internal events.
+   - Published Global Research at ACM ICMR 2024 and IEEE ICMEW 2024.
+
+3. KASIKORN Business-Technology Group (KBTG) (Feb 2022 - Apr 2024) | Research Engineer (B1: Voice Specialist)
+   - Automated 80% of KBank customer chat traffic, saving 300,000 customer hours.
+   - Developed video analytics system preventing 4 negative social trends (saving 640 hours).
+   - Executed end-to-end ML lifecycle for sarcasm detection, sentiment analysis, and VAD.
+
+4. NECTEC (June 2020 - Aug 2020 / July 2021 - Dec 2021) | Research Assistant (NCR)
+   - Engineered robust Thai speaker segmentation/verification for noisy/reverberant environments.
+   - Deployed "AI for Thai" API services using Kaldi and PyTorch.
+
+WORK EXPERIENCE (CONTRACT & SPECIALIST):
+1. Synthesia (London/Remote) (Oct 2023 - July 2024) | Research Scientist (Co-operated)
+   - Conducted cutting-edge research in AI video synthesis and digital avatars.
+
+2. Mental Health Tech Discovery, Mahidol University (Mar 2021 - Dec 2024) | Product Owner
+   - Led a team of 7 to deliver 11 health-tech projects (e.g., AI Care Avatar, Psyjai Dashboard).
+   - Managed data projects and optimized emotion recognition models over a 3-year tenure.
+
+3. Faculty of IT, KMITL (Aug 2019 - Jan 2025) | Research Assistant (PRIP Lab)
+   - Computational linguistics and pattern recognition research.
+
+INTERNSHIPS:
+- KBTG (SuperAI) (Mar 2021 - May 2021): Deployed AI search engine using Elasticsearch/PyTorch.
+- Dolby Laboratories (Jan 2021 - July 2021): Designed novel deep learning algorithms for audio processing.
+- Siam Commercial Bank (SCB) (Jan 2020 - July 2020 / June 2021 - Nov 2021): Deployed SER module for call centers; designed deployment roadmap.
+- KBTG (Bootcamp) (June 2019 - Aug 2019): Developed Thai Dependency Parser; won Best Progress & Popular Vote awards.
+- Wisesight (June 2018 - Mar 2019): Data Research Analyst using ZocialEye and Tableau.
+- Village Farm Winery (Jan 2018 - June 2018): Digital Business Development (ERP/OCR).
 
 EDUCATION:
-- Master's Degree in Information Technology, KMITL (2021-2025). GPA: 4.00. Innovator's Promising with Honor Scholarship.
-- Bachelor's Degree in Information Technology, KMITL (2016-2020). GPA: 3.74. First-class Honors.
+- Master's Degree in IT, KMITL (Jan 2019 - May 2025): GPA 4.00. Outstanding Oral Defense. Innovator's Promising Scholarship.
+- Bachelor's Degree in IT, KMITL (2016 - 2020): GPA 3.74. First-class Honors. Business Intelligence Program.
 
-EXPERIENCE:
-1. True Digital Group (May 2025 - Present): Specialist, AI Engineer/AI Solution Hub. Built NLP/Speech models. Integrated Voice IoT Multi-Agent with MCP on TrueX app (800k MAU, 4.4/5.0 rating).
-2. KASIKORN Business-Technology Group (KBTG) (Feb 2022 - Apr 2025): Research Engineer. Automated 80% of KBank customer chat traffic. Developed video analytics preventing negative trends. Published research at ICMR, ICME.
-3. Mental Health Tech Discovery, Mahidol University (Aug 2023 - Dec 2024): Product Owner. Led team of 7. Delivered "AI Care Avatar" and "Psyjai Dashboard".
-4. Synthesia (Oct 2023 - July 2024): Research Scientist (Co-operated). Research in AI video synthesis and digital avatars.
-5. Dolby Laboratories (Jan 2021 - July 2021): Speech/Audio Deep Learning Intern.
-
-SKILLS:
-- Languages: Python, SQL, C, R, Bash.
-- AI Frameworks: PyTorch, TensorFlow, Hugging Face, FastAPI.
-- GenAI: LangChain, Llama.cpp, Gradio, Chainlit, Multi-Agent Systems.
-- Deployment: Docker, ONNX, TorchScript, Quantization.
-
-RESEARCH HIGHLIGHTS:
-- "Teacher-To-Teacher: Harmonizing Dual Expertise into a Unified Speech Emotion Model" (IEEE SMC 2024)
-- "Residual, Mixer, and Attention... Streaming Wake Word Detection" (IEEE APSIPA-ASC 2023)
-- "End-to-End Thai Text-to-Speech" (ACM ICMR 2024)
-- "THaLLE: Text Hyperlocally Augmented Large Language Extension" (ArXiv)
-
-AWARDS:
+SELECTED AWARDS:
 - Star Award 2024 (KBTG)
-- Bronze Medal, Super-AI Engineer 2020
+- Bronze Medal, Super-AI Engineer 2020 (Top 100 Basic AI)
+- Winner, Thai ASR Hackathon 2020 (NECTEC)
 - Winner, CAT Cyfence Cybercop Contest 2016
-- Winner, Thai ASR Hackathon 2020
+- CIMB 3D Conquest Representative (Singapore, 2018)
+
+RESEARCH PUBLICATIONS (HIGHLIGHTS):
+- "Teacher-To-Teacher: Harmonizing Dual Expertise into a Unified Speech Emotion Model" (IEEE SMC 2024)
+- "An Enhanced Multimodal Negative Feedback Detection Framework" (IEEE ICMEW 2024)
+- "Residual, Mixer, and Attention... Streaming Wake Word Detection" (IEEE APSIPA-ASC 2023 - Best Paper Session)
+- "End-to-End Thai Text-to-Speech with Linguistic Unit" (ACM ICMR 2024)
+- "Vector Learning Representation based on Generalized SER" (Heliyon 2022, Q1)
+
+VOLUNTEERING:
+- Reviewer: IEEE Access (Q1), IJEECS (Q3), ACM TALLIP (Q3), IEEE ICITEE, Springer ICONIP.
+- AIAT: Technical Committee/TA for Super-AI Engineer (SS2-SS5). Mentored winning hackathon teams.
+- Guest Lecturer: Huachiew Chalermprakiet University (AI topics).
 `;
 
 // --- GEMINI API HELPER ---
@@ -1000,11 +1043,11 @@ const Portfolio = () => {
                 AI Research & Solution Engineer
               </div>
               <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-                Pioneering <br />
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-teal-400 to-emerald-400">
-                  Tomorrow's AI
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-teal-400 to-emerald-400">
+                  Sattaya Singkul
                 </span>
-                <br /> Today
+                <br /> Pioneering <br />
+                Tomorrow's AI Today
               </h1>
               <p className="text-lg text-gray-400 max-w-xl">
                 Specializing in NLP, Speech Processing, and Large Language Models. 
@@ -1369,7 +1412,6 @@ const Portfolio = () => {
             <FooterLink href="mailto:joeysattaya@hotmail.com" icon={Mail} label="Email" />
             <FooterLink href="https://www.linkedin.com/in/sattaya-singkul" icon={Linkedin} label="LinkedIn" />
             <FooterLink href="https://github.com/JoesSattes" icon={Github} label="GitHub" />
-            <FooterLink href="tel:+66801995935" icon={Phone} label="Call" />
           </div>
           <p className="text-gray-500 text-sm">
             © {new Date().getFullYear()} Sattaya Singkul. All rights reserved. <br/>
