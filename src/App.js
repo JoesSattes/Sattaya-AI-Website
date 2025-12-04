@@ -274,8 +274,8 @@ const AIChatWidget = () => {
               </button>
             </div>
             <div className="text-center mt-2">
-               <span className="text-[10px] text-gray-500 uppercase tracking-widest flex items-center justify-center gap-1">
-                 Powered by Sattaya.AIxGemini <Sparkles size={8} />
+               <span className="text-[10px] text-gray-500 tracking-widest flex items-center justify-center gap-1">
+                 Powered by Sattaya.AI x Gemini <Sparkles size={8} />
                </span>
             </div>
           </div>
@@ -372,103 +372,171 @@ const experienceData = {
       company: "True Digital Group",
       logo: "https://logo.clearbit.com/truedigital.com",
       period: "May 2025 - Present",
-      description: "Leading development of scalable AI solutions for TrueX app ecosystem.",
+      description: "Spearheading the design and optimization of state-of-the-art NLP, ASR, TTS, and LLM architectures.",
       achievements: [
-        "Voice IoT Multi-Agent: Integrated AI voice agent with Model Context Protocol (MCP) for dynamic IoT control.",
-        "Scaled to 800k MAU: Deployed solutions on TrueX app, boosting engagement with a 4.4/5.0 rating.",
-        "Built and optimized state-of-the-art NLP and speech processing models (ASR, TTS, SER)."
+        "Voice IoT Multi-Agent: Architected an AI voice agent using Multi-agent systems and the Model Context Protocol (MCP) to enable dynamic, context-aware IoT control.",
+        "Embedded AI Solutions: Engineered lightweight, embedded AI models specifically designed to optimize customer journey touchpoints.",
+        "Strategic Innovation: Conducted R&D to identify and conceptualize high-potential AI solutions that drive new business opportunities.",
+        "System Scalability: Implemented scalable training and inference pipelines using FastAPI, Docker, and GPU-accelerated computing for the True Voice IoT platform.",
+        "Production Impact: Deployed solutions to 800k MAU on the TrueX app, boosting engagement and achieving a 4.4/5.0 average user rating.",
+        "Data Strategy: Established guidelines for data annotation and preprocessed large-scale multilingual datasets to ensure high-fidelity model performance."
       ],
-      tags: ["Voice IoT", "Multi-Agent", "MCP", "FastAPI"]
+      tags: ["Voice IoT", "Multi-Agent", "MCP", "FastAPI", "Docker", "Embedded AI"]
     },
     {
-      role: "Research Engineer (B2: HCI Expert & B1: Voice Specialist)",
+      role: "Research Engineer (B2: Human Computer Interaction/Interface Expert)",
       company: "KASIKORN Business-Technology Group (KBTG)",
       logo: "https://logo.clearbit.com/kbtg.tech",
-      period: "Feb 2022 - Apr 2025",
-      description: "Spearheaded AI innovation for banking services, focusing on customer automation and safety.",
+      period: "April 2024 - April 2025",
+      description: "Expanded B1 scope to include timeline management and prioritization of junior projects while continuing core R&D.",
       achievements: [
-        "Call Center Automation: Designed LLM-based method covering 93% of call center chatbot use cases.",
-        "Chatbot Success: Automated 80% of KBank's chat traffic, saving 300,000 customer hours.",
-        "Video Analytics: Developed social media video insight tool, preventing 4 negative trends.",
-        "Global Research: Presented at ACM ICMR 2024, IEEE ICME 2024, and IEEE APSIPA-ASC 2023."
+        "Call Center LLM: Designed and implemented a method covering 93% of call center chatbot use cases for chatbot search and reasoning functionality.",
+        "Innovation Showcase: Developed and showcased innovative Virtual Assistant/Speech-to-Text methods at 2 public and 3 internal KBTG events.",
+        "Global Research: Presented and proposed international research papers at ACM ICMR 2024 (Main-track) and IEEE ICMEW 2024."
       ],
-      tags: ["LLM", "Chatbots", "Video Analytics", "Research"]
+      tags: ["LLM", "HCI", "Virtual Assistant", "Research Management"]
+    },
+    {
+      role: "Research Engineer (B1: Voice Specialist)",
+      company: "KASIKORN Business-Technology Group (KBTG)",
+      logo: "https://logo.clearbit.com/kbtg.tech",
+      period: "Feb 2022 - April 2024",
+      description: "Researched and developed end-to-end NLP and speech technologies.",
+      achievements: [
+        "Chatbot Automation: Designed and developed a method that automated 80% of KBank's customer chat traffic, saving 300,000 customer hours.",
+        "Video Analytics: Researched and developed a system to analyze and summarize video insights from social media, preventing 4 negative trends and saving 640 customer hours.",
+        "End-to-End ML: Executed full ML lifecycle from data collection to prototyping for sarcasm detection, sentiment analysis, and voice activity detection.",
+        "Mentorship: Mentored apprentices in conversational AI and collaborated with MIT Media Lab on generalized NLP research."
+      ],
+      tags: ["Chatbots", "Video Analytics", "NLP", "Speech Processing"]
+    },
+    {
+      role: "Research Assistant (NCR)",
+      company: "NECTEC",
+      logo: "https://logo.clearbit.com/nectec.or.th",
+      period: "June 2020 - Aug 2020 / July 2021 - Dec 2021",
+      description: "Conducted R&D in the Speech and Text Understanding (STU) Laboratory, focusing on Thai spoken and written language technologies.",
+      achievements: [
+        "Robust Segmentation: Engineered a fine-tuning methodology for Thai speaker segmentation and verification designed to remain robust in noisy and reverberant environments.",
+        "API Deployment: Deployed production-ready AI models for the 'AI for Thai' API platform, specifically implementing Thai speaker verification pipelines using Kaldi and PyTorch.",
+        "Linguistic Feature Engineering: Analyzed phonetic expressions, IPA symbols, and vowel structures to engineer advanced acoustic features for model training."
+      ],
+      tags: ["Speaker Verification", "Kaldi", "PyTorch", "Phonetics", "Feature Engineering"]
     }
   ],
   contract: [
-    {
-      role: "Product Owner",
-      company: "Mental Health Tech Discovery, Mahidol University",
-      logo: "https://logo.clearbit.com/mahidol.ac.th",
-      period: "Aug 2023 - Dec 2024",
-      description: "Managed a team of 7 to develop psychology-integrated AI health solutions.",
-      achievements: [
-        "Delivered 11 projects successfully including 'AI Care Avatar' and 'Psyjai Dashboard'.",
-        "Managed data projects, optimized AI models, and mentored junior developers."
-      ],
-      tags: ["Product Management", "HealthTech", "Team Lead"]
-    },
     {
       role: "Research Scientist (Co-operated)",
       company: "Synthesia (London/Remote)",
       logo: "https://logo.clearbit.com/synthesia.io",
       period: "Oct 2023 - July 2024",
-      description: "Collaborated on cutting-edge generative AI research.",
+      description: "Conducted cutting-edge research in AI and video synthesis.",
       achievements: [
-        "Conducted research in AI video synthesis and digital avatars.",
-        "Contributed to scientific papers and patent applications."
+        "Method Development: Developed new methods and technologies to advance state-of-the-art video synthesis and digital avatars.",
+        "Collaboration: Worked with research scientists and engineers to drive forward collaborative projects and scientific papers."
       ],
       tags: ["Video Synthesis", "Generative AI", "Research"]
     },
     {
-      role: "Data Scientist (Contract)",
-      company: "Siam Commercial Bank (SCB)",
-      logo: "https://logo.clearbit.com/scb.co.th",
-      period: "June 2021 - Nov 2021",
-      description: "Enhanced customer experience through voice technology.",
+      role: "Product Owner",
+      company: "Mental Health Tech Discovery, Mahidol University",
+      logo: "https://logo.clearbit.com/mahidol.ac.th",
+      period: "Mar 2021 - Dec 2024",
+      description: "Designed and created solving solutions based on health tech knowledge, and Led a team of seven in developing health tech solutions integrating psychology and AI.",
       achievements: [
-        "Deployed Speech Emotion Recognition module for call centers using TensorFlow and PyTorch.",
-        "Designed solutions aligned with business requirements."
+        "Project Delivery: Successfully delivered 11 projects including 'AI Care Avatar', 'Psyjai Dashboard', 'Baanphaeo Web App', and 'EGAT EMS/DM Monitoring'.",
+        "Technical Management: Managed data projects, optimized AI models for emotion recognition, and mentored junior developers.",
+        "Strategic Planning: Ensured technology compatibility and achieved organizational goals over a 3-year tenure.",
+        "Model Development: Developing, evaluating, and deploying new models and techniques for health tech solutions."
       ],
-      tags: ["Speech Emotion", "Banking", "TensorFlow"]
+      tags: ["Product Management", "HealthTech", "Team Lead", "Emotion Recognition", "AI Development"]
+    },
+    {
+      role: "Research Assistant (PRIP Lab)",
+      company: "Faculty of IT, KMITL",
+      logo: "https://logo.clearbit.com/kmitl.ac.th",
+      period: "Aug 2019 - Jan 2025",
+      description: "Researcher in Pattern Recognition and Image Processing laboratory focused on computational linguistics.",
+      achievements: [
+        "Solution Implementation: Responsible for developing, researching, and collaborating on innovative solutions for pain points.",
+        "Community Growth: Helped expand the AI research community through academic contributions."
+      ],
+      tags: ["Computational Linguistics", "Pattern Recognition", "Research"]
     }
   ],
   internship: [
     {
-      role: "Research Assistant (NCR)",
-      company: "NECTEC",
-      logo: "https://logo.clearbit.com/nectec.or.th",
-      period: "July 2021 - Dec 2021",
-      description: "Focused on Thai spoken and written language technologies.",
+      role: "Research Engineer (SuperAI)",
+      company: "KBTG",
+      logo: "https://logo.clearbit.com/kbtg.tech",
+      period: "Mar 2021 - May 2021",
+      description: "Challenged in specific domain application of NLP QA.",
       achievements: [
-        "Developed fine-tuning method for Thai speaker segmentation robust to reverberant environments.",
-        "Deployed AI models for 'AI for Thai' API services."
+        "Search Engine: Deployed AI search engine service from QA search engine technique using Elasticsearch, PyTorch, TensorFlow, and SQL.",
+        "Business Value: Experimented and designed the responsibility of business value and requirement."
       ],
-      tags: ["Speaker Verification", "Kaldi", "PyTorch"]
+      tags: ["QA Search", "Elasticsearch", "SQL"]
     },
     {
       role: "Speech/Audio Deep Learning Intern",
       company: "Dolby Laboratories (Australia/Remote)",
       logo: "https://logo.clearbit.com/dolby.com",
       period: "Jan 2021 - July 2021",
-      description: "Worked with researchers on novel deep learning algorithms.",
+      description: "Participated in the Dolby U program working with researchers.",
       achievements: [
-        "Designed and implemented deep learning algorithms for speech/audio processing.",
-        "Participated in the Dolby U program with industry leaders."
+        "Algorithm Design: Designed and implemented novel deep learning algorithms for speech/audio processing.",
+        "Research: Conducted extensive literature reading, creative thinking, hands-on development, and result analysis."
       ],
       tags: ["Audio Processing", "Deep Learning", "Innovation"]
+    },
+    {
+      role: "Data Scientist",
+      company: "Siam Commercial Bank (SCB)",
+      logo: "https://logo.clearbit.com/scb.co.th",
+      period: "Jan 2020 - July 2020 /June 2021 - Nov 2021",
+      description: "Worked in Data Analytics and Governance to enhance customer experience by conducting R&D.",
+      achievements: [
+        "Computational Linguistics Research: Conducted R&D on Global Speech Emotion Recognition algorithms, focusing on feature extraction and acoustic modeling to process diverse call center audio data.",
+        "Service Architecture Proposal: Conceptualized and designed a deployment roadmap for integrating SER technology into live customer support workflows to enhance agent empathy and reduce customer churn.",
+        "Solution Design: Designed solutions aligned with business requirements and delivered reports to leadership."
+      ],
+      tags: ["Research", "Speech Emotion Recognition", "Computational Linguistics", "Banking"]
     },
     {
       role: "Data Scientist (Intern)",
       company: "KBTG",
       logo: "https://logo.clearbit.com/kbtg.tech",
       period: "June 2019 - Aug 2019",
-      description: "Machine Learning Bootcamp participant.",
+      description: "Machine Learning Bootcamp participant to conduct R&D on Thai language intent understanding.",
       achievements: [
-        "Developed Dependency Parser for Thai social data.",
-        "Won Best Progress and Effort Award & Popular Vote Award."
+        "Dependency Parser: Designed, Developed, and Deployed Thai dependency parsing with elementary discourse unit segmentation in AI for Thai.",
+        "Awards: Won 'Best Progress and Effort Award' and 'Popular Vote Award'."
       ],
-      tags: ["NLP", "Dependency Parsing"]
+      tags: ["Natural Language Processing", "Dependency Parsing", "Python", "Tensorflow"]
+    },
+    {
+      role: "Data Research Analyst",
+      company: "WISESIGHT",
+      logo: "https://logo.clearbit.com/wisesight.com",
+      period: "June 2018 - Mar 2019",
+      description: "Developed and analyzed data marketing research to analyze social value metrics.",
+      achievements: [
+        "Insight Delivery: Analyzed mention volume and social trends using ZocialEye, Python, and Tableau.",
+        "Visualization: Created clear visualizations to effectively engage with customers and users."
+      ],
+      tags: ["Data Analytics", "Social Listening", , "Python", "Tableau"]
+    },
+    {
+      role: "Digital Business Development Management Trainee",
+      company: "Village Farm Winery",
+      logo: "", 
+      period: "Jan 2018 - June 2018",
+      description: "Responsible for customer and employee data transformation.",
+      achievements: [
+        "Data Transformation: Transformed physical data for ERP cloud system using Python and OCR based on business functions and requirements.",
+        "Segmentation: Designed method for customer segmentation based on transformed data."
+      ],
+      tags: ["Digital Transformation", "ERP", "Python", "OCR"]
     }
   ]
 };
@@ -478,11 +546,11 @@ const educationData = {
     {
       title: "Master's Degree in Information Technology",
       institution: "King Mongkut's Institute of Technology Ladkrabang (KMITL)",
-      period: "2021 - 2025",
+      period: "Jan 2019 - May 2025",
       gpa: "4.00",
       details: [
-        "Innovator's Promising with Honor Scholarship",
-        "Outstanding Oral Defense"
+        "Outstanding Oral Defense",
+        "Innovator's Promising with Honor Scholarship"
       ]
     },
     {
@@ -540,12 +608,6 @@ const educationData = {
       details: "AI Hackathon"
     },
     {
-      title: "Top 10, SCG QA Hackathon",
-      institution: "Super-AI / SCG",
-      period: "2020",
-      details: "AI Hackathon"
-    },
-    {
       title: "CIMB 3D Conquest Representative",
       institution: "CIMB Bank",
       period: "2018",
@@ -562,6 +624,12 @@ const educationData = {
       institution: "Chulalongkorn University",
       period: "Completion",
       details: "Professional Certificate"
+    },
+    {
+      title: "Intro to Data Analytics and Big Data",
+      institution: "Chulalongkorn University",
+      period: "Completion",
+      details: "Professional Certificate"
     }
   ]
 };
@@ -574,34 +642,50 @@ const volunteerData = [
     period: "Jan 2021 - Present",
     description: "Reviewing AI research in NLP, audio, and visual domains.",
     details: [
-      "ACM Transactions on Asian and Low-Resource Language Information Processing (TALLIP, Q3)",
-      "Indonesian Journal of Electrical Engineering and Computer Science (IJEECS, Q3)",
-      "IEEE Access (Q1)",
-      "ACM ICMR 2024"
+      "Journal: IEEE Access (Q1), Indonesian Journal of Electrical Engineering and Computer Science (IJEECS, Q3), ACM Transactions on Asian and Low-Resource Language Information Processing (TALLIP, Q3)",
+      "Conference: IEEE ICITEE 2025, Springer ICONIP 2025, ACM ICMR 2024."
     ]
   },
   {
-    role: "Optimizer Committee & Teaching Assistant",
+    role: "Technical Committee & Teaching Assistant",
     organization: "Artificial Intelligence Association of Thailand (AIAT)",
     logo: "https://logo.clearbit.com/aiat.or.th",
-    period: "Feb 2022 - May 2024",
-    description: "Guided teams in Super-AI Engineer programs (SuperAISS2, SS3, SS4).",
+    period: "Feb 2022 - July 2025",
+    description: "Guided teams in Super-AI Engineer programs (SuperAISS2, SS3, SS4, SS5).",
     details: [
-      "Mentored projects on Thai NLP, font recognition, and financial AI.",
-      "Evaluated competitors and provided insights on NLP/LLMs.",
-      "Led teams to win multiple awards including Best Teamwork and Hackathon Winners."
+      "Mentored projects on Thai NLP, speech processing, and LLMs.",
+      "Evaluated competitors and provided insights in AI research and development.",
+      "Consulted teams to win multiple awards including Best Teamwork and Hackathon Winners."
     ]
   },
   {
-    role: "Special Guest Lecturer",
+    role: "Guest Lecturer",
     organization: "Huachiew Chalermprakiet University (HCU)",
     logo: "https://logo.clearbit.com/hcu.ac.th",
-    period: "July 2022 - June 2024",
+    period: "July 2022 - June 2025",
     description: "Delivered lectures on AI topics to undergraduate students.",
     details: [
-      "Topics: AI Future, Presentation Skills, Digital Image Processing, Speech Recognition.",
+      "Topics: AI Future, Presentation Skills, Digital Image Processing, Speech Recognition, AI frameworks, and GIS Analysis.",
       "Inspired students to prepare for careers in AI."
     ]
+  },
+  {
+    role: "Head of Data Science Camp",
+    organization: "IT Camp #14 KMITL",
+    logo: "https://logo.clearbit.com/kmitl.ac.th",
+    period: "Jan 2018 - June 2018",
+    description: "Planned and managed data science camp activities.",
+    details: [
+      "taught various data preparation and modeling related topics."
+    ]
+  },
+  {
+    role: "Student Organizer",
+    organization: "KMITL",
+    logo: "https://logo.clearbit.com/kmitl.ac.th",
+    period: "July 2017 - Nov 2017",
+    description: "Managed and developed the institution's activity registration system.",
+    details: []
   },
   {
     role: "Student Exchange Researcher",
@@ -629,6 +713,14 @@ const volunteerData = [
     period: "Oct 2016 - Dec 2016",
     description: "Taught IT topics to approx. 500 high school students.",
     details: []
+  },
+  {
+    role: "Moderator (FIT Program TV)",
+    organization: "KMITL",
+    logo: "https://logo.clearbit.com/kmitl.ac.th",
+    period: "Aug 2016 - Sep 2016",
+    description: "Hosted university TV program 'FIT' and presented news technology and startup knowledge.",
+    details: []
   }
 ];
 
@@ -645,7 +737,11 @@ const LogoMarquee = () => {
     { name: "Microsoft", url: "https://logo.clearbit.com/microsoft.com" },
     { name: "AIAT", url: "https://logo.clearbit.com/aiat.or.th" },
     { name: "IEEE", url: "https://logo.clearbit.com/ieee.org" },
-    { name: "CAT", url: "https://logo.clearbit.com/cattelecom.com" }
+    { name: "CAT", url: "https://logo.clearbit.com/cattelecom.com" },
+    { name: "Wisesight", url: "https://logo.clearbit.com/wisesight.com" },
+    { name: "KMITL", url: "https://logo.clearbit.com/kmitl.ac.th" },
+    { name: "HCU", url: "https://logo.clearbit.com/hcu.ac.th" },
+    { name: "CIMB", url: "https://logo.clearbit.com/cimb.com" }
   ];
 
   return (
@@ -657,15 +753,19 @@ const LogoMarquee = () => {
         {/* Render logos twice for seamless loop */}
         {[...logos, ...logos].map((logo, index) => (
           <div key={index} className="mx-8 flex items-center justify-center grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
-            <img 
-              src={logo.url} 
-              alt={logo.name} 
-              className="h-10 w-auto object-contain max-w-[120px]"
-              onError={(e) => {
-                e.target.onerror = null; 
-                e.target.style.display = 'none'; // Hide if fails to load
-              }}
-            />
+            {logo.url ? (
+              <img 
+                src={logo.url} 
+                alt={logo.name} 
+                className="h-10 w-auto object-contain max-w-[120px]"
+                onError={(e) => {
+                  e.target.onerror = null; 
+                  e.target.style.display = 'none'; // Hide if fails to load
+                }}
+              />
+            ) : (
+              <span className="text-gray-500 font-bold text-lg">{logo.name}</span>
+            )}
           </div>
         ))}
       </div>
@@ -744,19 +844,19 @@ const Portfolio = () => {
       title: "Vector Learning Representation based on Generalized Speech Emotion Recognition",
       venue: "Heliyon 2022 (CellPress/Elsevier)",
       type: "Journal",
-      rank: "Q1",
+      rank: "Q1 (Special Issue on Advanced AI)",
       role: "First Author"
     },
     {
       title: "Real-Time End-to-End Speech Emotion Recognition with Cross-Domain Adaptation",
-      venue: "MDPI BDCCC 2022",
+      venue: "MDPI BDCC 2022",
       type: "Journal",
-      rank: "Q1",
+      rank: "Q1 (Editor's Choice)",
       role: "Second Author"
     },
     {
       title: "Deep Residual Local Feature Learning for Speech Emotion Recognition",
-      venue: "ICONIP 2020 (Springer LNCS)",
+      venue: "Springer ICONIP 2020 (LNCS)",
       type: "Conference",
       rank: "Rank A",
       role: "First Author (Presenter)"
@@ -769,11 +869,11 @@ const Portfolio = () => {
       role: "Second Author"
     },
     {
-      title: "International Research (Title TBD)",
-      venue: "Springer ICDAR 2025",
+      title: "Optimizing Thai-English Spoken Question Answering Interaction for Open Environments with Limited Resources",
+      venue: "Springer ICDAR 2025 (LNCS)",
       type: "Conference",
       rank: "Rank A",
-      role: "Author"
+      role: "First Author"
     },
     {
       title: "Residual, Mixer, and Attention: The Three-way Combination for Streaming Wake Word Detection",
@@ -900,11 +1000,10 @@ const Portfolio = () => {
                 AI Research & Solution Engineer
               </div>
               <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-teal-400 to-emerald-400">
-                  Sattaya Singkul <br />
-                </span>
                 Pioneering <br />
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-teal-400 to-emerald-400">
                   Tomorrow's AI
+                </span>
                 <br /> Today
               </h1>
               <p className="text-lg text-gray-400 max-w-xl">
@@ -1101,7 +1200,11 @@ const Portfolio = () => {
               <div key={index} className="bg-slate-800/30 p-6 rounded-xl border border-white/5 hover:border-pink-500/30 hover:bg-slate-800/50 transition-all duration-300 flex items-start space-x-4">
                  <div className="flex-shrink-0">
                     <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center overflow-hidden p-1">
-                      <img src={vol.logo} alt={vol.organization} className="w-full h-full object-contain" onError={(e) => { e.target.style.display = 'none'; e.target.parentNode.innerHTML = '<Heart size={20} class="text-pink-500" />'; }} />
+                      {vol.logo ? (
+                        <img src={vol.logo} alt={vol.organization} className="w-full h-full object-contain" onError={(e) => { e.target.style.display = 'none'; e.target.parentNode.innerHTML = '<Heart size={20} class="text-pink-500" />'; }} />
+                      ) : (
+                        <Heart size={20} className="text-pink-500" />
+                      )}
                     </div>
                  </div>
                  <div className="flex-1">
@@ -1166,9 +1269,11 @@ const Portfolio = () => {
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">{edu.title}</h3>
                   <p className="text-gray-400 mb-4">{edu.institution}</p>
-                  <div className="flex items-center gap-2 mb-4">
-                     <span className="text-sm px-2 py-1 bg-white/5 rounded text-gray-300">GPA: {edu.gpa}</span>
-                  </div>
+                  {edu.gpa && (
+                    <div className="flex items-center gap-2 mb-4">
+                       <span className="text-sm px-2 py-1 bg-white/5 rounded text-gray-300">GPA: {edu.gpa}</span>
+                    </div>
+                  )}
                   <ul className="space-y-2">
                     {edu.details.map((detail, i) => (
                       <li key={i} className="flex items-center text-sm text-gray-400">
@@ -1248,7 +1353,7 @@ const Portfolio = () => {
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <SkillGroup title="Languages" skills={["Python", "SQL", "C", "R", "Bash/Shell"]} color="cyan" />
-                <SkillGroup title="Frameworks" skills={["PyTorch", "TensorFlow", "HuggingFace", "FastAPI"]} color="teal" />
+                <SkillGroup title="Frameworks" skills={["PyTorch", "TensorFlow", "HuggingFace", "Nemo", "Opik", "Pipecat", "LightRAG", "n8n", "FastAPI", "MCP"]} color="teal" />
                 <SkillGroup title="GenAI Tools" skills={["LangChain", "Llama.cpp", "Gradio", "Chainlit"]} color="emerald" />
                 <SkillGroup title="Deployment" skills={["Docker", "ONNX", "TorchScript", "Quantization"]} color="green" />
               </div>
@@ -1287,15 +1392,19 @@ const ExperienceCard = ({ role, company, logo, period, description, achievements
       <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
         <div className="flex items-center space-x-4 mb-2 md:mb-0">
           <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center overflow-hidden p-1 flex-shrink-0">
-             <img 
-               src={logo} 
-               alt={company} 
-               className="w-full h-full object-contain" 
-               onError={(e) => {
-                 e.target.style.display = 'none'; // Hide image if error
-                 e.target.parentNode.innerHTML = '<span class="text-slate-900 font-bold text-xs">LOGO</span>'; // Fallback text
-               }}
-             />
+             {logo ? (
+               <img 
+                 src={logo} 
+                 alt={company} 
+                 className="w-full h-full object-contain" 
+                 onError={(e) => {
+                   e.target.style.display = 'none'; // Hide image if error
+                   e.target.parentNode.innerHTML = '<span class="text-slate-900 font-bold text-xs">LOGO</span>'; // Fallback text
+                 }}
+               />
+             ) : (
+               <Briefcase size={20} className="text-cyan-600" />
+             )}
           </div>
           <div>
             <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">{role}</h3>
