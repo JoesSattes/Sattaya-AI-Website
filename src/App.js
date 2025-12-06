@@ -172,7 +172,7 @@ VOLUNTEERING:
 
 // --- GEMINI API HELPER ---
 const callGeminiAPI = async (prompt, systemInstruction = "") => {
-  const apiKey = ""; // API Key injected by environment
+  const apiKey = process.env.REACT_APP_GEMINI_API_KEY || "";
   const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
 
   const payload = {
@@ -979,7 +979,7 @@ const Portfolio = () => {
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-200 selection:bg-cyan-500/30 font-sans">
-      {/* <SEO /> */} {/* Temporarily commented out SEO component to avoid build errors in preview */}
+      <SEO />
       {/* Navigation */}
       <nav className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled ? 'bg-slate-950/80 backdrop-blur-md border-b border-white/10 py-2' : 'bg-transparent py-4'
