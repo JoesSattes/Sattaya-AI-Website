@@ -37,32 +37,51 @@ const SEO = () => {
   const siteUrl = "https://JoesSattes.github.io/Sattaya-AI-Website"; 
   const siteTitle = "Sattaya Singkul - Specialist, AI Research & Solution Engineer";
   const siteDescription = "Portfolio of Sattaya Singkul, an AI Specialist in NLP, Speech Recognition, and LLMs. Currently working at True Digital Group.";
+  const imageUrl = "https://github.com/JoesSattes.png"; // Your GitHub avatar
 
-  // JSON-LD for Google Knowledge Graph
+  // JSON-LD: ProfilePage wrapping the Person entity
+  // This structure tells Google: "This is a Profile Page about Sattaya Singkul"
   const schemaData = {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Sattaya Singkul",
-    "url": siteUrl,
-    "jobTitle": "Specialist, AI Research & Solution Engineer",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "True Digital Group"
-    },
-    "alumniOf": {
-      "@type": "CollegeOrUniversity",
-      "name": "King Mongkut's Institute of Technology Ladkrabang"
-    },
-    "sameAs": [
-      "https://www.linkedin.com/in/sattaya-singkul",
-      "https://github.com/JoesSattes",
-      "https://scholar.google.com/citations?user=kJI-LQAAAAJ&hl=en"
-    ],
-    "knowsAbout": ["Artificial Intelligence", "Natural Language Processing", "Speech Recognition", "Agentic LLMs", "Machine Learning", "Deep Learning"],
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Bangkok",
-      "addressCountry": "Thailand"
+    "@type": "ProfilePage", 
+    "dateCreated": "2024-04-01T00:00:00+07:00", // Approximate creation date helps
+    "dateModified": new Date().toISOString(),   // Always shows current date of build
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Sattaya Singkul", // STRICT: Name only. No job titles here.
+      "alternateName": "JoesSattes", // Good for your GitHub handle
+      "identifier": "sattaya-singkul", // A unique ID for disambiguation
+      "url": siteUrl,
+      "image": imageUrl,
+      "jobTitle": "Specialist, AI Research & Solution Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "True Digital Group",
+        "url": "https://www.truedigital.com"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "King Mongkut's Institute of Technology Ladkrabang",
+        "url": "https://www.kmitl.ac.th"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/sattaya-singkul",
+        "https://github.com/JoesSattes",
+        "https://scholar.google.com/citations?user=kJI-LQAAAAJ&hl=en"
+      ],
+      "knowsAbout": [
+          "Artificial Intelligence", 
+          "Natural Language Processing", 
+          "Speech Recognition", 
+          "Agentic LLMs", 
+          "Machine Learning"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bangkok",
+        "addressCountry": "Thailand"
+      },
+      "email": "mailto:joeysattaya@hotmail.com"
     }
   };
 
@@ -72,15 +91,27 @@ const SEO = () => {
       <meta name="description" content={siteDescription} />
       <meta name="keywords" content="Sattaya Singkul, AI Engineer, NLP, Speech Recognition, LLM, Thailand, True Digital Group, KBTG, AI Portfolio" />
       <meta name="author" content="Sattaya Singkul" />
+      <meta name="robots" content="index, follow" />
       <link rel="canonical" href={siteUrl} />
-      <meta property="og:type" content="website" />
+      
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content="profile" /> 
       <meta property="og:url" content={siteUrl} />
       <meta property="og:title" content={siteTitle} />
       <meta property="og:description" content={siteDescription} />
+      <meta property="og:image" content={imageUrl} />
+      <meta property="profile:first_name" content="Sattaya" />
+      <meta property="profile:last_name" content="Singkul" />
+      <meta property="profile:username" content="JoesSattes" />
+
+      {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content={siteUrl} />
       <meta property="twitter:title" content={siteTitle} />
       <meta property="twitter:description" content={siteDescription} />
+      <meta property="twitter:image" content={imageUrl} />
+
+      {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(schemaData)}
       </script>
