@@ -34,7 +34,7 @@ import {
 
 // --- SEO & STRUCTURED DATA COMPONENT ---
 const SEO = () => {
-  const siteUrl = "https://JoesSattes.github.io/portfolio"; 
+  const siteUrl = "https://JoesSattes.github.io/Sattaya-AI-Website"; 
   const siteTitle = "Sattaya Singkul - Specialist, AI Research & Solution Engineer";
   const siteDescription = "Portfolio of Sattaya Singkul, an AI Specialist in NLP, Speech Recognition, and LLMs. Currently working at True Digital Group.";
 
