@@ -1,6 +1,6 @@
-# 🚀 React CV Website with SEO & AI Chat Widget
+# Sattaya Singkul (AI) Portfolio Website
 
-A modern, responsive CV/Portfolio website built with React, featuring SEO optimization and an interactive Gemini AI chat widget. Perfect for showcasing your professional profile with free GitHub Pages hosting.
+The example of 🚀 React CV Website with SEO & AI Chat Widget. A modern, responsive CV/Portfolio website built with React, featuring SEO optimization and an interactive Gemini AI chat widget. Perfect for showcasing your professional profile with free GitHub Pages hosting.
 
 ![React](https://img.shields.io/badge/React-19.2.1-61DAFB?logo=react)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.1-38B2AC?logo=tailwind-css)
@@ -9,10 +9,13 @@ A modern, responsive CV/Portfolio website built with React, featuring SEO optimi
 ## ✨ Features
 
 - 🎨 **Modern UI/UX** - Beautiful, responsive design with Tailwind CSS
+- 🌈 **Animated Gradient Background** - Smooth, dark animated gradient orbs for visual depth
 - 🔍 **SEO Optimized** - Meta tags, Open Graph, Twitter Cards, and JSON-LD structured data
 - 🤖 **AI Chat Widget** - Interactive Gemini AI assistant for visitor engagement
 - 📱 **Fully Responsive** - Works seamlessly on desktop, tablet, and mobile
 - ⚡ **Fast Performance** - Optimized React build with code splitting
+- 🎭 **Loading Animation** - Elegant loading screen with logo animation
+- 🖼️ **Local Logo Support** - Uses local logo images instead of external services
 - 🌐 **Free Hosting** - Easy deployment to GitHub Pages
 - 🎯 **Accessible** - Built with accessibility best practices
 
@@ -65,11 +68,17 @@ A modern, responsive CV/Portfolio website built with React, featuring SEO optimi
 Sattaya-AI-Website/
 ├── public/
 │   ├── index.html          # Main HTML template
+│   ├── manifest.json       # PWA manifest
+│   ├── logo/               # Local logo images folder
+│   │   ├── sattaya-logo512.png
+│   │   ├── sattaya-logo192.png
+│   │   └── ...            # Company/organization logos
 │   └── ...
 ├── src/
 │   ├── App.js              # Main portfolio component
 │   ├── App.css             # Global styles
 │   ├── index.js            # React entry point
+│   ├── index.css           # Global CSS with animations
 │   └── ...
 ├── package.json            # Dependencies and scripts
 ├── tailwind.config.js      # Tailwind CSS configuration
@@ -105,7 +114,40 @@ Find the social media links in the Hero section (around line 915) and footer (ar
 Edit `tailwind.config.js` to change the color scheme. The current theme uses:
 - Cyan (#06b6d4) - Primary accent
 - Emerald (#10b981) - Secondary accent
+- Teal (#14b8a6) - Tertiary accent
 - Slate (#0f172a) - Background
+
+### 4. Update Logos
+
+The website uses local logos from the `public/logo/` folder instead of external services:
+
+1. **Add your logos** to `public/logo/` folder
+2. **Update logo mappings** in `src/App.js` (lines ~442-468) in the `getLogoPath` function:
+   ```jsx
+   const logoMap = {
+     'truedigital.com': `${publicUrl}/logo/true-digital-group.png`,
+     'kbtg.tech': `${publicUrl}/logo/kbtg.png`,
+     // Add your own mappings
+   };
+   ```
+
+3. **Replace navbar logo**: Update the logo path in the navigation section (around line 1102)
+
+### 5. Customize Animated Background
+
+The animated gradient background can be customized in `src/App.js` (AnimatedGradientBackground component):
+
+- **Colors**: Change `bg-cyan-500/10`, `bg-emerald-500/10`, etc.
+- **Opacity**: Adjust the `/10`, `/8`, `/6` values for darker/lighter effects
+- **Animation Speed**: Modify animation durations in `src/index.css` (currently 8s-12s)
+- **Movement**: Adjust the `translate` values in the `@keyframes` definitions
+
+### 6. Loading Screen
+
+Customize the loading screen in `src/App.js` (LoadingScreen component):
+- Change the logo path
+- Adjust animation duration (currently 1.5 seconds)
+- Modify the loading text and animations
 
 ## 🔍 SEO Optimization
 
@@ -297,6 +339,17 @@ git push origin gh-pages
 - Retry logic for API failures
 - Loading states and animations
 
+### 7. Animated Gradient Background
+- Smooth, organic blob animations
+- Multiple gradient orbs with different movement patterns
+- Dark, subtle appearance that doesn't distract from content
+- Performance optimized with CSS animations
+
+### 8. Loading Screen
+- Elegant logo-based loading animation
+- Smooth fade-in/fade-out transitions
+- Animated gradient glow effects
+
 ## 🛠️ Troubleshooting
 
 ### Build Errors
@@ -322,6 +375,17 @@ npx tailwindcss init -p
 **Styles not loading**
 - Ensure all paths use relative URLs (not absolute)
 - Check that CSS files are in the `build/static/css` folder
+- Verify that `process.env.PUBLIC_URL` is correctly set in `package.json` homepage field
+
+**Logos not displaying**
+- Ensure logo files are in `public/logo/` folder
+- Check that logo paths use `process.env.PUBLIC_URL` for GitHub Pages compatibility
+- Verify file names match the mappings in `getLogoPath` function
+
+**Animations not working**
+- Clear browser cache and hard refresh (Ctrl+Shift+R or Cmd+Shift+R)
+- Check that `src/index.css` contains the animation keyframes
+- Verify Tailwind CSS is properly configured
 
 ### Gemini API Issues
 
@@ -360,6 +424,7 @@ This project is open source and available under the [MIT License](LICENSE).
 - Icons from [Lucide React](https://lucide.dev/)
 - SEO with [React Helmet](https://github.com/nfl/react-helmet)
 - AI powered by [Google Gemini](https://deepmind.google/technologies/gemini/)
+- Animated gradient background inspired by modern web design patterns
 
 ## 📞 Support
 
