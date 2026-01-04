@@ -438,13 +438,43 @@ const BioRewriter = ({ originalBio }) => {
   );
 };
 
+// --- LOGO MAPPING HELPER ---
+const getLogoPath = (clearbitUrl) => {
+  if (!clearbitUrl || !clearbitUrl.includes('logo.clearbit.com')) {
+    return clearbitUrl || '';
+  }
+  
+  const domain = clearbitUrl.replace('https://logo.clearbit.com/', '');
+  const publicUrl = process.env.PUBLIC_URL || '';
+  const logoMap = {
+    'truedigital.com': `${publicUrl}/logo/true-digital-group.png`,
+    'kbtg.tech': `${publicUrl}/logo/kbtg.png`,
+    'mahidol.ac.th': `${publicUrl}/logo/mahidol.png`,
+    'synthesia.io': `${publicUrl}/logo/synthesia.png`,
+    'dolby.com': `${publicUrl}/logo/dolby.png`,
+    'scb.co.th': `${publicUrl}/logo/scb.png`,
+    'nectec.or.th': `${publicUrl}/logo/nectec.png`,
+    'microsoft.com': `${publicUrl}/logo/microsoft.png`,
+    'aiat.or.th': `${publicUrl}/logo/aiat.png`,
+    'ieee.org': `${publicUrl}/logo/institute-of-electrical-and-electronics-engineers.png`,
+    'cattelecom.com': `${publicUrl}/logo/cat-telecom-public-company-limited.png`,
+    'wisesight.com': `${publicUrl}/logo/wisesight.png`,
+    'kmitl.ac.th': `${publicUrl}/logo/king-mongkut-s-institute-of-technology-ladkrabang.png`,
+    'hcu.ac.th': `${publicUrl}/logo/huachiew-chalermprakiet-university.png`,
+    'cimb.com': `${publicUrl}/logo/cimb-thai-bank.png`,
+    'kurume-nct.ac.jp': `${publicUrl}/logo/kurume-national-college-of-technology.png`
+  };
+  
+  return logoMap[domain] || clearbitUrl;
+};
+
 // --- DATA: EXPERIENCE & EDUCATION ---
 const experienceData = {
   fulltime: [
     {
       role: "Specialist, AI Engineer / AI Solution Hub",
       company: "True Digital Group",
-      logo: "https://logo.clearbit.com/truedigital.com",
+      logo: getLogoPath("https://logo.clearbit.com/truedigital.com"),
       period: "May 2025 - Present",
       description: "Spearheading the design and optimization of state-of-the-art NLP, ASR, TTS, and LLM architectures.",
       achievements: [
@@ -460,7 +490,7 @@ const experienceData = {
     {
       role: "Research Engineer (B2: Human Computer Interaction/Interface Expert)",
       company: "KASIKORN Business-Technology Group (KBTG)",
-      logo: "https://logo.clearbit.com/kbtg.tech",
+      logo: getLogoPath("https://logo.clearbit.com/kbtg.tech"),
       period: "April 2024 - April 2025",
       description: "Expanded B1 scope to include timeline management and prioritization of junior projects while continuing core R&D.",
       achievements: [
@@ -473,7 +503,7 @@ const experienceData = {
     {
       role: "Research Engineer (B1: Voice Specialist)",
       company: "KASIKORN Business-Technology Group (KBTG)",
-      logo: "https://logo.clearbit.com/kbtg.tech",
+      logo: getLogoPath("https://logo.clearbit.com/kbtg.tech"),
       period: "Feb 2022 - April 2024",
       description: "Researched and developed end-to-end NLP and speech technologies.",
       achievements: [
@@ -487,7 +517,7 @@ const experienceData = {
     {
       role: "Research Assistant (NCR)",
       company: "NECTEC",
-      logo: "https://logo.clearbit.com/nectec.or.th",
+      logo: getLogoPath("https://logo.clearbit.com/nectec.or.th"),
       period: "June 2020 - Aug 2020 / July 2021 - Dec 2021",
       description: "Conducted R&D in the Speech and Text Understanding (STU) Laboratory, focusing on Thai spoken and written language technologies.",
       achievements: [
@@ -502,7 +532,7 @@ const experienceData = {
     {
       role: "Research Scientist (Co-operated)",
       company: "Synthesia (London/Remote)",
-      logo: "https://logo.clearbit.com/synthesia.io",
+      logo: getLogoPath("https://logo.clearbit.com/synthesia.io"),
       period: "Oct 2023 - July 2024",
       description: "Conducted cutting-edge research in AI and video synthesis.",
       achievements: [
@@ -514,7 +544,7 @@ const experienceData = {
     {
       role: "Product Owner",
       company: "Mental Health Tech Discovery, Mahidol University",
-      logo: "https://logo.clearbit.com/mahidol.ac.th",
+      logo: getLogoPath("https://logo.clearbit.com/mahidol.ac.th"),
       period: "Mar 2021 - Dec 2024",
       description: "Designed and created solving solutions based on health tech knowledge, and Led a team of seven in developing health tech solutions integrating psychology and AI.",
       achievements: [
@@ -528,7 +558,7 @@ const experienceData = {
     {
       role: "Research Assistant (PRIP Lab)",
       company: "Faculty of IT, KMITL",
-      logo: "https://logo.clearbit.com/kmitl.ac.th",
+      logo: getLogoPath("https://logo.clearbit.com/kmitl.ac.th"),
       period: "Aug 2019 - Jan 2025",
       description: "Researcher in Pattern Recognition and Image Processing laboratory focused on computational linguistics.",
       achievements: [
@@ -542,7 +572,7 @@ const experienceData = {
     {
       role: "Research Engineer (SuperAI)",
       company: "KBTG",
-      logo: "https://logo.clearbit.com/kbtg.tech",
+      logo: getLogoPath("https://logo.clearbit.com/kbtg.tech"),
       period: "Mar 2021 - May 2021",
       description: "Challenged in specific domain application of NLP QA.",
       achievements: [
@@ -554,7 +584,7 @@ const experienceData = {
     {
       role: "Speech/Audio Deep Learning Intern",
       company: "Dolby Laboratories (Australia/Remote)",
-      logo: "https://logo.clearbit.com/dolby.com",
+      logo: getLogoPath("https://logo.clearbit.com/dolby.com"),
       period: "Jan 2021 - July 2021",
       description: "Participated in the Dolby U program working with researchers.",
       achievements: [
@@ -566,7 +596,7 @@ const experienceData = {
     {
       role: "Data Scientist",
       company: "Siam Commercial Bank (SCB)",
-      logo: "https://logo.clearbit.com/scb.co.th",
+      logo: getLogoPath("https://logo.clearbit.com/scb.co.th"),
       period: "Jan 2020 - July 2020 /June 2021 - Nov 2021",
       description: "Worked in Data Analytics and Governance to enhance customer experience by conducting R&D.",
       achievements: [
@@ -579,7 +609,7 @@ const experienceData = {
     {
       role: "Data Scientist (Intern)",
       company: "KBTG",
-      logo: "https://logo.clearbit.com/kbtg.tech",
+      logo: getLogoPath("https://logo.clearbit.com/kbtg.tech"),
       period: "June 2019 - Aug 2019",
       description: "Machine Learning Bootcamp participant to conduct R&D on Thai language intent understanding.",
       achievements: [
@@ -591,7 +621,7 @@ const experienceData = {
     {
       role: "Data Research Analyst",
       company: "WISESIGHT",
-      logo: "https://logo.clearbit.com/wisesight.com",
+      logo: getLogoPath("https://logo.clearbit.com/wisesight.com"),
       period: "June 2018 - Mar 2019",
       description: "Developed and analyzed data marketing research to analyze social value metrics.",
       achievements: [
@@ -712,7 +742,7 @@ const volunteerData = [
   {
     role: "Program Committee / Research Reviewer",
     organization: "Academic Journals & Conferences",
-    logo: "https://logo.clearbit.com/ieee.org",
+    logo: getLogoPath("https://logo.clearbit.com/ieee.org"),
     period: "Jan 2021 - Present",
     description: "Reviewing AI research in NLP, audio, and visual domains.",
     details: [
@@ -723,7 +753,7 @@ const volunteerData = [
   {
     role: "Technical Committee & Teaching Assistant",
     organization: "Artificial Intelligence Association of Thailand (AIAT)",
-    logo: "https://logo.clearbit.com/aiat.or.th",
+    logo: getLogoPath("https://logo.clearbit.com/aiat.or.th"),
     period: "Feb 2022 - July 2025",
     description: "Guided teams in Super-AI Engineer programs (SuperAISS2, SS3, SS4, SS5).",
     details: [
@@ -735,7 +765,7 @@ const volunteerData = [
   {
     role: "Guest Lecturer",
     organization: "Huachiew Chalermprakiet University (HCU)",
-    logo: "https://logo.clearbit.com/hcu.ac.th",
+    logo: getLogoPath("https://logo.clearbit.com/hcu.ac.th"),
     period: "July 2022 - June 2025",
     description: "Delivered lectures on AI topics to undergraduate students.",
     details: [
@@ -746,7 +776,7 @@ const volunteerData = [
   {
     role: "Head of Data Science Camp",
     organization: "IT Camp #14 KMITL",
-    logo: "https://logo.clearbit.com/kmitl.ac.th",
+    logo: getLogoPath("https://logo.clearbit.com/kmitl.ac.th"),
     period: "Jan 2018 - June 2018",
     description: "Planned and managed data science camp activities.",
     details: [
@@ -756,7 +786,7 @@ const volunteerData = [
   {
     role: "Student Organizer",
     organization: "KMITL",
-    logo: "https://logo.clearbit.com/kmitl.ac.th",
+    logo: getLogoPath("https://logo.clearbit.com/kmitl.ac.th"),
     period: "July 2017 - Nov 2017",
     description: "Managed and developed the institution's activity registration system.",
     details: []
@@ -764,7 +794,7 @@ const volunteerData = [
   {
     role: "Student Exchange Researcher",
     organization: "Kurume College (Japan)",
-    logo: "https://logo.clearbit.com/kurume-nct.ac.jp",
+    logo: getLogoPath("https://logo.clearbit.com/kurume-nct.ac.jp"),
     period: "June 2017",
     description: "SAKURA Exchange Program in Science.",
     details: [
@@ -775,7 +805,7 @@ const volunteerData = [
   {
     role: "Microsoft Student Volunteer",
     organization: "Microsoft",
-    logo: "https://logo.clearbit.com/microsoft.com",
+    logo: getLogoPath("https://logo.clearbit.com/microsoft.com"),
     period: "Jan 2017 - July 2017",
     description: "Provided counseling to customers on Microsoft products and IT technologies.",
     details: []
@@ -783,7 +813,7 @@ const volunteerData = [
   {
     role: "Teaching Director and Lecturer",
     organization: "KMITL (ToBeIT60 Program)",
-    logo: "https://logo.clearbit.com/kmitl.ac.th",
+    logo: getLogoPath("https://logo.clearbit.com/kmitl.ac.th"),
     period: "Oct 2016 - Dec 2016",
     description: "Taught IT topics to approx. 500 high school students.",
     details: []
@@ -791,7 +821,7 @@ const volunteerData = [
   {
     role: "Moderator (FIT Program TV)",
     organization: "KMITL",
-    logo: "https://logo.clearbit.com/kmitl.ac.th",
+    logo: getLogoPath("https://logo.clearbit.com/kmitl.ac.th"),
     period: "Aug 2016 - Sep 2016",
     description: "Hosted university TV program 'FIT' and presented news technology and startup knowledge.",
     details: []
@@ -801,21 +831,21 @@ const volunteerData = [
 // --- LOGO MARQUEE COMPONENT ---
 const LogoMarquee = () => {
   const logos = [
-    { name: "True Digital", url: "https://logo.clearbit.com/truedigital.com" },
-    { name: "KBTG", url: "https://logo.clearbit.com/kbtg.tech" },
-    { name: "Mahidol", url: "https://logo.clearbit.com/mahidol.ac.th" },
-    { name: "Synthesia", url: "https://logo.clearbit.com/synthesia.io" },
-    { name: "Dolby", url: "https://logo.clearbit.com/dolby.com" },
-    { name: "SCB", url: "https://logo.clearbit.com/scb.co.th" },
-    { name: "NECTEC", url: "https://logo.clearbit.com/nectec.or.th" },
-    { name: "Microsoft", url: "https://logo.clearbit.com/microsoft.com" },
-    { name: "AIAT", url: "https://logo.clearbit.com/aiat.or.th" },
-    { name: "IEEE", url: "https://logo.clearbit.com/ieee.org" },
-    { name: "CAT", url: "https://logo.clearbit.com/cattelecom.com" },
-    { name: "Wisesight", url: "https://logo.clearbit.com/wisesight.com" },
-    { name: "KMITL", url: "https://logo.clearbit.com/kmitl.ac.th" },
-    { name: "HCU", url: "https://logo.clearbit.com/hcu.ac.th" },
-    { name: "CIMB", url: "https://logo.clearbit.com/cimb.com" }
+    { name: "True Digital", url: getLogoPath("https://logo.clearbit.com/truedigital.com") },
+    { name: "KBTG", url: getLogoPath("https://logo.clearbit.com/kbtg.tech") },
+    { name: "Mahidol", url: getLogoPath("https://logo.clearbit.com/mahidol.ac.th") },
+    { name: "Synthesia", url: getLogoPath("https://logo.clearbit.com/synthesia.io") },
+    { name: "Dolby", url: getLogoPath("https://logo.clearbit.com/dolby.com") },
+    { name: "SCB", url: getLogoPath("https://logo.clearbit.com/scb.co.th") },
+    { name: "NECTEC", url: getLogoPath("https://logo.clearbit.com/nectec.or.th") },
+    { name: "Microsoft", url: getLogoPath("https://logo.clearbit.com/microsoft.com") },
+    { name: "AIAT", url: getLogoPath("https://logo.clearbit.com/aiat.or.th") },
+    { name: "IEEE", url: getLogoPath("https://logo.clearbit.com/ieee.org") },
+    { name: "CAT", url: getLogoPath("https://logo.clearbit.com/cattelecom.com") },
+    { name: "Wisesight", url: getLogoPath("https://logo.clearbit.com/wisesight.com") },
+    { name: "KMITL", url: getLogoPath("https://logo.clearbit.com/kmitl.ac.th") },
+    { name: "HCU", url: getLogoPath("https://logo.clearbit.com/hcu.ac.th") },
+    { name: "CIMB", url: getLogoPath("https://logo.clearbit.com/cimb.com") }
   ];
 
   return (
@@ -857,6 +887,35 @@ const LogoMarquee = () => {
   );
 };
 
+// --- LOADING SCREEN COMPONENT ---
+const LoadingScreen = ({ isVisible }) => {
+  const publicUrl = process.env.PUBLIC_URL || '';
+  const logoPath = `${publicUrl}/logo/sattaya-logo512.png`;
+  
+  return (
+    <div className={`fixed inset-0 bg-slate-950 z-[100] flex items-center justify-center transition-opacity duration-500 ${
+      isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
+    }`}>
+      <div className="flex flex-col items-center space-y-6">
+        <div className="relative">
+          <img 
+            src={logoPath}
+            alt="Sattaya.AI Logo"
+            className="w-32 h-32 md:w-40 md:h-40 object-contain animate-pulse"
+          />
+          <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 to-emerald-500/20 rounded-full blur-2xl animate-ping" />
+        </div>
+        <div className="flex space-x-2">
+          <div className="w-3 h-3 bg-cyan-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
+          <div className="w-3 h-3 bg-emerald-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
+          <div className="w-3 h-3 bg-cyan-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
+        </div>
+        <p className="text-gray-400 text-sm font-medium">Loading Sattaya.AI...</p>
+      </div>
+    </div>
+  );
+};
+
 // --- MAIN PORTFOLIO COMPONENT ---
 
 const Portfolio = () => {
@@ -864,10 +923,30 @@ const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [scrolled, setScrolled] = useState(false);
   const [showAllPapers, setShowAllPapers] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   
   // Tab States
   const [activeExpTab, setActiveExpTab] = useState('fulltime');
   const [activeEduTab, setActiveEduTab] = useState('degrees');
+  
+  // Handle page load
+  useEffect(() => {
+    // Wait for images and content to load
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500); // Show loading for 1.5 seconds
+    
+    // Also hide loading when page is fully loaded
+    if (document.readyState === 'complete') {
+      setTimeout(() => setIsLoading(false), 500);
+    } else {
+      window.addEventListener('load', () => {
+        setTimeout(() => setIsLoading(false), 500);
+      });
+    }
+    
+    return () => clearTimeout(timer);
+  }, []);
 
   // Handle scroll for navbar styling
   useEffect(() => {
@@ -1010,6 +1089,7 @@ const Portfolio = () => {
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-200 selection:bg-cyan-500/30 font-sans">
+      <LoadingScreen isVisible={isLoading} />
       <SEO />
       {/* Navigation */}
       <nav className={`fixed w-full z-50 transition-all duration-300 ${
@@ -1018,7 +1098,16 @@ const Portfolio = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-tr from-cyan-500 to-emerald-500 rounded-lg flex items-center justify-center shadow-lg shadow-cyan-500/20">
+              <img 
+                src={`${process.env.PUBLIC_URL || ''}/logo/sattaya-logo512.png`}
+                alt="Sattaya.AI"
+                className="w-8 h-8 object-contain"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  e.target.nextElementSibling?.classList.remove('hidden');
+                }}
+              />
+              <div className="w-8 h-8 bg-gradient-to-tr from-cyan-500 to-emerald-500 rounded-lg flex items-center justify-center shadow-lg shadow-cyan-500/20 hidden">
                 <span className="text-white font-bold text-xl">S</span>
               </div>
               <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-emerald-400">
