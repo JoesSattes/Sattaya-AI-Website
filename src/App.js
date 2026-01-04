@@ -916,6 +916,27 @@ const LoadingScreen = ({ isVisible }) => {
   );
 };
 
+// --- ANIMATED GRADIENT BACKGROUND ---
+const AnimatedGradientBackground = () => {
+  return (
+    <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+      {/* Animated gradient orbs - darker and more visible movement */}
+      <div className="absolute top-0 -left-4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-blob" />
+      <div className="absolute top-0 -right-4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl animate-blob-delay-2" />
+      <div className="absolute -bottom-8 left-20 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl animate-blob-delay-4" />
+      <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-cyan-400/8 rounded-full blur-3xl animate-pulse-slow" style={{ transform: 'translate(-50%, -50%)' }} />
+      
+      {/* Additional smaller animated lights - darker */}
+      <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-emerald-400/8 rounded-full blur-2xl animate-blob-delay-1" />
+      <div className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-teal-400/8 rounded-full blur-2xl animate-blob-delay-3" />
+      
+      {/* Extra subtle moving lights */}
+      <div className="absolute top-1/3 left-1/4 w-80 h-80 bg-cyan-400/6 rounded-full blur-3xl animate-blob-delay-3" />
+      <div className="absolute bottom-1/3 right-1/4 w-88 h-88 bg-emerald-400/6 rounded-full blur-3xl animate-blob-delay-1" />
+    </div>
+  );
+};
+
 // --- MAIN PORTFOLIO COMPONENT ---
 
 const Portfolio = () => {
@@ -1088,7 +1109,8 @@ const Portfolio = () => {
   to pioneering voice IoT agents, I focus on building scalable, real-world AI solutions.`;
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-200 selection:bg-cyan-500/30 font-sans">
+    <div className="min-h-screen bg-slate-950 text-slate-200 selection:bg-cyan-500/30 font-sans relative">
+      <AnimatedGradientBackground />
       <LoadingScreen isVisible={isLoading} />
       <SEO />
       {/* Navigation */}
