@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 440" font-family="Inter, system-ui, -apple-system, Segoe UI, sans-serif">
+  <rect width="960" height="440" rx="20" fill="#0f1820"/>
+  <text x="40" y="50" fill="#e8eef3" font-size="21" font-weight="600">What the model learns to separate</text>
+  <g font-size="15">
+    <text x="40" y="92" fill="#b3c0cc" font-weight="600">Softmax classifier</text>
+    <text x="40" y="114" fill="#7d8fa1" font-size="13">Boundaries good enough for the training corpus</text>
+    <rect x="40" y="130" width="420" height="250" rx="14" fill="#13202a" stroke="#2b3c4a"/>
+    <path d="M250 140 L250 370 M50 255 L450 255" stroke="#3a4b5a" stroke-dasharray="6 6"/>
+    <g fill="#3fd0c0"><circle cx="110" cy="190" r="6"/><circle cx="150" cy="215" r="6"/><circle cx="200" cy="175" r="6"/><circle cx="230" cy="240" r="6"/><circle cx="130" cy="235" r="6"/></g>
+    <g fill="#f2b544"><circle cx="300" cy="180" r="6"/><circle cx="380" cy="210" r="6"/><circle cx="270" cy="240" r="6"/><circle cx="420" cy="170" r="6"/></g>
+    <g fill="#5cb6f2"><circle cx="120" cy="300" r="6"/><circle cx="210" cy="330" r="6"/><circle cx="240" cy="270" r="6"/><circle cx="170" cy="350" r="6"/></g>
+    <g fill="#e07a8f"><circle cx="300" cy="320" r="6"/><circle cx="360" cy="290" r="6"/><circle cx="420" cy="340" r="6"/><circle cx="262" cy="280" r="6"/></g>
+    <g fill="none" stroke="#e8eef3" stroke-width="2"><circle cx="258" cy="250" r="9"/><circle cx="244" cy="262" r="9"/></g>
+    <text x="276" y="372" fill="#7d8fa1" font-size="12">new mic / new speaker → falls over the line</text>
+
+    <text x="500" y="92" fill="#b3c0cc" font-weight="600">Metric learning (angular prototypes)</text>
+    <text x="500" y="114" fill="#7d8fa1" font-size="13">Tight clusters with wide angular margins</text>
+    <rect x="500" y="130" width="420" height="250" rx="14" fill="#13202a" stroke="#3fd0c0"/>
+    <circle cx="710" cy="255" r="4" fill="#7d8fa1"/>
+    <g stroke="#2b3c4a"><line x1="710" y1="255" x2="600" y2="175"/><line x1="710" y1="255" x2="830" y2="175"/><line x1="710" y1="255" x2="600" y2="335"/><line x1="710" y1="255" x2="830" y2="335"/></g>
+    <g fill="#3fd0c0"><circle cx="595" cy="170" r="6"/><circle cx="607" cy="182" r="6"/><circle cx="588" cy="186" r="6"/><circle cx="612" cy="166" r="6"/></g>
+    <g fill="#f2b544"><circle cx="835" cy="170" r="6"/><circle cx="822" cy="180" r="6"/><circle cx="842" cy="186" r="6"/><circle cx="828" cy="164" r="6"/></g>
+    <g fill="#5cb6f2"><circle cx="595" cy="338" r="6"/><circle cx="608" cy="328" r="6"/><circle cx="586" cy="326" r="6"/><circle cx="612" cy="344" r="6"/></g>
+    <g fill="#e07a8f"><circle cx="835" cy="338" r="6"/><circle cx="822" cy="330" r="6"/><circle cx="844" cy="326" r="6"/><circle cx="828" cy="346" r="6"/></g>
+    <g fill="none" stroke="#e8eef3" stroke-width="2"><circle cx="630" cy="196" r="9"/><circle cx="815" cy="315" r="9"/></g>
+    <text x="640" y="372" fill="#7d8fa1" font-size="12">same shift → still closest to the right prototype</text>
+  </g>
+  <g font-size="13" fill="#b3c0cc">
+    <circle cx="48" cy="414" r="5" fill="#3fd0c0"/><text x="58" y="418">neutral</text>
+    <circle cx="128" cy="414" r="5" fill="#f2b544"/><text x="138" y="418">happy</text>
+    <circle cx="200" cy="414" r="5" fill="#5cb6f2"/><text x="210" y="418">sad</text>
+    <circle cx="262" cy="414" r="5" fill="#e07a8f"/><text x="272" y="418">angry</text>
+    <circle cx="340" cy="414" r="7" fill="none" stroke="#e8eef3" stroke-width="2"/><text x="352" y="418">unseen test samples (illustrative)</text>
+  </g>
+</svg>

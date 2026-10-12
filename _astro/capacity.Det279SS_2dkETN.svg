@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" font-family="Inter, system-ui, -apple-system, Segoe UI, sans-serif">
+  <rect width="960" height="420" rx="20" fill="#0f1820"/>
+  <text x="40" y="52" fill="#e8eef3" font-size="22" font-weight="600">From monthly users to GPUs</text>
+  <g font-size="15">
+    <g>
+      <rect x="40" y="90" width="190" height="110" rx="14" fill="#13202a" stroke="#2b3c4a"/>
+      <text x="60" y="124" fill="#7d8fa1">Monthly users</text>
+      <text x="60" y="164" fill="#e8eef3" font-size="30" font-weight="700">1M</text>
+      <text x="60" y="188" fill="#7d8fa1" font-size="13">MAU</text>
+    </g>
+    <g>
+      <rect x="270" y="90" width="190" height="110" rx="14" fill="#13202a" stroke="#2b3c4a"/>
+      <text x="290" y="124" fill="#7d8fa1">Daily active</text>
+      <text x="290" y="164" fill="#e8eef3" font-size="30" font-weight="700">200K</text>
+      <text x="290" y="188" fill="#7d8fa1" font-size="13">× 20% DAU/MAU</text>
+    </g>
+    <g>
+      <rect x="500" y="90" width="190" height="110" rx="14" fill="#13202a" stroke="#2b3c4a"/>
+      <text x="520" y="124" fill="#7d8fa1">Peak sessions live</text>
+      <text x="520" y="164" fill="#e8eef3" font-size="30" font-weight="700">≈2,000</text>
+      <text x="520" y="188" fill="#7d8fa1" font-size="13">Little's law, peak hour</text>
+    </g>
+    <g>
+      <rect x="730" y="90" width="190" height="110" rx="14" fill="#13202a" stroke="#3fd0c0"/>
+      <text x="750" y="124" fill="#7d8fa1">LLM requests in flight</text>
+      <text x="750" y="164" fill="#3fd0c0" font-size="30" font-weight="700">≈150</text>
+      <text x="750" y="188" fill="#7d8fa1" font-size="13">generation is ~7.5% of a session</text>
+    </g>
+    <g stroke="#5cb6f2" stroke-width="2" fill="none">
+      <path d="M232 145 H266"/><path d="M462 145 H496"/><path d="M692 145 H726"/>
+    </g>
+  </g>
+  <text x="40" y="262" fill="#b3c0cc" font-size="16">The scary number on the left is not the number you provision for.</text>
+  <text x="40" y="290" fill="#b3c0cc" font-size="16">The number on the right is — and it decides KV-cache memory, batch size and how many GPUs you need.</text>
+  <text x="40" y="350" fill="#7d8fa1" font-size="13" font-family="ui-monospace, Menlo, monospace">Illustrative assumptions — see the worked example in the post. Plug in your own traffic.</text>
+</svg>

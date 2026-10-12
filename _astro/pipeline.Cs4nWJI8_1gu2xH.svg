@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" font-family="Inter, system-ui, -apple-system, Segoe UI, sans-serif">
+  <rect width="960" height="400" rx="20" fill="#0f1820"/>
+  <text x="40" y="50" fill="#e8eef3" font-size="21" font-weight="600">TurboQuant in two stages (b bits per coordinate)</text>
+  <g font-size="14">
+    <rect x="40" y="90" width="140" height="90" rx="14" fill="#13202a" stroke="#2b3c4a"/>
+    <text x="60" y="124" fill="#e8eef3" font-weight="600">Input vector</text>
+    <text x="60" y="148" fill="#7d8fa1">x ∈ ℝᵈ</text>
+    <text x="60" y="168" fill="#7d8fa1">key, value or embedding</text>
+
+    <rect x="220" y="90" width="170" height="90" rx="14" fill="#16303a" stroke="#5cb6f2"/>
+    <text x="240" y="124" fill="#e8eef3" font-weight="600">Random rotation</text>
+    <text x="240" y="148" fill="#9fb4c4">y = Π x</text>
+    <text x="240" y="168" fill="#9fb4c4">coords ≈ 𝒩(0, 1/d)</text>
+
+    <rect x="430" y="90" width="210" height="90" rx="14" fill="#173a3a" stroke="#3fd0c0"/>
+    <text x="450" y="124" fill="#e8eef3" font-weight="600">Scalar quantizer per coord</text>
+    <text x="450" y="148" fill="#9fb4c4">fixed Lloyd–Max codebook</text>
+    <text x="450" y="168" fill="#3fd0c0">b − 1 bits · MSE-optimal</text>
+
+    <rect x="680" y="90" width="240" height="90" rx="14" fill="#2b2a1c" stroke="#f2b544"/>
+    <text x="700" y="124" fill="#e8eef3" font-weight="600">QJL on the residual</text>
+    <text x="700" y="148" fill="#9fb4c4">sign(S r),  r = x − x̂</text>
+    <text x="700" y="168" fill="#f2b544">1 bit · removes inner-product bias</text>
+
+    <g stroke="#5cb6f2" stroke-width="2" fill="none"><path d="M182 135 H216"/><path d="M392 135 H426"/><path d="M642 135 H676"/></g>
+  </g>
+  <g font-size="15" fill="#b3c0cc">
+    <text x="40" y="240">No calibration data, no learned codebook, no per-block scales to store:</text>
+    <text x="40" y="266">the rotation makes every coordinate follow the same known distribution,</text>
+    <text x="40" y="292">so one precomputed codebook works for any input, the moment it arrives.</text>
+  </g>
+  <g font-size="14" font-family="ui-monospace, Menlo, monospace">
+    <rect x="40" y="320" width="880" height="48" rx="12" fill="#13202a"/>
+    <text x="60" y="350" fill="#3fd0c0">MSE ≤ (√3·π/2)·4⁻ᵇ</text>
+    <text x="300" y="350" fill="#7d8fa1">vs. lower bound 4⁻ᵇ for any quantizer  →  within ≈ 2.7×</text>
+  </g>
+</svg>

@@ -1,6 +1,6 @@
 # Sattaya Singkul (สัตยา สิงห์กุล)
 
-> Specialist Lead, AI Solution Engineer at True Digital Group, Bangkok, Thailand. AI solution lead building end-to-end AI products — voice assistants, multi-agent LLMs and on-premise AI — that ship to production.
+> Specialist Lead, AI Solution Engineer at True Digital Group, Bangkok, Thailand. AI solution lead who turns AI research into production systems that create real value — at scale or fully on-premise.
 
 AI engineer with 6+ years of experience building production-grade AI products with LLMs, NLP, voice, multi-agent and on-premise AI systems. I design and deploy end-to-end systems that serve large user bases — conversational AI, voice assistants and intelligent automation — and turn research into products with measurable user and business impact.
 
@@ -148,3 +148,10 @@ End-to-end AI & LLM systems; AI product & applications; On-premise AI; System ar
 - CHiME4-SER-Conv-TasNet-Speech-Enhancement: Conv-TasNet speech enhancement on CHiME-4 with ESPnet, used ahead of speech emotion recognition. https://github.com/JoesSattes/CHiME4-SER-Conv-TasNet-Speech-Enhancement
 - Vector-Database-Practice-Courses: Coursework notebooks on vector databases and semantic search. https://github.com/JoesSattes/Vector-Database-Practice-Courses
 - Thai-Biaffine-Dependency-Parsing: Biaffine dependency parser for Thai on Universal Dependencies treebanks. https://github.com/JoesSattes/Thai-Biaffine-Dependency-Parsing
+
+## Blog
+- [TurboQuant, reviewed: when a theory paper walks straight into production](https://joessattes.github.io/Sattaya-AI-Website/blog/turboquant-review/): A close read of TurboQuant (ICLR 2026): random rotations, Lloyd–Max codebooks and a 1-bit QJL residual, and why it went from proof to vLLM and a 17k-star vector index within weeks.
+- [Why emotion models fall apart outside the lab (and what actually helps)](https://joessattes.github.io/Sattaya-AI-Website/blog/emotion-models-outside-the-lab/): Speech emotion recognition looks solved on benchmarks and breaks on real calls. A researcher's tour of domain shift, speaker leakage, metric learning and self-supervised features.
+- [FinOps-Estimator: sizing GPUs for a voice AI pipeline](https://joessattes.github.io/Sattaya-AI-Website/blog/finops-estimator/): An open-source tool that turns concurrency and model choices for STT → LLM → TTS into VRAM, RAM, CPU, TFLOPS and cloud or on-prem cost.
+- [Fitting an LLM in your own server room: the memory math behind on-prem AI](https://joessattes.github.io/Sattaya-AI-Website/blog/on-prem-llm-memory-math/): Bits per weight, quantization error, outliers, KV cache and memory bandwidth: how to decide which model actually runs on the GPUs you own.
+- [Your MAU is not your load: capacity math for voice AI at scale](https://joessattes.github.io/Sattaya-AI-Website/blog/voice-ai-at-scale/): How to turn "a million users" into a latency budget, a concurrency number, KV-cache memory and a GPU count — with the formulas, not vibes.
