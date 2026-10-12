@@ -1,6 +1,6 @@
 # Sattaya Singkul (สัตยา สิงห์กุล)
 
-> Specialist Lead, AI Solution Engineer at True Digital Group, Bangkok, Thailand. AI engineer building voice assistants, LLM agents and speech systems that ship to production.
+> Specialist Lead, AI Solution Engineer at True Digital Group, Bangkok, Thailand. AI solution lead building end-to-end AI products — voice assistants, multi-agent LLMs and on-premise AI — that ship to production.
 
 AI engineer with 6+ years of experience building production-grade AI products with LLMs, NLP, voice, multi-agent and on-premise AI systems. I design and deploy end-to-end systems that serve large user bases — conversational AI, voice assistants and intelligent automation — and turn research into products with measurable user and business impact.
 
@@ -15,7 +15,7 @@ Contact: joeysattaya@hotmail.com
 ## Pages
 - [Home](https://joessattes.github.io/Sattaya-AI-Website/): profile, selected work, experience, research highlights
 - [Research](https://joessattes.github.io/Sattaya-AI-Website/research/): full publication list
-- [Notes](https://joessattes.github.io/Sattaya-AI-Website/blog/): blog
+- [Blog](https://joessattes.github.io/Sattaya-AI-Website/blog/): blog
 
 ## Experience
 ### Specialist (Lead), AI Solution & Platform — True Digital Group (full-time; May 2025 – Present)
@@ -131,7 +131,7 @@ Digitised paper records into a cloud ERP with Python and OCR; customer segmentat
 - Microsoft student volunteer, Microsoft Thailand (2017): Advised customers on Microsoft products.
 
 ## Strengths
-End-to-end AI & LLM systems; System architecture & engineering; Collaboration & leadership; AI product & applications; Data & AI infrastructure; AI product strategy; Conversational AI; AI evaluation & optimization; AI experimentation
+End-to-end AI & LLM systems; AI product & applications; On-premise AI; System architecture & engineering; AI product strategy; Data & AI infrastructure; Conversational AI; AI evaluation & optimization; AI experimentation; Collaboration & leadership
 
 ## Skills
 - LLM / GenAI: RAG, Multi-agent systems, Prompt engineering, LangChain, MCP, llama.cpp, vLLM
