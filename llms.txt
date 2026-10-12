@@ -1,0 +1,150 @@
+# Sattaya Singkul (สัตยา สิงห์กุล)
+
+> Specialist Lead, AI Solution Engineer at True Digital Group, Bangkok, Thailand. AI engineer building voice assistants, LLM agents and speech systems that ship to production.
+
+AI engineer with 6+ years of experience building production-grade AI products with LLMs, NLP, voice, multi-agent and on-premise AI systems. I design and deploy end-to-end systems that serve large user bases — conversational AI, voice assistants and intelligent automation — and turn research into products with measurable user and business impact.
+
+Contact: joeysattaya@hotmail.com
+- linkedin: https://www.linkedin.com/in/sattaya-singkul/
+- github: https://github.com/JoesSattes
+- scholar: https://scholar.google.com/citations?user=kJj-LQsAAAAJ
+- orcid: https://orcid.org/0000-0001-7335-7105
+- semanticScholar: https://www.semanticscholar.org/author/1455186557
+- huggingface: https://huggingface.co/JoesSattes
+
+## Pages
+- [Home](https://joessattes.github.io/Sattaya-AI-Website/): profile, selected work, experience, research highlights
+- [Research](https://joessattes.github.io/Sattaya-AI-Website/research/): full publication list
+- [Notes](https://joessattes.github.io/Sattaya-AI-Website/blog/): blog
+
+## Experience
+### Specialist (Lead), AI Solution & Platform — True Digital Group (full-time; May 2025 – Present)
+Technical AI lead for production voice and LLM systems on the TrueX platform.
+- Built and deployed a production AI voice assistant on a multi-agent architecture, serving 800K MAU and 2M+ downloads on TrueX.
+- Own end-to-end design of AI systems for large-scale users, from architecture to production rollout.
+- Designed LLM systems with RAG, memory and tool orchestration (MCP) for real-world interaction and IoT control.
+- Lead architecture integrating ASR, TTS, LLM reasoning, on-premise AI and real-time interaction pipelines.
+- Established evaluation frameworks for LLM systems covering performance, robustness and reliability.
+- Partner with product on AI features; mentor engineers and set technical direction for multi-agent work.
+- Author of 6 patents on RAG and AI agent systems (in the publishing process).
+
+### AI Research Engineer (advanced level) — KASIKORN Business-Technology Group (KBTG) (full-time; Feb 2022 – Apr 2025)
+Research-to-production NLP, speech and LLM systems for banking.
+- Step: Research Engineer B2 — Human-Computer Interaction Expert (Apr 2024 – Apr 2025)
+- Step: Research Engineer B1 — Voice Specialist (Feb 2022 – Apr 2024)
+- Built conversational AI that automates 80% of KBank's customer chat traffic, saving 300,000 customer hours.
+- Designed an LLM-based search and reasoning system covering 93% of call-center use cases.
+- Developed sentiment analysis, ASR, TTS and knowledge-retrieval pipelines across support, analytics and automation.
+- Presented AI solutions to technical, non-technical and executive audiences.
+- Presented 4 research papers at ACM, IEEE and Springer venues.
+
+### Research Assistant (NCR) — National Electronics and Computer Technology Center (NECTEC) (full-time; Jun 2020 – Dec 2020 · Jul 2021 – Dec 2021)
+Thai speech and NLP research in the Speech and Text Understanding lab.
+- Researched Thai speaker verification and diarization robust to noisy, reverberant audio (Kaldi, PyTorch).
+- Deployed Thai speaker-verification models to the 'AI for Thai' API platform.
+
+### Research Scientist — Synthesia (contract; Oct 2023 – Jul 2024)
+Research on AI-driven video synthesis and multimodal systems with international teams.
+
+### Product Owner — Thailand Mental Health Tech Discovery, Mahidol University (contract; Mar 2021 – Dec 2024)
+Led a team of 7 building AI health-tech that combines psychology and machine learning.
+- Delivered ~11 AI projects, including 'AI Care Avatar' and the 'Psyjai Dashboard'.
+- Built and tuned emotion-recognition models for health-tech products.
+
+### Data Scientist — Siam Commercial Bank (SCB) (contract; Jan 2020 – Jul 2020 · Jun 2021 – Nov 2021)
+Speech emotion recognition for call-center applications.
+
+### Speech/Audio AI Intern — Dolby Laboratories (internship; Jan 2021 – Jun 2021)
+Deep learning models for speech and audio processing in an international R&D team (Dolby U).
+
+### Research Assistant — Faculty of IT, KMITL — PRIP Lab (contract; Aug 2019 – Jan 2025)
+Computational linguistics and pattern-recognition research.
+
+### Research Engineer (intern) — KBTG — Super AI Engineer program (internship; Mar 2021 – May 2021)
+Deployed a QA search-engine service with Elasticsearch, PyTorch and TensorFlow.
+
+### Data Scientist (intern) — KBTG — Machine Learning Bootcamp (internship; Jun 2019 – Aug 2019)
+Thai dependency parsing with EDU segmentation for 'AI for Thai'. Best Progress & Popular Vote awards.
+
+### Data Research Analyst — Wisesight (internship; Jun 2018 – Mar 2019)
+Social-listening analytics with ZocialEye, Python and Tableau.
+
+### Digital Business Development Trainee — Village Farm Winery (internship; Jan 2018 – Jun 2018)
+Digitised paper records into a cloud ERP with Python and OCR; customer segmentation.
+
+## Selected AI products
+- Voice AI Assistant (TrueX · True Digital Group): 800K monthly active users. Multi-agent LLM with voice interaction for IoT control. Real-time interaction with memory and tool integration (MCP). 2M+ downloads on the TrueX platform.
+- PII Call-Center Blinding (Security compliance zone · 6 sites, Thailand): 2,300 call-hours per day on one RTX Pro 6000. Speaker-attributed transcription with PII masking for insurance call-center scripts. Large-model batch optimisation sized to run on a single GPU.
+- Chatbot Automation (KBank · KBTG): 80% of customer chat traffic automated. Saved 300,000 customer hours.
+- Call-Center AI System (KBank · KBTG): 93% of call-center use cases covered. LLM-based search and reasoning for agents.
+
+## Publications
+- 2025. "Optimizing Thai-English Spoken Question Answering Interaction for Open Environments with Limited Resources". International Conference on Document Analysis and Recognition (ICDAR 2025), Springer LNCS. Author position: 1st of 5. Rank A. https://doi.org/10.1007/978-3-032-04624-6_31
+- 2024. "Teacher-to-Teacher: Harmonizing Dual Expertise into a Unified Speech Emotion Model". IEEE International Conference on Systems, Man, and Cybernetics (SMC 2024). Author position: 1st of 3. Presenter · Rank B · HSRI-funded. https://doi.org/10.1109/SMC54092.2024.10830986
+- 2024. "An Enhanced Multimodal Negative Feedback Detection Framework with Target Retrieval in Thai Spoken Audio". IEEE International Conference on Multimedia and Expo Workshops (ICMEW 2024). Author position: 2nd of 7. Rank A (ICME). https://doi.org/10.1109/ICMEW63481.2024.10645364
+- 2024. "End-to-End Thai Text-to-Speech with Linguistic Unit". ACM International Conference on Multimedia Retrieval (ICMR 2024). Author position: 2nd of 4. Main track · Rank B. https://doi.org/10.1145/3652583.3658029
+- 2023. "Residual, Mixer, and Attention: The Three-way Combination for Streaming Wake Word Detection Framework". Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC 2023). Author position: 1st of 3. Presenter · Best Paper session. https://doi.org/10.1109/APSIPAASC58517.2023.10317514
+- 2022. "Real-Time End-to-End Speech Emotion Recognition with Cross-Domain Adaptation". Big Data and Cognitive Computing 6(3):79, MDPI. Author position: 2nd of 4. Q1 · Editor’s Choice. https://doi.org/10.3390/bdcc6030079
+- 2022. "Vector Learning Representation for Generalized Speech Emotion Recognition". Heliyon 8(3), Cell Press / Elsevier. Author position: 1st of 2. Q1. https://doi.org/10.1016/j.heliyon.2022.e09196
+- 2022. "Real-Time Thai Speech Emotion Recognition With Speech Enhancement Using Time-Domain Contrastive Predictive Coding and Conv-Tasnet". IEEE International Conference on Business and Industrial Research (ICBIR 2022). Author position: 4th of 4. Presenter. https://doi.org/10.1109/ICBIR54589.2022.9786444
+- 2020. "Deep Residual Local Feature Learning for Speech Emotion Recognition". International Conference on Neural Information Processing (ICONIP 2020), Springer LNCS. Author position: 1st of 4. Presenter · Rank A. https://doi.org/10.1007/978-3-030-63830-6_21
+- 2019. "Parsing Thai Social Data: A New Challenge for Thai NLP". International Joint Symposium on AI and NLP (iSAI-NLP 2019), IEEE. Author position: 1st of 5. https://doi.org/10.1109/iSAI-NLP48611.2019.9045639
+- 2019. "Thai Dependency Parsing with Character Embedding". International Conference on Information Technology and Electrical Engineering (ICITEE 2019), IEEE. Author position: 1st of 2. Presenter. https://doi.org/10.1109/ICITEED.2019.8930002
+- 2024. "Thai Financial Domain Adaptation of THaLLE". arXiv preprint 2411.18242 (KBTG Labs). Author position: Contributor (KBTG Labs team). https://arxiv.org/abs/2411.18242
+- Patents: 6 petty patents on RAG and AI agent systems (in the publishing process)
+- Funded project: Teacher-to-Teacher: Harmonizing Dual Expertise into a Unified Speech Emotion Model — Health Systems Research Institute (HSRI), Thailand (no. 65-075)
+- Funded project: Developing a Smart Practice Platform to Promote Learning in the New Normal — EdTech Fund Thailand (no. 7/2566)
+- Funded project: Real-Time End-to-End Speech Emotion Recognition with Cross-Domain Adaptation — Thammasat University Research Fund (TUFF19/2564, TUFF24/2565)
+
+## Education
+- Master's Degree in Information Technology, King Mongkut's Institute of Technology Ladkrabang (KMITL) (2019 – 2025), GPA 4.00. Outstanding Oral Defense Award; Innovator's Promising with Honor Scholarship. Thesis: Verify-to-Classify: A Separation Learning for Generalized Speech Emotion Recognition.
+- Bachelor's Degree in Information Technology, King Mongkut's Institute of Technology Ladkrabang (KMITL) (2016 – 2020), GPA 3.74. First-Class Honors; Business Intelligence program.
+
+## Honours
+- Outstanding Project Recognition — True / CP Group
+- Star Award 2025 — Team Award — KBTG (2025)
+- Star Award 2024 — Outstanding Award — KBTG (2024)
+- Bronze Medal, Super AI Engineer — AIAT Thailand (2020)
+- Multiple awards, Super AI Engineer — top 5–10 of 2,059 candidates — AIAT Thailand (2020)
+- Winner, Thai ASR Hackathon — NECTEC · Super AI Engineer (2020)
+- Top 3, IRPC Hackathon — Super AI / IRPC (2020)
+- Top 5, DENSO LASI Hackathon — Super AI / DENSO (2020)
+- Best Progress & Effort Award; Popular Vote Award — KBTG Machine Learning Bootcamp (2019)
+- Thailand representative, CIMB 3D Conquest (coding track, Singapore) — CIMB (2018)
+- Winner, Cyfence Cybercop Contest — CAT Telecom (2016)
+
+## Certificates
+- Google AI Professional
+- Google DeepMind — AI Research Foundations (path series)
+- Google DeepMind — Train a Small Language Model (advanced skill)
+- Google — MLOps for Generative AI
+- Microsoft DAT210x — Programming with Python for Data Science
+- Chulalongkorn University — IT Security; Intro to Data Analytics and Big Data
+
+## Service
+- Technical program committee & reviewer, IEEE Access, ACM TALLIP, IJEECS · IEEE ICITEE 2025, Springer ICONIP 2025, ACM ICMR 2024 (2021 – present): Reviewing NLP, audio and vision research.
+- AI technical committee & teaching assistant, AIAT — Super AI Engineer, seasons 2–5 (2022 – 2025): Mentored teams on Thai NLP, speech and LLMs; several went on to win hackathons and team awards.
+- Guest lecturer, Huachiew Chalermprakiet University (2022 – 2025): AI futures, speech recognition, image processing and AI frameworks for undergraduates.
+- Head of Data Science Camp, IT Camp #14, KMITL (2018): Planned the camp and taught data preparation and modelling.
+- Teaching director & lecturer, ToBeIT60, KMITL (2016): Taught IT topics to ~500 high-school students.
+- Student exchange researcher, Kurume National College of Technology, Japan (SAKURA Exchange) (2017): Short-term science research exchange.
+- Microsoft student volunteer, Microsoft Thailand (2017): Advised customers on Microsoft products.
+
+## Strengths
+End-to-end AI & LLM systems; System architecture & engineering; Collaboration & leadership; AI product & applications; Data & AI infrastructure; AI product strategy; Conversational AI; AI evaluation & optimization; AI experimentation
+
+## Skills
+- LLM / GenAI: RAG, Multi-agent systems, Prompt engineering, LangChain, MCP, llama.cpp, vLLM
+- AI / ML: NLP, Speech processing, PyTorch, TensorFlow, NeMo, Hugging Face, Quantization
+- GenOps: FastAPI, Docker, CI/CD, ONNX, Streaming inference, Observability
+- Programming: Python, SQL, JavaScript, Rust
+- Cloud: GCP Vertex AI, Secret Manager, Apigee
+- Languages: Thai (Native), English (CEFR B1 · professional working proficiency)
+
+## Open source
+- FinOps-Estimator: Capacity planning and FinOps estimation for conversational-AI pipelines: VRAM, latency budgets and GPU cost for STT, LLM, TTS and RAG workloads. https://github.com/JoesSattes/FinOps-Estimator
+- Thai-TTS-Evaluation: Evaluation scripts for Thai text-to-speech, focused on speaker tone and pronunciation. https://github.com/JoesSattes/Thai-TTS-Evaluation
+- Self-Supervised-LTMMv2: LTMMv2 — notes on a self-supervised Thai speech foundation model. https://github.com/JoesSattes/Self-Supervised-LTMMv2
+- CHiME4-SER-Conv-TasNet-Speech-Enhancement: Conv-TasNet speech enhancement on CHiME-4 with ESPnet, used ahead of speech emotion recognition. https://github.com/JoesSattes/CHiME4-SER-Conv-TasNet-Speech-Enhancement
+- Vector-Database-Practice-Courses: Coursework notebooks on vector databases and semantic search. https://github.com/JoesSattes/Vector-Database-Practice-Courses
+- Thai-Biaffine-Dependency-Parsing: Biaffine dependency parser for Thai on Universal Dependencies treebanks. https://github.com/JoesSattes/Thai-Biaffine-Dependency-Parsing
