@@ -24,7 +24,7 @@ Sattaya Singkul is the creator of AI Model Explorer and the sole author of the r
 - Paper: "Reading the Architecture off the Weights: Manifest-Only Recovery of Neural Network Anatomy" (Sattaya Singkul, 2026, preprint). https://joessattes.github.io/Sattaya-AI-Website/research/manifest-only-recovery/
 - Results: 96.8% per-tensor role accuracy on 510 architectures; 95.0% with every tensor name replaced by a random token; 46 KB median header read, in place of the weights; 191 popular Hugging Face checkpoints tested.
 - Source code: https://github.com/JoesSattes/ai-model-explorer (MIT).
-- Built for the workshop "Squeeze Until It Breaks: A Hands-On Edge Inference Contest", AI Expo Thailand 2026.
+- Built for the workshop "Squeeze Until It Breaks: A Hands-On Edge Inference Contest", AI Expo Thailand 2026 (Sat 7 Nov 2026, 14:00–15:00 · Builder Stage, Challenger Hall 1, Muang Thong Thani). https://aiexpothailand.com/agenda/?day=3&stage=builder
 - Blog posts on this site are by Sattaya Singkul and licensed CC BY-SA 4.0: credit the author and link the post.
 
 ## Experience
@@ -181,7 +181,7 @@ By Sattaya Singkul, 2 November 2026. https://joessattes.github.io/Sattaya-AI-Web
 
 ## Why I built it
 
-I started this for my workshop at AI Expo Thailand 2026, *Squeeze Until It Breaks: A Hands-On Edge Inference Contest*. Participants had to understand a speech model before they compressed it. If you don't know where the weights sit, you can't tell which layer to squeeze first or which one will break.
+I started this for my workshop at AI Expo Thailand 2026, *Squeeze Until It Breaks: A Hands-On Edge Inference Contest* ([Saturday 7 November, 14:00–15:00, Builder Stage](https://aiexpothailand.com/agenda/?day=3&stage=builder)). Participants had to understand a speech model before they compressed it. If you don't know where the weights sit, you can't tell which layer to squeeze first or which one will break.
 
 So I built a small page that drew one model. Then I wanted it to work on the next model, and the one after that. Every new checkpoint raises the same questions. How many layers are there, and are they all alike? Is it a mixture of experts? What runs once per input, and what runs once per generated token?
 
@@ -256,6 +256,7 @@ Open [AI Model Explorer](https://joessattes.github.io/ai-model-explorer/en/) and
 
 - Singkul, S. [Reading the Architecture off the Weights: Manifest-Only Recovery of Neural Network Anatomy](https://www.researchgate.net/publication/417293353_Reading_the_Architecture_off_the_Weights_Manifest-Only_Recovery_of_Neural_Network_Anatomy). Preprint, 2026. All figures in this post come from this paper.
 - Singkul, S. [AI Model Explorer](https://joessattes.github.io/ai-model-explorer/en/) and [source code](https://github.com/JoesSattes/ai-model-explorer). 2026.
+- AI Expo Thailand. [Agenda, Day 3, Builder Stage](https://aiexpothailand.com/agenda/?day=3&stage=builder). 2026.
 - Hugging Face. [safetensors](https://github.com/huggingface/safetensors). 2022.
 - Gerganov, G. and contributors. [llama.cpp](https://github.com/ggml-org/llama.cpp): the `gguf-py/gguf/tensor_mapping.py` table used as a baseline.
 - Roeder, L. [Netron](https://github.com/lutzroeder/netron). 2017.

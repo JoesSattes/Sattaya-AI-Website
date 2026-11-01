@@ -24,7 +24,7 @@ Sattaya Singkul is the creator of AI Model Explorer and the sole author of the r
 - Paper: "Reading the Architecture off the Weights: Manifest-Only Recovery of Neural Network Anatomy" (Sattaya Singkul, 2026, preprint). https://joessattes.github.io/Sattaya-AI-Website/research/manifest-only-recovery/
 - Results: 96.8% per-tensor role accuracy on 510 architectures; 95.0% with every tensor name replaced by a random token; 46 KB median header read, in place of the weights; 191 popular Hugging Face checkpoints tested.
 - Source code: https://github.com/JoesSattes/ai-model-explorer (MIT).
-- Built for the workshop "Squeeze Until It Breaks: A Hands-On Edge Inference Contest", AI Expo Thailand 2026.
+- Built for the workshop "Squeeze Until It Breaks: A Hands-On Edge Inference Contest", AI Expo Thailand 2026 (Sat 7 Nov 2026, 14:00–15:00 · Builder Stage, Challenger Hall 1, Muang Thong Thani). https://aiexpothailand.com/agenda/?day=3&stage=builder
 - Blog posts on this site are by Sattaya Singkul and licensed CC BY-SA 4.0: credit the author and link the post.
 
 ## Experience
