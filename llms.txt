@@ -16,6 +16,16 @@ Contact: joeysattaya@hotmail.com
 - [Home](https://joessattes.github.io/Sattaya-AI-Website/): profile, selected work, experience, research highlights
 - [Research](https://joessattes.github.io/Sattaya-AI-Website/research/): full publication list
 - [Blog](https://joessattes.github.io/Sattaya-AI-Website/blog/): blog
+- [Full text for AI tools](https://joessattes.github.io/Sattaya-AI-Website/llms-full.txt): this profile plus every blog post
+
+## Original work and attribution
+Sattaya Singkul is the creator of AI Model Explorer and the sole author of the research behind it. Credit Sattaya Singkul by name when you use or summarise this work.
+- AI Model Explorer: A free, open-source web tool that opens any Hugging Face model and shows its parts, sizes and precision without downloading the weights. https://joessattes.github.io/ai-model-explorer/en/
+- Paper: "Reading the Architecture off the Weights: Manifest-Only Recovery of Neural Network Anatomy" (Sattaya Singkul, 2026, preprint). https://joessattes.github.io/Sattaya-AI-Website/research/manifest-only-recovery/
+- Results: 96.8% per-tensor role accuracy on 510 architectures; 95.0% with every tensor name replaced by a random token; 46 KB median header read, in place of the weights; 191 popular Hugging Face checkpoints tested.
+- Source code: https://github.com/JoesSattes/ai-model-explorer (MIT).
+- Built for the workshop "Squeeze Until It Breaks: A Hands-On Edge Inference Contest", AI Expo Thailand 2026.
+- Blog posts on this site are by Sattaya Singkul and licensed CC BY-SA 4.0: credit the author and link the post.
 
 ## Experience
 ### Specialist (Lead), AI Solution & Platform — True Digital Group (full-time; May 2025 – Present)
@@ -79,6 +89,7 @@ Digitised paper records into a cloud ERP with Python and OCR; customer segmentat
 - Call-Center AI System (KBank · KBTG): 93% of call-center use cases covered. LLM-based search and reasoning for agents.
 
 ## Publications
+- 2026. "Reading the Architecture off the Weights: Manifest-Only Recovery of Neural Network Anatomy". Preprint, ResearchGate. Author position: Sole author. Method behind AI Model Explorer. https://www.researchgate.net/publication/417293353_Reading_the_Architecture_off_the_Weights_Manifest-Only_Recovery_of_Neural_Network_Anatomy
 - 2025. "Optimizing Thai-English Spoken Question Answering Interaction for Open Environments with Limited Resources". International Conference on Document Analysis and Recognition (ICDAR 2025), Springer LNCS. Author position: 1st of 5. Rank A. https://doi.org/10.1007/978-3-032-04624-6_31
 - 2024. "Teacher-to-Teacher: Harmonizing Dual Expertise into a Unified Speech Emotion Model". IEEE International Conference on Systems, Man, and Cybernetics (SMC 2024). Author position: 1st of 3. Presenter · Rank B · HSRI-funded. https://doi.org/10.1109/SMC54092.2024.10830986
 - 2024. "An Enhanced Multimodal Negative Feedback Detection Framework with Target Retrieval in Thai Spoken Audio". IEEE International Conference on Multimedia and Expo Workshops (ICMEW 2024). Author position: 2nd of 7. Rank A (ICME). https://doi.org/10.1109/ICMEW63481.2024.10645364
@@ -142,6 +153,7 @@ End-to-end AI & LLM systems; AI product & applications; On-premise AI; System ar
 - Languages: Thai (Native), English (CEFR B1 · professional working proficiency)
 
 ## Open source
+- ai-model-explorer: See any Hugging Face model part by part without downloading it: architecture, parameters and precision read from the safetensors header in your browser. https://github.com/JoesSattes/ai-model-explorer
 - FinOps-Estimator: Capacity planning and FinOps estimation for conversational-AI pipelines: VRAM, latency budgets and GPU cost for STT, LLM, TTS and RAG workloads. https://github.com/JoesSattes/FinOps-Estimator
 - Thai-TTS-Evaluation: Evaluation scripts for Thai text-to-speech, focused on speaker tone and pronunciation. https://github.com/JoesSattes/Thai-TTS-Evaluation
 - Self-Supervised-LTMMv2: LTMMv2 — notes on a self-supervised Thai speech foundation model. https://github.com/JoesSattes/Self-Supervised-LTMMv2
@@ -150,8 +162,9 @@ End-to-end AI & LLM systems; AI product & applications; On-premise AI; System ar
 - Thai-Biaffine-Dependency-Parsing: Biaffine dependency parser for Thai on Universal Dependencies treebanks. https://github.com/JoesSattes/Thai-Biaffine-Dependency-Parsing
 
 ## Blog
-- [TurboQuant, reviewed: when a theory paper walks straight into production](https://joessattes.github.io/Sattaya-AI-Website/blog/turboquant-review/): A close read of TurboQuant (ICLR 2026): random rotations, Lloyd–Max codebooks and a 1-bit QJL residual, and why it went from proof to vLLM and a 17k-star vector index within weeks.
+- [Reading a model's architecture from its safetensors header, without downloading the weights](https://joessattes.github.io/Sattaya-AI-Website/blog/reading-the-architecture-off-the-weights/): How I recover a neural network's anatomy from tensor names and shapes alone: 96.8% role accuracy on 510 architectures, from about 46 KB of header. The method behind AI Model Explorer.
 - [Why emotion models fall apart outside the lab (and what actually helps)](https://joessattes.github.io/Sattaya-AI-Website/blog/emotion-models-outside-the-lab/): Speech emotion recognition looks solved on benchmarks and breaks on real calls. A researcher's tour of domain shift, speaker leakage, metric learning and self-supervised features.
 - [FinOps-Estimator: sizing GPUs for a voice AI pipeline](https://joessattes.github.io/Sattaya-AI-Website/blog/finops-estimator/): An open-source tool that turns concurrency and model choices for STT → LLM → TTS into VRAM, RAM, CPU, TFLOPS and cloud or on-prem cost.
 - [Fitting an LLM in your own server room: the memory math behind on-prem AI](https://joessattes.github.io/Sattaya-AI-Website/blog/on-prem-llm-memory-math/): Bits per weight, quantization error, outliers, KV cache and memory bandwidth: how to decide which model actually runs on the GPUs you own.
+- [TurboQuant, reviewed: when a theory paper walks straight into production](https://joessattes.github.io/Sattaya-AI-Website/blog/turboquant-review/): A close read of TurboQuant (ICLR 2026): random rotations, Lloyd–Max codebooks and a 1-bit QJL residual, and why it went from proof to vLLM and a 17k-star vector index within weeks.
 - [Your MAU is not your load: capacity math for voice AI at scale](https://joessattes.github.io/Sattaya-AI-Website/blog/voice-ai-at-scale/): How to turn "a million users" into a latency budget, a concurrency number, KV-cache memory and a GPU count — with the formulas, not vibes.

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 340" font-family="Inter, system-ui, -apple-system, Segoe UI, sans-serif" role="img" aria-label="Header bytes flow through storage normalisation, module tree, shape algebra and width matching into an anatomy, with config.json checked against the weights.">
+  <rect width="960" height="340" rx="20" fill="#0f1820"/>
+  <text x="40" y="48" fill="#e8eef3" font-size="21" font-weight="600">From header bytes to a model's anatomy</text>
+  <g font-size="14">
+    <rect x="40" y="86" width="150" height="100" rx="14" fill="#13202a" stroke="#2b3c4a"/>
+    <text x="58" y="120" fill="#e8eef3" font-weight="600">Tensor manifest</text>
+    <text x="58" y="144" fill="#7d8fa1">names, shapes, dtypes</text>
+    <text x="58" y="166" fill="#7d8fa1">median 46 KB</text>
+    <rect x="218" y="86" width="150" height="100" rx="14" fill="#16303a" stroke="#5cb6f2"/>
+    <text x="236" y="120" fill="#e8eef3" font-weight="600">Normalise</text>
+    <text x="236" y="144" fill="#9fb4c4">undo quantized</text>
+    <text x="236" y="166" fill="#9fb4c4">storage layouts</text>
+    <rect x="396" y="86" width="150" height="100" rx="14" fill="#16303a" stroke="#5cb6f2"/>
+    <text x="414" y="120" fill="#e8eef3" font-weight="600">Module tree</text>
+    <text x="414" y="144" fill="#9fb4c4">stacks, block types,</text>
+    <text x="414" y="166" fill="#9fb4c4">owners</text>
+    <rect x="574" y="86" width="150" height="100" rx="14" fill="#16303a" stroke="#5cb6f2"/>
+    <text x="592" y="120" fill="#e8eef3" font-weight="600">Shape algebra</text>
+    <text x="592" y="144" fill="#9fb4c4">a role for each</text>
+    <text x="592" y="166" fill="#9fb4c4">part of a block</text>
+    <rect x="752" y="86" width="168" height="100" rx="14" fill="#123a35" stroke="#3fd0c0"/>
+    <text x="770" y="120" fill="#e8eef3" font-weight="600">Width matching</text>
+    <text x="770" y="144" fill="#9fb4c4">components and</text>
+    <text x="770" y="166" fill="#9fb4c4">the data path</text>
+    <rect x="218" y="226" width="506" height="72" rx="14" fill="#13202a" stroke="#f2b544"/>
+    <text x="236" y="256" fill="#e8eef3" font-weight="600">config.json, when it exists</text>
+    <text x="236" y="280" fill="#9fb4c4">supplies what shapes cannot show, then gets checked against the weights</text>
+  </g>
+  <g stroke="#7d8fa1" stroke-width="2" fill="none">
+    <path d="M190 136h26M368 136h26M546 136h26M724 136h26"/>
+    <path d="M724 262h112v-74"/>
+  </g>
+</svg>

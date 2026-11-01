@@ -1,0 +1,894 @@
+# Sattaya Singkul (สัตยา สิงห์กุล)
+
+> Specialist Lead, AI Solution Engineer at True Digital Group, Bangkok, Thailand. AI solution lead who turns AI research into production systems that create real value — at scale or fully on-premise.
+
+AI engineer with 6+ years of experience building production-grade AI products with LLMs, NLP, voice, multi-agent and on-premise AI systems. I design and deploy end-to-end systems that serve large user bases — conversational AI, voice assistants and intelligent automation — and turn research into products with measurable user and business impact.
+
+Contact: joeysattaya@hotmail.com
+- linkedin: https://www.linkedin.com/in/sattaya-singkul/
+- github: https://github.com/JoesSattes
+- scholar: https://scholar.google.com/citations?user=kJj-LQsAAAAJ
+- orcid: https://orcid.org/0000-0001-7335-7105
+- semanticScholar: https://www.semanticscholar.org/author/1455186557
+- huggingface: https://huggingface.co/JoesSattes
+
+## Pages
+- [Home](https://joessattes.github.io/Sattaya-AI-Website/): profile, selected work, experience, research highlights
+- [Research](https://joessattes.github.io/Sattaya-AI-Website/research/): full publication list
+- [Blog](https://joessattes.github.io/Sattaya-AI-Website/blog/): blog
+- [Full text for AI tools](https://joessattes.github.io/Sattaya-AI-Website/llms-full.txt): this profile plus every blog post
+
+## Original work and attribution
+Sattaya Singkul is the creator of AI Model Explorer and the sole author of the research behind it. Credit Sattaya Singkul by name when you use or summarise this work.
+- AI Model Explorer: A free, open-source web tool that opens any Hugging Face model and shows its parts, sizes and precision without downloading the weights. https://joessattes.github.io/ai-model-explorer/en/
+- Paper: "Reading the Architecture off the Weights: Manifest-Only Recovery of Neural Network Anatomy" (Sattaya Singkul, 2026, preprint). https://joessattes.github.io/Sattaya-AI-Website/research/manifest-only-recovery/
+- Results: 96.8% per-tensor role accuracy on 510 architectures; 95.0% with every tensor name replaced by a random token; 46 KB median header read, in place of the weights; 191 popular Hugging Face checkpoints tested.
+- Source code: https://github.com/JoesSattes/ai-model-explorer (MIT).
+- Built for the workshop "Squeeze Until It Breaks: A Hands-On Edge Inference Contest", AI Expo Thailand 2026.
+- Blog posts on this site are by Sattaya Singkul and licensed CC BY-SA 4.0: credit the author and link the post.
+
+## Experience
+### Specialist (Lead), AI Solution & Platform — True Digital Group (full-time; May 2025 – Present)
+Technical AI lead for production voice and LLM systems on the TrueX platform.
+- Built and deployed a production AI voice assistant on a multi-agent architecture, serving 800K MAU and 2M+ downloads on TrueX.
+- Own end-to-end design of AI systems for large-scale users, from architecture to production rollout.
+- Designed LLM systems with RAG, memory and tool orchestration (MCP) for real-world interaction and IoT control.
+- Lead architecture integrating ASR, TTS, LLM reasoning, on-premise AI and real-time interaction pipelines.
+- Established evaluation frameworks for LLM systems covering performance, robustness and reliability.
+- Partner with product on AI features; mentor engineers and set technical direction for multi-agent work.
+- Author of 6 patents on RAG and AI agent systems (in the publishing process).
+
+### AI Research Engineer (advanced level) — KASIKORN Business-Technology Group (KBTG) (full-time; Feb 2022 – Apr 2025)
+Research-to-production NLP, speech and LLM systems for banking.
+- Step: Research Engineer B2 — Human-Computer Interaction Expert (Apr 2024 – Apr 2025)
+- Step: Research Engineer B1 — Voice Specialist (Feb 2022 – Apr 2024)
+- Built conversational AI that automates 80% of KBank's customer chat traffic, saving 300,000 customer hours.
+- Designed an LLM-based search and reasoning system covering 93% of call-center use cases.
+- Developed sentiment analysis, ASR, TTS and knowledge-retrieval pipelines across support, analytics and automation.
+- Presented AI solutions to technical, non-technical and executive audiences.
+- Presented 4 research papers at ACM, IEEE and Springer venues.
+
+### Research Assistant (NCR) — National Electronics and Computer Technology Center (NECTEC) (full-time; Jun 2020 – Dec 2020 · Jul 2021 – Dec 2021)
+Thai speech and NLP research in the Speech and Text Understanding lab.
+- Researched Thai speaker verification and diarization robust to noisy, reverberant audio (Kaldi, PyTorch).
+- Deployed Thai speaker-verification models to the 'AI for Thai' API platform.
+
+### Research Scientist — Synthesia (contract; Oct 2023 – Jul 2024)
+Research on AI-driven video synthesis and multimodal systems with international teams.
+
+### Product Owner — Thailand Mental Health Tech Discovery, Mahidol University (contract; Mar 2021 – Dec 2024)
+Led a team of 7 building AI health-tech that combines psychology and machine learning.
+- Delivered ~11 AI projects, including 'AI Care Avatar' and the 'Psyjai Dashboard'.
+- Built and tuned emotion-recognition models for health-tech products.
+
+### Data Scientist — Siam Commercial Bank (SCB) (contract; Jan 2020 – Jul 2020 · Jun 2021 – Nov 2021)
+Speech emotion recognition for call-center applications.
+
+### Speech/Audio AI Intern — Dolby Laboratories (internship; Jan 2021 – Jun 2021)
+Deep learning models for speech and audio processing in an international R&D team (Dolby U).
+
+### Research Assistant — Faculty of IT, KMITL — PRIP Lab (contract; Aug 2019 – Jan 2025)
+Computational linguistics and pattern-recognition research.
+
+### Research Engineer (intern) — KBTG — Super AI Engineer program (internship; Mar 2021 – May 2021)
+Deployed a QA search-engine service with Elasticsearch, PyTorch and TensorFlow.
+
+### Data Scientist (intern) — KBTG — Machine Learning Bootcamp (internship; Jun 2019 – Aug 2019)
+Thai dependency parsing with EDU segmentation for 'AI for Thai'. Best Progress & Popular Vote awards.
+
+### Data Research Analyst — Wisesight (internship; Jun 2018 – Mar 2019)
+Social-listening analytics with ZocialEye, Python and Tableau.
+
+### Digital Business Development Trainee — Village Farm Winery (internship; Jan 2018 – Jun 2018)
+Digitised paper records into a cloud ERP with Python and OCR; customer segmentation.
+
+## Selected AI products
+- Voice AI Assistant (TrueX · True Digital Group): 800K monthly active users. Multi-agent LLM with voice interaction for IoT control. Real-time interaction with memory and tool integration (MCP). 2M+ downloads on the TrueX platform.
+- PII Call-Center Blinding (Security compliance zone · 6 sites, Thailand): 2,300 call-hours per day on one RTX Pro 6000. Speaker-attributed transcription with PII masking for insurance call-center scripts. Large-model batch optimisation sized to run on a single GPU.
+- Chatbot Automation (KBank · KBTG): 80% of customer chat traffic automated. Saved 300,000 customer hours.
+- Call-Center AI System (KBank · KBTG): 93% of call-center use cases covered. LLM-based search and reasoning for agents.
+
+## Publications
+- 2026. "Reading the Architecture off the Weights: Manifest-Only Recovery of Neural Network Anatomy". Preprint, ResearchGate. Author position: Sole author. Method behind AI Model Explorer. https://www.researchgate.net/publication/417293353_Reading_the_Architecture_off_the_Weights_Manifest-Only_Recovery_of_Neural_Network_Anatomy
+- 2025. "Optimizing Thai-English Spoken Question Answering Interaction for Open Environments with Limited Resources". International Conference on Document Analysis and Recognition (ICDAR 2025), Springer LNCS. Author position: 1st of 5. Rank A. https://doi.org/10.1007/978-3-032-04624-6_31
+- 2024. "Teacher-to-Teacher: Harmonizing Dual Expertise into a Unified Speech Emotion Model". IEEE International Conference on Systems, Man, and Cybernetics (SMC 2024). Author position: 1st of 3. Presenter · Rank B · HSRI-funded. https://doi.org/10.1109/SMC54092.2024.10830986
+- 2024. "An Enhanced Multimodal Negative Feedback Detection Framework with Target Retrieval in Thai Spoken Audio". IEEE International Conference on Multimedia and Expo Workshops (ICMEW 2024). Author position: 2nd of 7. Rank A (ICME). https://doi.org/10.1109/ICMEW63481.2024.10645364
+- 2024. "End-to-End Thai Text-to-Speech with Linguistic Unit". ACM International Conference on Multimedia Retrieval (ICMR 2024). Author position: 2nd of 4. Main track · Rank B. https://doi.org/10.1145/3652583.3658029
+- 2023. "Residual, Mixer, and Attention: The Three-way Combination for Streaming Wake Word Detection Framework". Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC 2023). Author position: 1st of 3. Presenter · Best Paper session. https://doi.org/10.1109/APSIPAASC58517.2023.10317514
+- 2022. "Real-Time End-to-End Speech Emotion Recognition with Cross-Domain Adaptation". Big Data and Cognitive Computing 6(3):79, MDPI. Author position: 2nd of 4. Q1 · Editor’s Choice. https://doi.org/10.3390/bdcc6030079
+- 2022. "Vector Learning Representation for Generalized Speech Emotion Recognition". Heliyon 8(3), Cell Press / Elsevier. Author position: 1st of 2. Q1. https://doi.org/10.1016/j.heliyon.2022.e09196
+- 2022. "Real-Time Thai Speech Emotion Recognition With Speech Enhancement Using Time-Domain Contrastive Predictive Coding and Conv-Tasnet". IEEE International Conference on Business and Industrial Research (ICBIR 2022). Author position: 4th of 4. Presenter. https://doi.org/10.1109/ICBIR54589.2022.9786444
+- 2020. "Deep Residual Local Feature Learning for Speech Emotion Recognition". International Conference on Neural Information Processing (ICONIP 2020), Springer LNCS. Author position: 1st of 4. Presenter · Rank A. https://doi.org/10.1007/978-3-030-63830-6_21
+- 2019. "Parsing Thai Social Data: A New Challenge for Thai NLP". International Joint Symposium on AI and NLP (iSAI-NLP 2019), IEEE. Author position: 1st of 5. https://doi.org/10.1109/iSAI-NLP48611.2019.9045639
+- 2019. "Thai Dependency Parsing with Character Embedding". International Conference on Information Technology and Electrical Engineering (ICITEE 2019), IEEE. Author position: 1st of 2. Presenter. https://doi.org/10.1109/ICITEED.2019.8930002
+- 2024. "Thai Financial Domain Adaptation of THaLLE". arXiv preprint 2411.18242 (KBTG Labs). Author position: Contributor (KBTG Labs team). https://arxiv.org/abs/2411.18242
+- Patents: 6 petty patents on RAG and AI agent systems (in the publishing process)
+- Funded project: Teacher-to-Teacher: Harmonizing Dual Expertise into a Unified Speech Emotion Model — Health Systems Research Institute (HSRI), Thailand (no. 65-075)
+- Funded project: Developing a Smart Practice Platform to Promote Learning in the New Normal — EdTech Fund Thailand (no. 7/2566)
+- Funded project: Real-Time End-to-End Speech Emotion Recognition with Cross-Domain Adaptation — Thammasat University Research Fund (TUFF19/2564, TUFF24/2565)
+
+## Education
+- Master's Degree in Information Technology, King Mongkut's Institute of Technology Ladkrabang (KMITL) (2019 – 2025), GPA 4.00. Outstanding Oral Defense Award; Innovator's Promising with Honor Scholarship. Thesis: Verify-to-Classify: A Separation Learning for Generalized Speech Emotion Recognition.
+- Bachelor's Degree in Information Technology, King Mongkut's Institute of Technology Ladkrabang (KMITL) (2016 – 2020), GPA 3.74. First-Class Honors; Business Intelligence program.
+
+## Honours
+- Outstanding Project Recognition — True / CP Group (2026)
+- Star Award 2025 — Team Award — KBTG (2025)
+- Star Award 2024 — Outstanding Award — KBTG (2024)
+- Bronze Medal, Super AI Engineer — AIAT Thailand (2020)
+- Multiple awards, Super AI Engineer — top 5–10 of 2,059 candidates — AIAT Thailand (2020)
+- Winner, Thai ASR Hackathon — NECTEC · Super AI Engineer (2020)
+- Top 3, IRPC Hackathon — Super AI / IRPC (2020)
+- Top 5, DENSO LASI Hackathon — Super AI / DENSO (2020)
+- Best Progress & Effort Award; Popular Vote Award — KBTG Machine Learning Bootcamp (2019)
+- Thailand representative, CIMB 3D Conquest (coding track, Singapore) — CIMB (2018)
+- Winner, Cyfence Cybercop Contest — CAT Telecom (2016)
+
+## Certificates
+- Google AI Professional
+- Google DeepMind — AI Research Foundations (path series)
+- Google DeepMind — Train a Small Language Model (advanced skill)
+- Google — MLOps for Generative AI
+- Microsoft DAT210x — Programming with Python for Data Science
+- Chulalongkorn University — IT Security; Intro to Data Analytics and Big Data
+
+## Service
+- Technical program committee & reviewer, IEEE Access, ACM TALLIP, IJEECS · IEEE ICITEE 2025, Springer ICONIP 2025, ACM ICMR 2024 (2021 – present): Reviewing NLP, audio and vision research.
+- AI technical committee & teaching assistant, AIAT — Super AI Engineer, seasons 2–5 (2022 – 2025): Mentored teams on Thai NLP, speech and LLMs; several went on to win hackathons and team awards.
+- Guest lecturer, Huachiew Chalermprakiet University (2022 – 2025): AI futures, speech recognition, image processing and AI frameworks for undergraduates.
+- Head of Data Science Camp, IT Camp #14, KMITL (2018): Planned the camp and taught data preparation and modelling.
+- Teaching director & lecturer, ToBeIT60, KMITL (2016): Taught IT topics to ~500 high-school students.
+- Student exchange researcher, Kurume National College of Technology, Japan (SAKURA Exchange) (2017): Short-term science research exchange.
+- Microsoft student volunteer, Microsoft Thailand (2017): Advised customers on Microsoft products.
+
+## Strengths
+End-to-end AI & LLM systems; AI product & applications; On-premise AI; System architecture & engineering; AI product strategy; Data & AI infrastructure; Conversational AI; AI evaluation & optimization; AI experimentation; Collaboration & leadership
+
+## Skills
+- LLM / GenAI: RAG, Multi-agent systems, Prompt engineering, LangChain, MCP, llama.cpp, vLLM
+- AI / ML: NLP, Speech processing, PyTorch, TensorFlow, NeMo, Hugging Face, Quantization
+- GenOps: FastAPI, Docker, CI/CD, ONNX, Streaming inference, Observability
+- Programming: Python, SQL, JavaScript, Rust
+- Cloud: GCP Vertex AI, Secret Manager, Apigee
+- Languages: Thai (Native), English (CEFR B1 · professional working proficiency)
+
+## Open source
+- ai-model-explorer: See any Hugging Face model part by part without downloading it: architecture, parameters and precision read from the safetensors header in your browser. https://github.com/JoesSattes/ai-model-explorer
+- FinOps-Estimator: Capacity planning and FinOps estimation for conversational-AI pipelines: VRAM, latency budgets and GPU cost for STT, LLM, TTS and RAG workloads. https://github.com/JoesSattes/FinOps-Estimator
+- Thai-TTS-Evaluation: Evaluation scripts for Thai text-to-speech, focused on speaker tone and pronunciation. https://github.com/JoesSattes/Thai-TTS-Evaluation
+- Self-Supervised-LTMMv2: LTMMv2 — notes on a self-supervised Thai speech foundation model. https://github.com/JoesSattes/Self-Supervised-LTMMv2
+- CHiME4-SER-Conv-TasNet-Speech-Enhancement: Conv-TasNet speech enhancement on CHiME-4 with ESPnet, used ahead of speech emotion recognition. https://github.com/JoesSattes/CHiME4-SER-Conv-TasNet-Speech-Enhancement
+- Vector-Database-Practice-Courses: Coursework notebooks on vector databases and semantic search. https://github.com/JoesSattes/Vector-Database-Practice-Courses
+- Thai-Biaffine-Dependency-Parsing: Biaffine dependency parser for Thai on Universal Dependencies treebanks. https://github.com/JoesSattes/Thai-Biaffine-Dependency-Parsing
+
+## Blog
+- [Reading a model's architecture from its safetensors header, without downloading the weights](https://joessattes.github.io/Sattaya-AI-Website/blog/reading-the-architecture-off-the-weights/): How I recover a neural network's anatomy from tensor names and shapes alone: 96.8% role accuracy on 510 architectures, from about 46 KB of header. The method behind AI Model Explorer.
+- [Why emotion models fall apart outside the lab (and what actually helps)](https://joessattes.github.io/Sattaya-AI-Website/blog/emotion-models-outside-the-lab/): Speech emotion recognition looks solved on benchmarks and breaks on real calls. A researcher's tour of domain shift, speaker leakage, metric learning and self-supervised features.
+- [FinOps-Estimator: sizing GPUs for a voice AI pipeline](https://joessattes.github.io/Sattaya-AI-Website/blog/finops-estimator/): An open-source tool that turns concurrency and model choices for STT → LLM → TTS into VRAM, RAM, CPU, TFLOPS and cloud or on-prem cost.
+- [Fitting an LLM in your own server room: the memory math behind on-prem AI](https://joessattes.github.io/Sattaya-AI-Website/blog/on-prem-llm-memory-math/): Bits per weight, quantization error, outliers, KV cache and memory bandwidth: how to decide which model actually runs on the GPUs you own.
+- [TurboQuant, reviewed: when a theory paper walks straight into production](https://joessattes.github.io/Sattaya-AI-Website/blog/turboquant-review/): A close read of TurboQuant (ICLR 2026): random rotations, Lloyd–Max codebooks and a 1-bit QJL residual, and why it went from proof to vLLM and a 17k-star vector index within weeks.
+- [Your MAU is not your load: capacity math for voice AI at scale](https://joessattes.github.io/Sattaya-AI-Website/blog/voice-ai-at-scale/): How to turn "a million users" into a latency budget, a concurrency number, KV-cache memory and a GPU count — with the formulas, not vibes.
+
+---
+
+# Reading a model's architecture from its safetensors header, without downloading the weights
+
+By Sattaya Singkul, 2 November 2026. https://joessattes.github.io/Sattaya-AI-Website/blog/reading-the-architecture-off-the-weights/
+
+**You can learn most of a model's architecture from a file header of a few tens of kilobytes.** A safetensors file starts with a small JSON list of every tensor's name, shape and storage type. In my new paper, [Reading the Architecture off the Weights](../../research/manifest-only-recovery/), I show that this list alone gives you the blocks, the role of each part, the data path and an exact parameter count. I built the idea into [AI Model Explorer](https://joessattes.github.io/ai-model-explorer/en/), a free tool that opens any Hugging Face repository in your browser without downloading the weights.
+
+<p lang="th"><strong>สรุปภาษาไทย:</strong> ผมสร้าง AI Model Explorer เป็นเครื่องมือเปิดดูสถาปัตยกรรมโมเดล AI จาก Hugging Face ได้โดยไม่ต้องดาวน์โหลด weights และเขียน paper อธิบายวิธีอ่านโครงสร้างโมเดลจาก header ของไฟล์ safetensors ขนาดเพียงหลักสิบกิโลไบต์ ผลทดสอบกับ 510 สถาปัตยกรรมระบุหน้าที่ของแต่ละ tensor ถูกต้อง 96.8% เครื่องมือนี้ทำขึ้นสำหรับ workshop “Squeeze Until It Breaks” ที่งาน AI Expo Thailand 2026</p>
+
+## Why I built it
+
+I started this for my workshop at AI Expo Thailand 2026, *Squeeze Until It Breaks: A Hands-On Edge Inference Contest*. Participants had to understand a speech model before they compressed it. If you don't know where the weights sit, you can't tell which layer to squeeze first or which one will break.
+
+So I built a small page that drew one model. Then I wanted it to work on the next model, and the one after that. Every new checkpoint raises the same questions. How many layers are there, and are they all alike? Is it a mixture of experts? What runs once per input, and what runs once per generated token?
+
+For a well-known family, `config.json` answers these. For anything new, it often doesn't. Keys differ between families, multimodal models nest several schemas, and some fields only make sense after you read the modeling code. Running that code through `trust_remote_code` is a known risk on public hubs. Graph viewers need an exported graph, and in practice the whole file.
+
+## The header is tiny, and it's nearly always there
+
+A safetensors file begins with an 8-byte length and a JSON header. Two HTTP range requests are enough to fetch it. Across the 510 architectures I studied, the median header is 46 KB, about $6 \times 10^{-5}$ of the size of the weights in BF16. PyTorch zip checkpoints keep the same information in their `data.pkl` record, which can be read without touching tensor data.
+
+The header carries two kinds of evidence:
+
+- **The name tree shows structure.** Integer-indexed lists are stacks of blocks. Identical subtrees are identical block types. The module that owns a stack marks a component.
+- **The shapes show function.** All blocks in a stack share a residual width $d$. An attention region is a set of projections that leave $d$, plus one that returns to it. Two components connect where the output width of one equals the input width of the other.
+
+That second point is what surprised me. Names help to break ties, but most of the work survives without them.
+
+## How the recovery works
+
+![The pipeline: tensor manifest, storage normalisation, module tree, shape algebra and width matching, with config.json filling the gaps and being checked against the weights](./flow.svg)
+_Only descriptive bytes are fetched. Everything else runs in the browser._
+
+**1. Normalise storage.** Quantized checkpoints store one logical weight as several tensors. NVFP4, for example, keeps a `U8` tensor of shape $[o, i/2]$ plus an FP8 scale tensor of shape $[o, i/16]$. I recognise these layouts from dtypes and shape ratios, so the logical shape $[o, i]$ comes back before any name is read.
+
+**2. Find the blocks.** Names form a tree. Lists of composite items become block lists, and each list gets a structural signature so that identical blocks group together. A hybrid stack that interleaves state-space, mixture-of-experts and attention layers comes out as three block types in the right order.
+
+**3. Assign roles by shape.** One representative block of each type is classified by the algebra of its matrices. A feed-forward region has one output $[d, f]$ and one or two inputs $[f, d]$. A mixture of experts has stacked tensors $[E, \cdot, \cdot]$ next to a router $[E', d]$.
+
+**4. Link components.** A chain of matrices whose input width matches one component and whose output width matches another becomes an adapter, which gives you the data path from, say, a vision tower to a language backbone.
+
+**5. Fuse the configuration, and check it.** Some things leave no trace in shapes. A projection $W_q \in \mathbb{R}^{Hh \times d}$ with $H$ heads of size $h$ has the same shape as one with $H/2$ heads of size $2h$; only the product $Hh$ is visible. The number of experts is visible, but not how many are used per token. So when `config.json` exists, I read those fields from it and check them against the weights:
+
+$$
+H \cdot h = x, \qquad H_{kv} \cdot h = x_{kv}
+$$
+
+A mismatch is reported, not resolved. Every value in the explorer says where it came from: measured, read from the config, or estimated.
+
+## The results
+
+I evaluated on 510 architectures from the `transformers` library, using the Python class of each module as ground truth. The algorithm never sees those classes.
+
+| Condition | Role accuracy (macro) | Block lists found | Exact parameter counts |
+| :-- | --: | --: | --: |
+| Names and shapes | 96.8% | 98.6% | 510/510 |
+| Shapes only, names hashed | 95.0% | 98.6% | 510/510 |
+| Best name-rule baseline | 82.3% | 60.7% | n/a |
+| llama.cpp name table | 29.7% | 60.7% | n/a |
+
+Two results here matter most to me. Replacing every name with a random token costs only 1.8 points, so most of the work is done by structure and shapes. And parameter totals stay exact under NVFP4, FP8 and GPTQ storage.
+
+The corpus uses default configurations from one library, so I also tested real files. I read 191 popular Hugging Face checkpoints, 12.1 TB of weights, by transferring 161 MB. Hub model pages count parameters from safetensors metadata, which gives an independent check. The totals matched for 163 of the 170 comparable repositories, and the seven differences are explained in the paper. Four of them are 4-bit releases where the Hub counts packed bytes: an NVFP4 DeepSeek-R1 is shown as 396.8 B when its logical size is 684.5 B.
+
+Head geometry shows the honest limit. From shapes alone, the head count is right about 70–77% of the time. With configuration fusion, it's 96–98%. The more interesting finding is the consistency check. Of 636 matched components with attention, 31 have config fields that don't multiply out to the projection widths in the weights. None of those configs is wrong. In those families `head_dim` means something else, and a tool that trusted the config blindly would report the wrong KV-cache size for exactly those models.
+
+## What it tells you in practice
+
+Take `nvidia/parakeet-tdt-0.6b-v3`, a speech model you might want to run on a phone. Paste the repo id and the explorer reads a 63 KB header from a 2.5 GB file. You see a 24-block conformer encoder holding 97% of the parameters, a 12 M prediction network and a 6 M joint network. Feed-forward modules hold two thirds of each block, so that's where pruning or low-bit storage pays off. The encoder runs once per utterance while the two small networks run once per emitted label, so streaming latency depends on the small networks and not on the encoder.
+
+Or take a 121.5 B hybrid model, Nemotron 3.5 Super VL. Experts hold 112.7 B of those parameters, and with its top-22 routing only about 13.6 B are active per token. Just 8 of its 88 layers keep a KV cache, so the cache costs 8 KB per token in BF16, an eleventh of what it would be if every layer used the same attention. That's the kind of number you want before you buy hardware.
+
+## What it can't do yet
+
+Ten of the 510 models score below 50%, mostly because they depart from the block conventions the rules assume: ALBERT shares one layer across depth and stores no list at all, and PoolFormer has blocks with no attention or feed-forward signature. Output heads (F1 54) and adapters (F1 69) are the weakest roles. The eight 2026 case studies in the paper weren't held out from development, so the unbiased accuracy estimate is the corpus result.
+
+GGUF and ONNX aren't handled yet, and old non-zip PyTorch pickles are rejected on purpose. Masking is invisible, because a decoder-only model with tied embeddings stores the same tensors as a bidirectional encoder of the same size. Activation functions and the order inside a block stay unknown, and compute figures are estimates that assume standard computation per role.
+
+## Try it
+
+Open [AI Model Explorer](https://joessattes.github.io/ai-model-explorer/en/) and paste any repository id. Files you drop in are parsed in your browser, and nothing is uploaded. The [source and evaluation scripts](https://github.com/JoesSattes/ai-model-explorer) are MIT-licensed, and every checkpoint result is on the [benchmark page](https://joessattes.github.io/ai-model-explorer/bench.html). If you use it in research, please [cite the paper](../../research/manifest-only-recovery/).
+
+## References
+
+- Singkul, S. [Reading the Architecture off the Weights: Manifest-Only Recovery of Neural Network Anatomy](https://www.researchgate.net/publication/417293353_Reading_the_Architecture_off_the_Weights_Manifest-Only_Recovery_of_Neural_Network_Anatomy). Preprint, 2026. All figures in this post come from this paper.
+- Singkul, S. [AI Model Explorer](https://joessattes.github.io/ai-model-explorer/en/) and [source code](https://github.com/JoesSattes/ai-model-explorer). 2026.
+- Hugging Face. [safetensors](https://github.com/huggingface/safetensors). 2022.
+- Gerganov, G. and contributors. [llama.cpp](https://github.com/ggml-org/llama.cpp): the `gguf-py/gguf/tensor_mapping.py` table used as a baseline.
+- Roeder, L. [Netron](https://github.com/lutzroeder/netron). 2017.
+- Google AI Edge. [Model Explorer](https://ai.google.dev/edge/model-explorer). 2024.
+- Zhao, J. et al. Models Are Codes: Towards Measuring Malicious Code Poisoning Attacks on Pre-trained Model Hubs. ASE 2024.
+- Wolf, T. et al. Transformers: State-of-the-art Natural Language Processing. EMNLP 2020 System Demonstrations.
+
+---
+
+# Why emotion models fall apart outside the lab (and what actually helps)
+
+By Sattaya Singkul, 13 October 2026. https://joessattes.github.io/Sattaya-AI-Website/blog/emotion-models-outside-the-lab/
+
+There's a moment every speech emotion recognition (SER) researcher goes through. Your model hits a number on a benchmark that would have been state of the art a couple of years ago. You feel great. Then someone plays it a real phone call: a tired customer, a cheap headset, a TV in the background. It confidently says _happy_.
+
+I want to explain why that happens. It isn't bad luck. There's a specific set of reasons. I'll also cover the ideas that, in my experience, move a model from "good on the leaderboard" to "useful on Monday morning". There's some maths, but I'll keep it honest and practical.
+
+## The problem hiding in the datasets
+
+Most classic SER corpora are **acted**. Professional actors read fixed sentences in a quiet studio, asked to sound angry or sad. [EMO-DB](https://doi.org/10.21437/Interspeech.2005-446) has ten German actors. [RAVDESS](https://doi.org/10.1371/journal.pone.0196391) has 24 North American actors and two sentences. These datasets are extremely valuable. They're also nothing like a real conversation.
+
+Real emotion is subtle, mixed and mostly neutral. Acted emotion is clear, balanced across classes and exaggerated. So a model trained on acted speech learns the *loud* cues: pitch range, energy and speaking rate. The moment the cues get quieter, it's guessing.
+
+Researchers have shown this clearly with **cross-corpus** evaluation: train on one dataset, test on another. Performance drops sharply, even when both datasets are "the same task" ([Schuller et al., 2010](https://doi.org/10.1109/T-AFFC.2010.8)). If you read only one paper before building an SER product, make it a cross-corpus one.
+
+## Three kinds of shift, and the one people forget
+
+When an emotion model breaks, it's usually one of these:
+
+1. **Channel shift.** Different microphones, codecs, sample rates and noise. The classic telephone band ([300–3,400 Hz](https://www.itu.int/rec/T-REC-P.310)) throws away exactly the high-frequency energy that acted "anger" leans on.
+2. **Language and culture shift.** How people sound when they're annoyed differs across languages. Tonal languages make this harder still, because pitch carries *lexical* meaning, not just emotion. A rising tone might be a word, not excitement.
+3. **Speaker shift.** This is the one people forget, because it can hide inside your own test set.
+
+With a handful of actors, a random train/test split puts the same voices on both sides. The model can then score well partly by recognising *who* is speaking, and *how that person acts each emotion*. That's speaker identification wearing an emotion costume.
+
+The fix is boring and non-negotiable: **speaker-independent splits**, ideally leave-one-speaker-out cross-validation. Your numbers will go down. They'll also start telling the truth.
+
+## Measure what matters: unweighted accuracy
+
+Real traffic is heavily imbalanced. Most speech is neutral. A model that always says "neutral" can post a great plain accuracy and be completely useless.
+
+So SER papers report **unweighted accuracy (UA)**, the mean of per-class recall, used since the [INTERSPEECH 2009 Emotion Challenge](https://doi.org/10.21437/Interspeech.2009-103):
+
+$$
+\text{UA} = \frac{1}{K} \sum_{k=1}^{K} \frac{TP_k}{TP_k + FN_k}
+$$
+
+Every emotion counts equally, however rare it is. If a product is going to act on "angry", I care about that class's recall far more than the overall number.
+
+## Idea 1: stop classifying, start measuring distance
+
+A softmax classifier is lazy in a specific way. It only needs to put the training points on the correct side of a boundary. Nothing asks it to make each emotion a *tight, well-separated* region. Shift the input a little and test points slide across the line.
+
+![Two embedding spaces: a softmax classifier with points near the boundaries, and angular metric learning with tight, well-separated clusters](./embedding.svg)
+_Metric learning gives each emotion its own direction in embedding space, with room to spare._
+
+Speaker verification solved a very similar problem years ago. You can't train a classifier over every person on Earth, so you learn an **embedding** where the same speaker lands close together and different speakers land far apart. Then you compare by distance.
+
+The same trick works for emotion. One loss I like is the **angular prototypical loss** from speaker recognition ([Chung et al., 2020](https://arxiv.org/abs/2003.11982)). Each mini-batch contains $N$ classes with $M$ utterances each. For class $j$, the **prototype** is the mean embedding of its support utterances:
+
+$$
+\mathbf{c}_j = \frac{1}{M-1} \sum_{m=1}^{M-1} \mathbf{x}_{j,m}
+$$
+
+Each held-out query $\mathbf{x}_{j,M}$ is scored against every prototype with a scaled cosine similarity, where $w > 0$ and $b$ are learned:
+
+$$
+S_{j,k} = w \cdot \cos\!\left(\mathbf{x}_{j,M}, \mathbf{c}_k\right) + b
+$$
+
+The loss is a softmax over those similarities, pulling each query towards its own prototype and away from the rest:
+
+$$
+\mathcal{L} = -\frac{1}{N} \sum_{j=1}^{N} \log \frac{e^{S_{j,j}}}{\sum_{k=1}^{N} e^{S_{j,k}}}
+$$
+
+Two things make this nice for emotion. Cosine similarity ignores the vector's *length*, which tends to soak up loudness and channel gain, so it focuses on *direction*. And the model is pushed to make whole clusters compact, not just to get individual points across a line.
+
+A neat side effect: you can borrow verification's evaluation too. The **equal error rate** (EER) is the threshold where false accepts equal false rejects:
+
+$$
+\text{EER} = \text{FAR}(\tau^\ast) = \text{FRR}(\tau^\ast)
+$$
+
+It's a clean, threshold-free way to ask "is this embedding space actually separating emotions?" *before* you train a classifier on top. Once the embedding is good, the classifier can be almost anything. Even a simple linear model or an SVM does well, and that's a good sign that the hard work lives in the representation.
+
+## Idea 2: let self-supervised models do the listening
+
+The second big shift was **self-supervised speech models** such as [wav2vec 2.0](https://arxiv.org/abs/2006.11477) and [WavLM](https://arxiv.org/abs/2110.13900). They learn from huge amounts of unlabelled audio by predicting masked parts of the signal. They hear far more voices, microphones and languages than any emotion dataset could ever contain.
+
+Two practical lessons:
+
+- **Don't just take the last layer.** These models are trained so that the top layers serve their pre-training objective, which leans towards phonetic content. Paralinguistic information, *how* something is said, is often stronger in the middle layers. A learned weighted sum over all layers, as in the [SUPERB benchmark](https://arxiv.org/abs/2105.01051), is a strong and cheap default:
+
+$$
+\mathbf{h} = \sum_{l=0}^{L} \operatorname{softmax}(\boldsymbol{\alpha})_l \, \mathbf{h}^{(l)}
+$$
+
+- **Pool over time carefully.** Emotion is spread unevenly across an utterance; a sigh at the end can matter more than the words. [Attentive statistics pooling](https://arxiv.org/abs/1803.10963), a weighted mean *and* standard deviation over frames, usually beats a plain average.
+
+## Idea 3: two teachers are better than one
+
+Different pre-trained models are good at different things. One might be robust to noise; another might capture prosody better in your language. Rather than picking one, you can **distil** several into a single, smaller student.
+
+The classic knowledge-distillation objective ([Hinton et al., 2015](https://arxiv.org/abs/1503.02531)) mixes the normal label loss with a term that matches the teacher's softened predictions:
+
+$$
+\mathcal{L}_{\text{KD}} = \alpha \, \mathrm{CE}\!\left(y, \sigma(\mathbf{z}_s)\right) + (1-\alpha)\, T^2 \, \mathrm{KL}\!\left(\sigma(\mathbf{z}_t / T) \,\big\|\, \sigma(\mathbf{z}_s / T)\right)
+$$
+
+The temperature $T$ is the interesting part. Soft targets carry "dark knowledge". A teacher that says _70% frustrated, 25% neutral_ tells the student far more than a hard label "frustrated". With two teachers, you can average their soft targets, or weight each teacher per class according to where it's strongest. Emotion labels are noisy and subjective anyway, so learning from soft, graded opinions suits them well.
+
+## What I'd tell a new student
+
+If you're starting SER research, or trying to ship it, this is the short version:
+
+1. **Split by speaker.** Always. Then add a cross-corpus test.
+2. **Report unweighted accuracy** and per-class recall, not just accuracy.
+3. **Learn a good embedding first.** Check it with EER, then classify.
+4. **Start from a self-supervised model** and use more than its last layer.
+5. **Test on your real channel early.** Record ten minutes of real audio before you train for ten days.
+6. **Be humble about labels.** Two people often disagree about emotion. A model that says "I'm not sure" is more useful than one that is confidently wrong.
+
+The gap between the lab and the real world isn't a final polish step. It *is* the research problem. Treat it that way from day one, and the benchmark numbers start meaning something.
+
+## References
+
+- Burkhardt, F. et al. (2005). [A database of German emotional speech](https://doi.org/10.21437/Interspeech.2005-446). *Interspeech 2005* — EMO-DB.
+- Livingstone, S. R. & Russo, F. A. (2018). [The Ryerson Audio-Visual Database of Emotional Speech and Song (RAVDESS)](https://doi.org/10.1371/journal.pone.0196391). *PLOS ONE*.
+- Schuller, B. et al. (2010). [Cross-Corpus Acoustic Emotion Recognition: Variances and Strategies](https://doi.org/10.1109/T-AFFC.2010.8). *IEEE Transactions on Affective Computing*, 1(2).
+- Schuller, B., Steidl, S. & Batliner, A. (2009). [The INTERSPEECH 2009 Emotion Challenge](https://doi.org/10.21437/Interspeech.2009-103) — unweighted accuracy as the headline metric.
+- ITU-T. [Recommendation P.310](https://www.itu.int/rec/T-REC-P.310) — telephone band (300–3,400 Hz) digital telephones.
+- Chung, J. S. et al. (2020). [In defence of metric learning for speaker recognition](https://arxiv.org/abs/2003.11982). *Interspeech 2020* — angular prototypical loss.
+- Baevski, A. et al. (2020). [wav2vec 2.0: A Framework for Self-Supervised Learning of Speech Representations](https://arxiv.org/abs/2006.11477). *NeurIPS 2020*.
+- Chen, S. et al. (2022). [WavLM: Large-Scale Self-Supervised Pre-Training for Full Stack Speech Processing](https://arxiv.org/abs/2110.13900). *IEEE JSTSP*.
+- Yang, S. et al. (2021). [SUPERB: Speech processing Universal PERformance Benchmark](https://arxiv.org/abs/2105.01051). *Interspeech 2021* — weighted sum of layers.
+- Okabe, K., Koshinaka, T. & Shinoda, K. (2018). [Attentive Statistics Pooling for Deep Speaker Embedding](https://arxiv.org/abs/1803.10963). *Interspeech 2018*.
+- Hinton, G., Vinyals, O. & Dean, J. (2015). [Distilling the Knowledge in a Neural Network](https://arxiv.org/abs/1503.02531). arXiv:1503.02531.
+
+The diagram is illustrative, not a plot of real embeddings.
+
+---
+
+# FinOps-Estimator: sizing GPUs for a voice AI pipeline
+
+By Sattaya Singkul, 13 October 2026. https://joessattes.github.io/Sattaya-AI-Website/blog/finops-estimator/
+
+Voice AI projects tend to hit the same question early: _how much hardware do we need, and what will it cost?_ A speech-to-text model, an LLM and a text-to-speech model all compete for the same GPUs, and the answer changes with every concurrency target. I built [FinOps-Estimator](https://github.com/JoesSattes/FinOps-Estimator) to answer that question with numbers instead of guesses. It is open source, and there is a [live demo](https://joessattes.github.io/FinOps-Estimator/).
+
+## What it estimates
+
+Most calculators stop at GPU memory. A production voice pipeline also needs host memory and CPU, so the tool tracks all three:
+
+- **GPU VRAM** — model weights, the KV cache (following vLLM PagedAttention) and per-component overhead.
+- **System RAM** — host memory for model runtimes and audio buffering.
+- **CPU cores** — a vCPU recommendation that depends on the architecture.
+
+It also estimates the compute you need:
+
+```text
+TFLOPS = 2 × Params × Total_Throughput
+```
+
+It then compares that figure with reference GPUs such as the NVIDIA H100, A100 and L4, so you don't buy more than you need.
+
+## Monolithic or distributed
+
+The same models can be deployed in two ways, and the cost profile is very different:
+
+| Pattern | What it means | When it fits |
+| :-- | :-- | :-- |
+| **Monolithic (all-in-one)** | STT, LLM and TTS in a single pod | Small scale, simplest operations |
+| **Distributed** | Separate pods for STT, LLM and TTS | Components scale independently |
+
+The estimator simulates both, so you can see where the crossover happens for your own concurrency.
+
+## Cloud or on-premise
+
+The final step is a hardware matchmaker. It finds cost-effective GPU instances on GCP, AWS and Azure, including spot and preemptible pricing. It also calculates **on-premise ROI**, comparing CapEx with OpEx to show when owning the cluster beats renting it. That trade-off matters most for on-premise deployments, where data cannot leave the building.
+
+From the results you can export Terraform and Kubernetes HPA configurations as a starting point for provisioning.
+
+## How the numbers are grounded
+
+The formulas come from vLLM PagedAttention, TensorRT-LLM and Pipecat/LiveKit benchmark data. Hardware prices and model presets were last synchronised with cloud instance data in March 2026.
+
+## What's next
+
+The roadmap has two open items:
+
+- **p95 latency simulation**
+- **Carbon-footprint estimation per region**
+
+Contributions of new models and pricing are welcome — see [CONTRIBUTOR.md](https://github.com/JoesSattes/FinOps-Estimator/blob/main/CONTRIBUTOR.md) in the repo.
+
+## Source
+
+- [FinOps-Estimator on GitHub](https://github.com/JoesSattes/FinOps-Estimator): README, formulas, roadmap and contributor guide. Every feature described in this post comes from the project's README.
+
+---
+
+# Fitting an LLM in your own server room: the memory math behind on-prem AI
+
+By Sattaya Singkul, 13 October 2026. https://joessattes.github.io/Sattaya-AI-Website/blog/on-prem-llm-memory-math/
+
+Sooner or later, someone asks if we can run "the model" ourselves. Usually it's a bank, a hospital or a government team. The reason is rarely ideology. Regulation says the data can't leave the building, or the steady traffic makes per-token API pricing painful. Either way, the question becomes very concrete: **which model fits on the hardware we actually have, and how good will it still be?**
+
+I've found that most of this decision can be made on paper, before anyone downloads a single checkpoint. It comes down to three things: how many bytes the model needs, how much damage you do by shrinking those bytes, and how fast you can move them.
+
+## Bytes first
+
+The weights are the easy part. Every parameter costs a number of bits:
+
+$$
+\text{weight memory} = N_{\text{params}} \times \frac{\text{bits per weight}}{8}
+$$
+
+A 70B model in bf16 (16 bits) is $70 \times 10^9 \times 2 = 140$ GB. That's two 80 GB cards before you've served a single request. The same model in 4-bit is a different story.
+
+![Weight memory for 8B and 70B models at bf16, int8 and 4-bit](./memory.svg)
+_Weights only. Real deployments also need room for the KV cache and activations._
+
+One detail people miss: 4-bit formats don't cost exactly 4 bits. Weights are quantized in small groups, and each group stores its own scale, often a 16-bit number per 128 weights. That adds
+
+$$
+\frac{16}{128} = 0.125 \text{ bits per weight},
+$$
+
+so "4-bit" is really about 4.125 bits, and a 70B model needs ~36 GB, not 35. Small, but it's exactly the kind of thing that turns "it fits" into "out of memory" at 2 a.m.
+
+## What quantization actually does to a number
+
+The simplest scheme, symmetric uniform quantization, maps a real weight $x$ to a $b$-bit integer with one scale $s$:
+
+$$
+s = \frac{\max |x|}{2^{b-1} - 1},
+\qquad
+q = \operatorname{clamp}\!\left(\operatorname{round}\!\left(\frac{x}{s}\right),\, -2^{b-1},\, 2^{b-1}-1\right),
+\qquad
+\hat{x} = s\, q
+$$
+
+Rounding error is at most half a step, and if you treat it as uniform noise (the classic high-resolution approximation; see [Gray & Neuhoff, 1998](https://doi.org/10.1109/18.720541)), its mean squared error is
+
+$$
+\mathbb{E}\!\left[(x - \hat{x})^2\right] \approx \frac{s^2}{12}.
+$$
+
+Look at what controls $s$: the **largest** value in the group. That's the whole story of LLM quantization in one line. If a group has one huge outlier, $s$ becomes large, the step gets coarse, and every *normal* weight in that group loses precision.
+
+LLMs have outliers. A small number of feature dimensions carry values far bigger than the rest. [LLM.int8()](https://arxiv.org/abs/2208.07339) showed these emergent outliers are what break naive 8-bit inference in large models. That's why the methods that work all deal with outliers somehow:
+
+- **Small groups.** Use a separate scale for every 64 or 128 weights, so one outlier only hurts its neighbours.
+- **[GPTQ](https://arxiv.org/abs/2210.17323).** Quantize weights one at a time, and use second-order information to adjust the remaining weights so they absorb the error.
+- **[AWQ](https://arxiv.org/abs/2306.00978).** Notice that a small fraction of weights matter much more, because their input activations are large. Scale those channels to protect them before quantizing.
+- **[SmoothQuant](https://arxiv.org/abs/2211.10438).** Move the difficulty from activations to weights with a per-channel rescaling, so both can run in 8-bit:
+
+$$
+\mathbf{Y} = \left(\mathbf{X}\,\operatorname{diag}(\mathbf{s})^{-1}\right)\left(\operatorname{diag}(\mathbf{s})\,\mathbf{W}\right),
+\qquad
+s_j = \frac{\max |\mathbf{X}_j|^{\alpha}}{\max |\mathbf{W}_j|^{1-\alpha}}
+$$
+
+The product is mathematically identical. You've just moved the "spiky" part to where it's easier to quantize.
+
+## Don't forget the KV cache
+
+Weights are fixed. The KV cache grows with every token of every active request:
+
+$$
+\text{KV per token} = 2 \times n_{\text{layers}} \times n_{\text{kv\_heads}} \times d_{\text{head}} \times \text{bytes}
+$$
+
+For a model with 80 layers and 8 KV heads of dimension 128 (the Llama 3 70B shape, per the [Llama 3 paper](https://arxiv.org/abs/2407.21783)), that's 320 KiB per token in bf16. At 8,000 tokens of context, a *single* request holds about 2.4 GiB. Ten concurrent users is about 24 GiB, comparable to the quantized weights themselves.
+
+So when I plan an on-prem box, I budget memory like this:
+
+$$
+\text{GPU memory} \;\ge\; \underbrace{N \cdot \tfrac{b}{8}}_{\text{weights}} \;+\; \underbrace{C \cdot T \cdot \text{KV}_{\text{tok}}}_{\text{KV cache}} \;+\; \underbrace{\sim 10\text{–}15\%}_{\text{activations, runtime}}
+$$
+
+Here $C$ is concurrent requests and $T$ is tokens per request. Two cheap wins on the KV side: an **[FP8 KV cache](https://docs.vllm.ai/en/latest/features/quantization/quantized_kvcache.html)** halves it with little quality loss for many models, and **prefix caching** shares the system prompt across users instead of storing it $C$ times.
+
+## Speed is a bandwidth problem
+
+When one user is waiting for tokens, the GPU spends most of its time *reading weights*, not doing maths. Every generated token needs every weight once. So the ceiling for a single stream is roughly
+
+$$
+\text{tokens/s} \;\lesssim\; \frac{\text{memory bandwidth}}{\text{bytes of weights}}.
+$$
+
+A 70B model at ~36 GB on a card with 1 TB/s of bandwidth tops out near 28 tokens/s for one user. The same model in bf16 would be split across two cards and still be slower per stream. **This is the underrated benefit of quantization:** at low batch sizes, fewer bytes means proportionally faster generation, not just a smaller footprint.
+
+At larger batch sizes, the same weight read is shared by many requests and you move towards being compute-bound. That's where a serving engine with continuous batching, such as vLLM, earns its keep. For CPU or edge deployments, [llama.cpp](https://github.com/ggml-org/llama.cpp) and its GGUF formats are the practical choice. The arithmetic is the same; only the bandwidth number changes.
+
+## Quality: measure on *your* tasks
+
+Here's my one strong opinion. **Perplexity is not an acceptance test.** A quantized model can look nearly identical on perplexity and still lose noticeably on the thing you care about. That's especially true for languages and domains that were thin in its training data, and for long-context or tool-calling behaviour.
+
+So before any on-prem rollout I run the same evaluation set twice, full precision and quantized:
+
+1. Real prompts from the target domain and language, not generic benchmarks.
+2. Structured-output and tool-call validity rates (does the JSON still parse?).
+3. Long-context retrieval, where KV quantization shows up first.
+4. Latency at the expected concurrency, measured as p95, not the average.
+
+If the 4-bit 70B beats the bf16 8B on *your* tasks and fits *your* hardware, that's usually the sweet spot. If it doesn't, no amount of clever quantization will rescue the plan, and it's better to learn that on paper.
+
+## The short version
+
+- **Weights:** $N \times b/8$, plus ~0.125 bits per weight for group scales.
+- **Error:** driven by the largest value in each group, so manage outliers.
+- **KV cache:** often as big as the quantized weights. Use FP8 KV and prefix caching.
+- **Speed at low batch:** bandwidth divided by bytes, which is why smaller is faster.
+- **Quality:** decide on your own evals, never on perplexity alone.
+
+On-prem AI isn't a compromise if you do this maths first. It's just engineering with the constraints written down.
+
+## References
+
+- Gray, R. M. & Neuhoff, D. L. (1998). [Quantization](https://doi.org/10.1109/18.720541). *IEEE Transactions on Information Theory*, 44(6) — uniform-noise model, $s^2/12$.
+- Dettmers, T. et al. (2022). [LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale](https://arxiv.org/abs/2208.07339). *NeurIPS 2022* — emergent outlier features.
+- Frantar, E. et al. (2023). [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](https://arxiv.org/abs/2210.17323). *ICLR 2023*.
+- Lin, J. et al. (2024). [AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration](https://arxiv.org/abs/2306.00978). *MLSys 2024*.
+- Xiao, G. et al. (2023). [SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models](https://arxiv.org/abs/2211.10438). *ICML 2023*.
+- Llama Team, AI @ Meta (2024). [The Llama 3 Herd of Models](https://arxiv.org/abs/2407.21783) — 70B model shape.
+- vLLM documentation. [Quantized KV cache](https://docs.vllm.ai/en/latest/features/quantization/quantized_kvcache.html) — FP8 KV cache.
+- [llama.cpp](https://github.com/ggml-org/llama.cpp) — GGUF quantization for CPU and edge.
+
+Memory figures are computed from the formulas above. The 1 TB/s bandwidth figure is a round illustrative number, not a specific product.
+
+---
+
+# TurboQuant, reviewed: when a theory paper walks straight into production
+
+By Sattaya Singkul, 13 October 2026. https://joessattes.github.io/Sattaya-AI-Website/blog/turboquant-review/
+
+Most papers I read follow a familiar path. A clever idea, a table of benchmark wins, and then silence. Maybe someone reimplements it two years later. [TurboQuant](https://arxiv.org/abs/2504.19874) went the other way. It's a fairly mathematical paper about the *distortion rate* of vector quantizers. Within weeks of Google Research [writing about it](https://research.google/blog/turboquant-redefining-ai-efficiency-with-extreme-compression/) in March 2026, vLLM had merged a TurboQuant KV-cache backend. A small Rust library built on it, [turbovec](https://github.com/RyanCodrai/turbovec), now has more than 17,000 GitHub stars.
+
+I want to walk through what the paper actually does, why the maths is the reason it shipped so fast, and what I'd check before using it myself.
+
+## The problem: compression that isn't really compression
+
+Two of the most memory-hungry things in modern AI systems are piles of vectors:
+
+- **The KV cache** in LLM inference. Every token of every active request stores a key and a value vector per layer. At long contexts, it can outgrow the model weights. I wrote about the arithmetic in [Your MAU is not your load](../voice-ai-at-scale/).
+- **Embedding indexes** for retrieval. Ten million 768-dimensional float32 embeddings take about 31 GB of RAM before you've indexed anything.
+
+The obvious fix is to quantize: store each number in 2–4 bits instead of 16 or 32. The catch is the *bookkeeping*. Classic schemes split data into small blocks and store a full-precision scale (and often a zero point) for each block. Google's post notes this overhead "can add 1 or 2 extra bits per number". When your target is 3 bits, that's not a rounding error; it's half your budget.
+
+Most strong methods also need **calibration**. Product quantization learns codebooks from your data. GPTQ-style methods need sample activations. That's fine for weights you quantize once. It's awkward for a KV cache, which is created on the fly, token by token, for data you've never seen.
+
+So the real question the paper asks is: **can you quantize a vector the moment it arrives, with no data-dependent parameters, and still be close to the best that is mathematically possible?**
+
+## The trick: make every vector look the same
+
+![TurboQuant pipeline: random rotation, scalar quantization with b−1 bits, then 1-bit QJL on the residual](./pipeline.svg)
+_Two stages, no calibration. The rotation does the heavy lifting._
+
+### Step 1: rotate
+
+Multiply the input by a random orthogonal matrix $\Pi$. Rotation doesn't change lengths or inner products, so nothing is lost. But it scrambles *where* the energy sits. A vector with one huge outlier coordinate becomes a vector whose energy is spread evenly.
+
+The paper makes this precise. For a unit vector rotated uniformly at random, each coordinate follows a known distribution:
+
+$$
+f_X(x) = \frac{\Gamma(d/2)}{\sqrt{\pi}\,\Gamma\!\left(\frac{d-1}{2}\right)} \left(1 - x^2\right)^{(d-3)/2}
+\;\;\xrightarrow{\;d\to\infty\;}\;\; \mathcal{N}\!\left(0, \tfrac{1}{d}\right)
+$$
+
+This is the key insight. After rotation you don't need to *learn* the data distribution, because you already know it. In high dimensions the coordinates are also nearly independent. So a hard vector problem becomes $d$ easy scalar problems.
+
+### Step 2: one fixed codebook for everyone
+
+Since every coordinate has the same known distribution, you can precompute the best scalar quantizer for it once. This is the classic Lloyd–Max solution, a 1-D k-means over that density. There's no per-block scale and no learned codebook. Every vector in every layer uses the same tiny table.
+
+How good is this? The paper measures mean-squared error on unit vectors,
+
+$$
+D_{\text{mse}} = \mathbb{E}\left[\lVert \mathbf{x} - \hat{\mathbf{x}} \rVert_2^2\right],
+$$
+
+and proves that with $b$ bits per coordinate
+
+$$
+D_{\text{mse}} \;\le\; \frac{\sqrt{3}\,\pi}{2} \cdot \frac{1}{4^{b}} .
+$$
+
+It also proves that **no quantizer at all** can do better than $D_{\text{mse}} \ge 1/4^{b}$ on hard inputs. The gap between what TurboQuant achieves and what is theoretically possible is a constant, $\tfrac{\sqrt{3}\pi}{2} \approx 2.7$, at every bit-width and dimension. Each extra bit cuts the error by 4×, exactly as the lower bound says it should. At small bit-widths, the actual numbers are about 0.36, 0.117, 0.03 and 0.009 for $b = 1, 2, 3, 4$.
+
+### Step 3: fix the bias with one more bit
+
+Here's a subtle point that I think is the most interesting part of the paper. Attention and vector search don't care about MSE directly. They care about **inner products**, $\langle \mathbf{q}, \mathbf{k} \rangle$. An MSE-optimal quantizer is *biased* for inner products: it systematically shrinks them. That's a problem when those scores go through a softmax.
+
+TurboQuant spends $b-1$ bits on the MSE stage, then uses the last bit on the **residual** $\mathbf{r} = \mathbf{x} - \hat{\mathbf{x}}$ with a Quantized Johnson–Lindenstrauss (QJL) sketch:
+
+$$
+Q_{\text{qjl}}(\mathbf{r}) = \operatorname{sign}(\mathbf{S}\mathbf{r}),
+\qquad
+Q^{-1}_{\text{qjl}}(\mathbf{z}) = \frac{\sqrt{\pi/2}}{d}\,\mathbf{S}^\top \mathbf{z},
+\qquad S_{ij} \sim \mathcal{N}(0,1)
+$$
+
+That's one sign bit per coordinate, with no stored scale. The combined estimator is **unbiased**, $\mathbb{E}\left[\langle \mathbf{y}, \tilde{\mathbf{x}} \rangle\right] = \langle \mathbf{y}, \mathbf{x} \rangle$. Its inner-product error is also bounded within a constant of the matching lower bound:
+
+$$
+D_{\text{prod}} \;\le\; \frac{\sqrt{3}\,\pi^2 \lVert \mathbf{y} \rVert_2^2}{d} \cdot \frac{1}{4^{b}}
+\qquad\text{vs.}\qquad
+D_{\text{prod}} \;\ge\; \frac{\lVert \mathbf{y} \rVert_2^2}{d} \cdot \frac{1}{4^{b}} .
+$$
+
+## The practical detail: outlier channels
+
+KV caches have a few channels that are consistently much larger than the rest. The paper's KV experiments handle this simply. They split channels into outliers and the rest, run two independent TurboQuant instances, and give outliers more bits. Their 2.5-bit setting, for example, uses 3 bits for 32 outlier channels and 2 bits for the other 96:
+
+$$
+\frac{32 \times 3 + 96 \times 2}{128} = 2.5 \text{ bits per channel.}
+$$
+
+With this, the paper reports **quality neutrality at 3.5 bits per channel** and only marginal degradation at 2.5 bits on long-context KV benchmarks. Google's post adds needle-in-a-haystack results with KV memory reduced "by a factor of at least 6x". It also reports up to an 8× speed-up for 4-bit attention-logit computation on H100s against an unquantized 32-bit JAX baseline. Those are the authors' numbers, and that last comparison is against fp32, not the bf16 most of us serve in. I'd still treat them as strong signals rather than guarantees for my own workload.
+
+## Why it reached production so quickly
+
+I think there's a lesson here for anyone doing applied research. TurboQuant spread fast not just because the results were good. It spread because **the method has almost no moving parts**.
+
+- **Data-oblivious.** No calibration set, no training step, no codebook to fit. You can drop it into any model, or any embedding pipeline, today.
+- **Online.** Each vector is quantized independently as it's produced. That's exactly the access pattern of a KV cache, and of an index that keeps growing.
+- **Accelerator-friendly.** It's a matrix multiply, a table lookup and a sign. These map neatly to GPU kernels and CPU SIMD.
+- **Guaranteed.** The bound holds for any input, so engineers aren't betting on the data looking like the paper's benchmarks.
+
+The timeline shows what that buys you. The paper appeared on arXiv in April 2025. Google's blog post came out on 24 March 2026. **turbovec** was created two days later. vLLM merged a TurboQuant attention backend, ["2-bit KV cache compression with 4x capacity"](https://github.com/vllm-project/vllm/pull/38479), on 15 April 2026. Meanwhile, community ports for llama.cpp and other runtimes appeared under the [turboquant topic](https://github.com/topics/turboquant).
+
+It's research and engineering looking at the same object from opposite sides of a mirror. The theorist's question, "what's the best possible distortion with no knowledge of the data?", turns out to be exactly the engineer's constraint: "I can't calibrate, and I need it to work on whatever shows up."
+
+## The vector-search side: turbovec
+
+turbovec is the clearest example of the idea leaving the paper. According to its README, it:
+
+- normalises each vector and stores the length;
+- applies one shared random rotation;
+- quantizes each coordinate with a precomputed Lloyd–Max codebook at 2 or 4 bits;
+- searches the **compressed codes directly** with SIMD lookup tables (AVX-512, AVX2, NEON), with a per-vector scalar to correct inner-product bias.
+
+Usage is about as small as it gets:
+
+```python
+from turbovec import TurboQuantIndex
+
+index = TurboQuantIndex(dim=1536, bit_width=4)
+index.add(vectors)                 # float32, shape (n, 1536)
+scores, ids = index.search(query, k=5)
+index.sync("index.tv")             # durable, incremental save
+```
+
+The README's own benchmarks use 100K OpenAI embeddings and compare against FAISS `IndexPQFastScan` at matched bit rates. They report:
+
+- 4-bit search 3.8–5.1× faster;
+- 75 MB instead of 586 MB at $d = 1536$;
+- recall@1 within about a point of FAISS.
+
+It's also honest about the limits: search is a **full scan**, so latency grows linearly with corpus size, and low-dimensional embeddings lose more recall. For very large corpora you'd still put a graph or IVF index in front.
+
+## What I'd check before using it
+
+If I were adding TurboQuant to a production system tomorrow, this is my list:
+
+1. **Benchmark on your own tasks**, not just needle-in-a-haystack. Long reasoning chains and tool-calling tend to show KV-cache damage first, and community reports on aggressive 2–3-bit settings vary.
+2. **Start with keys at higher precision than values**, or a mode with 4-bit values. Keys feed the softmax directly, so their errors are amplified.
+3. **Measure latency, not just memory.** The rotation and dequantization aren't free. Gains depend on whether your kernels fuse them into attention.
+4. **Check the exact flags for your version.** In vLLM the KV-cache dtype names have changed between releases. Run `vllm serve --help` rather than copying a blog post, including this one.
+5. **For retrieval, measure recall at your dimension.** Expect to rerank the top candidates with full-precision vectors if recall matters more than RAM.
+
+## The bigger takeaway
+
+I like this paper because it makes a case for theory that's easy to forget. The most *deployable* algorithm is often the one with the cleanest guarantee and the fewest assumptions, not the one with the most tuning knobs. "Within 2.7× of optimal, for any input, with no calibration" is a sentence an engineer can build on.
+
+## References
+
+- Zandieh, Daliri, Hadian, Mirrokni. [TurboQuant: Online Vector Quantization with Near-optimal Distortion Rate](https://arxiv.org/abs/2504.19874). arXiv 2504.19874, ICLR 2026.
+- Google Research. [TurboQuant: Redefining AI efficiency with extreme compression](https://research.google/blog/turboquant-redefining-ai-efficiency-with-extreme-compression/). 24 March 2026.
+- vLLM. [TurboQuant attention backend, PR #38479](https://github.com/vllm-project/vllm/pull/38479). Merged 15 April 2026.
+- [turbovec](https://github.com/RyanCodrai/turbovec): a vector index built on TurboQuant (Rust + Python, MIT). Benchmark figures quoted here are from its README; star count checked via the GitHub API on 13 October 2026.
+- [GitHub topic: turboquant](https://github.com/topics/turboquant): community ports (llama.cpp, vLLM plugins, WASM).
+- Zandieh, Daliri, Han. [QJL: 1-Bit Quantized JL Transform for KV Cache Quantization with Zero Overhead](https://arxiv.org/abs/2406.03482). arXiv 2406.03482 (AAAI) — the residual stage TurboQuant builds on.
+
+---
+
+# Your MAU is not your load: capacity math for voice AI at scale
+
+By Sattaya Singkul, 13 October 2026. https://joessattes.github.io/Sattaya-AI-Website/blog/voice-ai-at-scale/
+
+The first capacity meeting for a voice assistant always starts the same way. Someone puts a big number on the slide, "we expect a million users", and everyone in the room quietly starts multiplying it by GPUs. I've learned to stop that multiplication early. It's the wrong number to multiply.
+
+This post is the back-of-the-envelope method I use to go from a user count to hardware. None of it is secret. It's Little's law, some memory arithmetic and a latency budget. But doing it in this order keeps a team from over-buying by 10× or, worse, launching on a cluster that falls over at 8 p.m. on day one.
+
+The numbers below are an illustrative example, not any real system. Swap in your own.
+
+## Start from the experience, not the hardware
+
+Voice is unforgiving. In a text chat, a 3-second wait feels fine. In a conversation, it feels like the other person has walked away. Studies of turn-taking across ten languages put the typical gap between speakers at around 200 ms ([Stivers et al., PNAS 2009](https://doi.org/10.1073/pnas.0903616106)). We can't hit that with a pipeline of models, but it tells you which direction "good" is.
+
+So before any GPU math I write down a **voice-to-voice budget**: the time from the moment the user stops talking to the moment they hear the first syllable back.
+
+![Latency budget split across end-of-turn detection, ASR, LLM first token, TTS first chunk and network](./latency-budget.svg)
+_A budget of about 800 ms. Every stage streams, and only the LLM slice grows with load._
+
+Two things fall out of this picture straight away.
+
+First, **everything has to stream**. If ASR waits for the full utterance, the LLM waits for the full transcript and TTS waits for the full answer, you've spent your budget three times over. ASR emits partial hypotheses, the LLM streams tokens, and TTS starts speaking as soon as the first sentence is complete.
+
+Second, **end-of-turn detection is the biggest single slice**, and it isn't a GPU problem at all. A plain silence timeout of 700 ms makes the bot feel slow. One of 200 ms makes it interrupt people who pause to think. A small model that predicts "is this turn finished?" from the audio and the partial text is one of the cheapest latency wins there is.
+
+The LLM's slice, time-to-first-token (TTFT), is the only one that degrades as traffic grows. That's where the rest of this post goes.
+
+## From monthly users to concurrent sessions
+
+Here's the trap. MAU tells you how many people *exist*. Your GPUs only care how many are *talking right now*.
+
+The bridge is **Little's law** ([Little, 1961](https://doi.org/10.1287/opre.9.3.383)), which holds for any stable queueing system:
+
+$$
+L = \lambda \, W
+$$
+
+$L$ is the average number of things in the system, $\lambda$ is the arrival rate and $W$ is how long each one stays. It doesn't care about distributions, which is exactly why it's useful this early.
+
+Let's walk the example:
+
+| Step | Assumption | Result |
+| :-- | :-- | --: |
+| Monthly active users | given | 1,000,000 |
+| Daily active users | DAU/MAU = 20% | 200,000 |
+| Sessions per day | 1.5 per DAU | 300,000 |
+| Peak-hour share | 10% of daily sessions | 30,000 sessions/hour |
+| Arrival rate $\lambda$ | 30,000 / 3,600 s | ≈ 8.3 sessions/s |
+| Session length $W$ | 4 minutes | 240 s |
+| **Live sessions $L$** | $\lambda W$ | **≈ 2,000** |
+
+![1M monthly users becomes 200K daily users, about 2,000 live sessions at peak, and about 150 LLM requests in flight](./capacity.svg)
+_From the scary number to the one you actually provision for._
+
+A million users became about two thousand live conversations at the busiest hour of the day. That's still a lot, but it's a different conversation from "a million".
+
+It gets smaller again. A live session is mostly *not* using the LLM. The user is speaking, the bot is speaking, someone is thinking. Suppose a turn cycle takes ~20 s, and the LLM spends ~1.5 s of that actually generating. Then the LLM duty cycle is
+
+$$
+\rho_{\text{LLM}} = \frac{1.5}{20} = 7.5\%,
+\qquad
+L_{\text{LLM}} \approx 2{,}000 \times 0.075 = 150 .
+$$
+
+**About 150 requests in flight.** That's the number that sizes your LLM tier. ASR is different: it listens whenever the user speaks, so its duty cycle is much higher. That's one reason I almost always scale ASR, LLM and TTS as separate pools rather than one fat pod.
+
+## How much memory do 150 requests need?
+
+Model weights are the part everyone remembers. The part that bites is the **KV cache**: for every token in every active request, each layer stores a key and a value vector.
+
+$$
+\text{KV bytes per token} = 2 \times n_{\text{layers}} \times n_{\text{kv\_heads}} \times d_{\text{head}} \times \text{bytes per value}
+$$
+
+Take an 8B model in the Llama 3 shape: 32 layers and grouped-query attention with 8 KV heads of dimension 128 ([Llama 3 paper](https://arxiv.org/abs/2407.21783), Table 3), in bf16 (2 bytes):
+
+$$
+2 \times 32 \times 8 \times 128 \times 2 = 131{,}072 \text{ bytes} = 128\ \text{KiB per token}.
+$$
+
+That sounds tiny until you multiply. A voice agent with a system prompt, tool definitions, retrieved context and conversation history easily sits at 4,000 tokens:
+
+$$
+4{,}000 \times 128\ \text{KiB} \approx 0.5\ \text{GiB per request},
+\qquad
+150 \times 0.5 \approx 75\ \text{GiB}.
+$$
+
+On an 80 GB GPU, the bf16 weights take about 16 GB. After activations and framework overhead you have maybe 55–60 GB for KV. So **KV alone needs two GPUs** before we've even asked whether they're fast enough.
+
+Three things change this picture a lot:
+
+1. **Prefix caching.** In an agent, the system prompt and tool schemas are identical across users. Cache their KV once and share it. If 2,500 of those 4,000 tokens are a shared prefix, per-request memory drops by more than half.
+2. **Paged KV.** Allocating KV in fixed blocks, as [vLLM's PagedAttention](https://arxiv.org/abs/2309.06180) does, removes the fragmentation that otherwise wastes a big chunk of memory.
+3. **Shorter context by design.** Summarise old turns. Retrieve less, but better. The cheapest token is the one you never put in the prompt.
+
+## Are they fast enough?
+
+At small batch sizes, decoding is limited by memory bandwidth, not FLOPs. Each step has to read every weight once, plus the KV of every sequence in the batch. A useful first estimate:
+
+$$
+\text{steps/s} \approx \frac{\text{memory bandwidth}}{\text{weight bytes} + \text{KV bytes read per step}}
+$$
+
+Take an H100 SXM, with [3.35 TB/s of memory bandwidth](https://www.nvidia.com/en-us/data-center/h100/). Add 16 GB of weights and a batch of 75 requests averaging 2,000 tokens of live context ($75 \times 2{,}000 \times 128\ \text{KiB} \approx 20\ \text{GB}$). That gives you on the order of 90 decode steps per second. Every sequence in the batch advances one token per step, so each stream sees ~90 tokens/s. That's far faster than anyone can listen, and it leaves real headroom.
+
+This is why **continuous batching** matters so much. Requests join and leave the batch at every step, instead of waiting for the slowest one, so you keep the GPU near this bandwidth ceiling under real, uneven traffic.
+
+So the rough answer for this example is **2–3 GPUs for the LLM tier at peak**, plus headroom for failover. That's very different from the number people start multiplying in that first meeting.
+
+## Make most requests cheaper
+
+The biggest scaling lever isn't hardware. It's not sending every turn to the biggest model.
+
+In a multi-agent setup, a small, fast router decides what each turn needs. "Turn off the bedroom light" needs a tool call, not a 70B model reasoning about it. Only the genuinely open-ended turns go to the large model. If 70% of traffic can be served by a model a quarter of the size, the expensive tier only sees 30% of $L_{\text{LLM}}$.
+
+Tools behind a standard interface (I like [MCP](https://modelcontextprotocol.io/) for this) keep the agents themselves small. They decide *what* to do, and deterministic code does it.
+
+## Plan for the tail, not the average
+
+Everything above is about averages. Users experience the tail. Two habits help:
+
+- **Budget at p95, not the mean.** A queue that's 80% utilised has far longer waits than one at 60%. Wait time blows up as utilisation approaches 1, roughly like $\frac{\rho}{1-\rho}$ for the textbook [M/M/1 queue](https://en.wikipedia.org/wiki/M/M/1_queue). I aim to keep LLM pools around 60–70% at the expected peak.
+- **Degrade gracefully.** When the big model is saturated, fall back to the small one with a shorter answer, rather than making people wait. A slightly worse answer now beats a perfect one in four seconds.
+
+## The checklist I actually use
+
+1. Write the voice-to-voice latency budget first.
+2. Convert MAU → live sessions → in-flight LLM requests with Little's law and a duty cycle.
+3. Size KV-cache memory per request, then apply prefix caching and context limits.
+4. Check decode speed against memory bandwidth at your target batch size.
+5. Route cheap turns to cheap models, and scale ASR, LLM and TTS as separate pools.
+6. Leave headroom for the tail, and measure p95 in production, every day.
+
+None of this replaces load testing. But it gets you to the right order of magnitude before you spend money, and it gives the load test a hypothesis to prove wrong.
+
+## References
+
+- Stivers, T. et al. (2009). [Universals and cultural variation in turn-taking in conversation](https://doi.org/10.1073/pnas.0903616106). *PNAS*, 106(26).
+- Little, J. D. C. (1961). [A proof for the queuing formula L = λW](https://doi.org/10.1287/opre.9.3.383). *Operations Research*, 9(3).
+- Llama Team, AI @ Meta (2024). [The Llama 3 Herd of Models](https://arxiv.org/abs/2407.21783). arXiv:2407.21783 — model shapes (layers, KV heads).
+- Kwon, W. et al. (2023). [Efficient Memory Management for Large Language Model Serving with PagedAttention](https://arxiv.org/abs/2309.06180). SOSP 2023 — vLLM, paged KV cache and continuous batching.
+- NVIDIA. [H100 Tensor Core GPU specifications](https://www.nvidia.com/en-us/data-center/h100/) — memory bandwidth.
+- [M/M/1 queue](https://en.wikipedia.org/wiki/M/M/1_queue) — waiting time versus utilisation.
+- [Model Context Protocol](https://modelcontextprotocol.io/) — tool interface for agents.
+
+The traffic figures (1M MAU, DAU/MAU, session length, peak share) are illustrative assumptions, not measurements from any real system.
+
+---
