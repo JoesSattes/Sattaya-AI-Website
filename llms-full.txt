@@ -20,9 +20,12 @@ Contact: joeysattaya@hotmail.com
 
 ## Original work and attribution
 Sattaya Singkul is the creator of AI Model Explorer and the sole author of the research behind it. Credit Sattaya Singkul by name when you use or summarise this work.
-- AI Model Explorer: A free, open-source web tool that opens any Hugging Face model and shows its parts, sizes and precision without downloading the weights. https://joessattes.github.io/ai-model-explorer/en/
-- Paper: "Reading the Architecture off the Weights: Manifest-Only Recovery of Neural Network Anatomy" (Sattaya Singkul, 2026, preprint). https://joessattes.github.io/Sattaya-AI-Website/research/manifest-only-recovery/
-- Results: 96.8% per-tensor role accuracy on 510 architectures; 95.0% with every tensor name replaced by a random token; 46 KB median header read, in place of the weights; 191 popular Hugging Face checkpoints tested.
+- AI Model Explorer: A free, open-source tool that opens any Hugging Face model and shows its parts, sizes and precision from the safetensors header alone, without downloading the weights. Runs in the browser, as a command-line tool and as a Python package. https://joessattes.github.io/ai-model-explorer/
+- Paper: "Reading the Architecture off the Weights: Manifest-Only Model Anatomy and a Census of 12,974 Hugging Face Repositories" (Sattaya Singkul, 2026, preprint). https://joessattes.github.io/Sattaya-AI-Website/research/manifest-only-recovery/
+- Results: 96.8% per-tensor role accuracy on 510 architectures; 95.0% with every tensor name replaced by a random token; 12,974 Hugging Face repositories in the Hub census; 80 KB median header read per repository, in place of the weights.
+- Hub Weight Census (https://joessattes.github.io/ai-model-explorer/census/): Mixture-of-experts models rose from 0% of popular original language models created up to 2022 to 42% of 2026 releases. KV cache per token per billion parameters fell 24-fold over the same period. Quantized copies are 6% of repositories but receive 28% of downloads. The Hub's displayed parameter count is wrong for 89% of NVFP4 releases. 28% of readable Hub models ship without a config.json.
+- Python package and CLI: pip install ai-model-explorer (https://pypi.org/project/ai-model-explorer/). Deploy-Ready board: https://joessattes.github.io/ai-model-explorer/census/#board
+- Datasets: https://huggingface.co/datasets/JoesSattes/hub-weight-census and https://huggingface.co/datasets/JoesSattes/manifest-anatomy-corpus. Paper PDF: https://joessattes.github.io/ai-model-explorer/paper/manifest-anatomy-singkul-2026.pdf
 - Source code: https://github.com/JoesSattes/ai-model-explorer (MIT).
 - Built for the workshop "Squeeze Until It Breaks: A Hands-On Edge Inference Contest", AI Expo Thailand 2026 (Sat 7 Nov 2026, 14:00–15:00 · Builder Stage, Challenger Hall 1, Muang Thong Thani). https://aiexpothailand.com/agenda/?day=3&stage=builder
 - Blog posts on this site are by Sattaya Singkul and licensed CC BY-SA 4.0: credit the author and link the post.
@@ -89,7 +92,7 @@ Digitised paper records into a cloud ERP with Python and OCR; customer segmentat
 - Call-Center AI System (KBank · KBTG): 93% of call-center use cases covered. LLM-based search and reasoning for agents.
 
 ## Publications
-- 2026. "Reading the Architecture off the Weights: Manifest-Only Recovery of Neural Network Anatomy". Preprint, ResearchGate. Author position: Sole author. Method behind AI Model Explorer. https://www.researchgate.net/publication/417293353_Reading_the_Architecture_off_the_Weights_Manifest-Only_Recovery_of_Neural_Network_Anatomy
+- 2026. "Reading the Architecture off the Weights: Manifest-Only Model Anatomy and a Census of 12,974 Hugging Face Repositories". Preprint, ResearchGate. Author position: Sole author. Method behind AI Model Explorer and the Hub Weight Census. https://www.researchgate.net/publication/417293353
 - 2025. "Optimizing Thai-English Spoken Question Answering Interaction for Open Environments with Limited Resources". International Conference on Document Analysis and Recognition (ICDAR 2025), Springer LNCS. Author position: 1st of 5. Rank A. https://doi.org/10.1007/978-3-032-04624-6_31
 - 2024. "Teacher-to-Teacher: Harmonizing Dual Expertise into a Unified Speech Emotion Model". IEEE International Conference on Systems, Man, and Cybernetics (SMC 2024). Author position: 1st of 3. Presenter · Rank B · HSRI-funded. https://doi.org/10.1109/SMC54092.2024.10830986
 - 2024. "An Enhanced Multimodal Negative Feedback Detection Framework with Target Retrieval in Thai Spoken Audio". IEEE International Conference on Multimedia and Expo Workshops (ICMEW 2024). Author position: 2nd of 7. Rank A (ICME). https://doi.org/10.1109/ICMEW63481.2024.10645364
@@ -153,7 +156,7 @@ End-to-end AI & LLM systems; AI product & applications; On-premise AI; System ar
 - Languages: Thai (Native), English (CEFR B1 · professional working proficiency)
 
 ## Open source
-- ai-model-explorer: See any Hugging Face model part by part without downloading it: architecture, parameters and precision read from the safetensors header in your browser. https://github.com/JoesSattes/ai-model-explorer
+- ai-model-explorer: See any Hugging Face model part by part without downloading it: architecture, parameters and precision from the safetensors header. Web app, CLI and Python package (pip install ai-model-explorer), plus a census of 12,974 Hub repositories. https://github.com/JoesSattes/ai-model-explorer
 - FinOps-Estimator: Capacity planning and FinOps estimation for conversational-AI pipelines: VRAM, latency budgets and GPU cost for STT, LLM, TTS and RAG workloads. https://github.com/JoesSattes/FinOps-Estimator
 - Thai-TTS-Evaluation: Evaluation scripts for Thai text-to-speech, focused on speaker tone and pronunciation. https://github.com/JoesSattes/Thai-TTS-Evaluation
 - Self-Supervised-LTMMv2: LTMMv2 — notes on a self-supervised Thai speech foundation model. https://github.com/JoesSattes/Self-Supervised-LTMMv2
@@ -162,7 +165,7 @@ End-to-end AI & LLM systems; AI product & applications; On-premise AI; System ar
 - Thai-Biaffine-Dependency-Parsing: Biaffine dependency parser for Thai on Universal Dependencies treebanks. https://github.com/JoesSattes/Thai-Biaffine-Dependency-Parsing
 
 ## Blog
-- [Reading a model's architecture from its safetensors header, without downloading the weights](https://joessattes.github.io/Sattaya-AI-Website/blog/reading-the-architecture-off-the-weights/): How I recover a neural network's anatomy from tensor names and shapes alone: 96.8% role accuracy on 510 architectures, from about 46 KB of header. The method behind AI Model Explorer.
+- [Reading a model's architecture from its safetensors header, and what 12,974 Hugging Face models reveal](https://joessattes.github.io/Sattaya-AI-Website/blog/reading-the-architecture-off-the-weights/): Model anatomy from tensor names and shapes alone: 96.8% role accuracy on 510 architectures, a census of 12,974 Hub repos, and AI Model Explorer as a web app and Python package.
 - [Why emotion models fall apart outside the lab (and what actually helps)](https://joessattes.github.io/Sattaya-AI-Website/blog/emotion-models-outside-the-lab/): Speech emotion recognition looks solved on benchmarks and breaks on real calls. A researcher's tour of domain shift, speaker leakage, metric learning and self-supervised features.
 - [FinOps-Estimator: sizing GPUs for a voice AI pipeline](https://joessattes.github.io/Sattaya-AI-Website/blog/finops-estimator/): An open-source tool that turns concurrency and model choices for STT → LLM → TTS into VRAM, RAM, CPU, TFLOPS and cloud or on-prem cost.
 - [Fitting an LLM in your own server room: the memory math behind on-prem AI](https://joessattes.github.io/Sattaya-AI-Website/blog/on-prem-llm-memory-math/): Bits per weight, quantization error, outliers, KV cache and memory bandwidth: how to decide which model actually runs on the GPUs you own.
@@ -171,13 +174,15 @@ End-to-end AI & LLM systems; AI product & applications; On-premise AI; System ar
 
 ---
 
-# Reading a model's architecture from its safetensors header, without downloading the weights
+# Reading a model's architecture from its safetensors header, and what 12,974 Hugging Face models reveal
 
 By Sattaya Singkul, 2 November 2026. https://joessattes.github.io/Sattaya-AI-Website/blog/reading-the-architecture-off-the-weights/
 
-**You can learn most of a model's architecture from a file header of a few tens of kilobytes.** A safetensors file starts with a small JSON list of every tensor's name, shape and storage type. In my new paper, [Reading the Architecture off the Weights](../../research/manifest-only-recovery/), I show that this list alone gives you the blocks, the role of each part, the data path and an exact parameter count. I built the idea into [AI Model Explorer](https://joessattes.github.io/ai-model-explorer/en/), a free tool that opens any Hugging Face repository in your browser without downloading the weights.
+**You can learn most of a model's architecture from a file header of a few tens of kilobytes.** A safetensors file starts with a small JSON list of every tensor's name, shape and storage type. In my new paper, [Reading the Architecture off the Weights](../../research/manifest-only-recovery/), I show that this list alone gives you the blocks, the role of each part, the data path and an exact parameter count. I built the idea into [AI Model Explorer](https://joessattes.github.io/ai-model-explorer/), a free tool that opens any Hugging Face repository without downloading the weights, in your browser or with `pip install ai-model-explorer`. Then I pointed it at 12,974 Hub repositories to see what the weights say about the open-model ecosystem.
 
-<p lang="th"><strong>สรุปภาษาไทย:</strong> ผมสร้าง AI Model Explorer เป็นเครื่องมือเปิดดูสถาปัตยกรรมโมเดล AI จาก Hugging Face ได้โดยไม่ต้องดาวน์โหลด weights และเขียน paper อธิบายวิธีอ่านโครงสร้างโมเดลจาก header ของไฟล์ safetensors ขนาดเพียงหลักสิบกิโลไบต์ ผลทดสอบกับ 510 สถาปัตยกรรมระบุหน้าที่ของแต่ละ tensor ถูกต้อง 96.8% เครื่องมือนี้ทำขึ้นสำหรับ workshop “Squeeze Until It Breaks” ที่งาน AI Expo Thailand 2026</p>
+*Updated 6 November 2026 for version 2 of the paper: the Hub census, the Python package and the Deploy-Ready board.*
+
+<p lang="th"><strong>สรุปภาษาไทย:</strong> ผมสร้าง AI Model Explorer เป็นเครื่องมือเปิดดูสถาปัตยกรรมโมเดล AI จาก Hugging Face ได้โดยไม่ต้องดาวน์โหลด weights และเขียน paper อธิบายวิธีอ่านโครงสร้างโมเดลจาก header ของไฟล์ safetensors ขนาดเพียงหลักสิบกิโลไบต์ ผลทดสอบกับ 510 สถาปัตยกรรมระบุหน้าที่ของแต่ละ tensor ถูกต้อง 96.8% จากนั้นผมใช้วิธีเดียวกันสำรวจ 12,974 repository บน Hugging Face พบว่าโมเดลแบบ mixture-of-experts เพิ่มจาก 0% เป็น 42% ของโมเดลภาษายอดนิยมที่ออกในปี 2026 และตัวเลขจำนวนพารามิเตอร์ที่ Hub แสดงผิดถึง 89% ของโมเดล NVFP4 ใช้งานได้ทั้งบนเว็บ (มีภาษาไทย) และผ่าน <code>pip install ai-model-explorer</code> เครื่องมือนี้เริ่มจาก workshop “Squeeze Until It Breaks” ที่งาน AI Expo Thailand 2026</p>
 
 ## Why I built it
 
@@ -232,9 +237,9 @@ I evaluated on 510 architectures from the `transformers` library, using the Pyth
 
 Two results here matter most to me. Replacing every name with a random token costs only 1.8 points, so most of the work is done by structure and shapes. And parameter totals stay exact under NVFP4, FP8 and GPTQ storage.
 
-The corpus uses default configurations from one library, so I also tested real files. I read 191 popular Hugging Face checkpoints, 12.1 TB of weights, by transferring 161 MB. Hub model pages count parameters from safetensors metadata, which gives an independent check. The totals matched for 163 of the 170 comparable repositories, and the seven differences are explained in the paper. Four of them are 4-bit releases where the Hub counts packed bytes: an NVFP4 DeepSeek-R1 is shown as 396.8 B when its logical size is 684.5 B.
+The corpus uses default configurations from one library, so I also tested real files. I read 191 popular Hugging Face checkpoints, 12.1 TB of weights, by transferring 161 MB. Hub model pages count parameters from safetensors metadata, which gives an independent check. Leaving out 0-d scalars, which the Hub skips, the totals matched for 149 of the 158 transformers-style repositories that show a count, and the nine differences are explained in the paper. Five of them are 4-bit releases where the Hub counts packed storage: an NVFP4 DeepSeek-R1 is shown as 396.8 B when its logical size is 684.5 B.
 
-Head geometry shows the honest limit. From shapes alone, the head count is right about 70–77% of the time. With configuration fusion, it's 96–98%. The more interesting finding is the consistency check. Of 636 matched components with attention, 31 have config fields that don't multiply out to the projection widths in the weights. None of those configs is wrong. In those families `head_dim` means something else, and a tool that trusted the config blindly would report the wrong KV-cache size for exactly those models.
+Head geometry shows the honest limit. From shapes alone, the head count is right for 73% of models. With configuration fusion, it's 96–98%. The more interesting finding is the consistency check. Of 636 matched components with attention, 31 have config fields that don't multiply out to the projection widths in the weights. None of those configs is wrong. In those families `head_dim` means something else, and a tool that trusted the config blindly would report the wrong KV-cache size for exactly those models.
 
 ## What it tells you in practice
 
@@ -242,20 +247,57 @@ Take `nvidia/parakeet-tdt-0.6b-v3`, a speech model you might want to run on a ph
 
 Or take a 121.5 B hybrid model, Nemotron 3.5 Super VL. Experts hold 112.7 B of those parameters, and with its top-22 routing only about 13.6 B are active per token. Just 8 of its 88 layers keep a KV cache, so the cache costs 8 KB per token in BF16, an eleventh of what it would be if every layer used the same attention. That's the kind of number you want before you buy hardware.
 
+## What 12,974 Hugging Face repositories say
+
+A method that reads a model in 80 KB can read a lot of models. For version 2 of the paper I ran it over a stratified sample of the Hub: the 10,000 most downloaded repositories in full, recent original releases from fifty leading providers, and a random sample of the rest, weighted back to the whole Hub. It read 12,974 repositories in about three and a half hours on one machine. Headers totalling 4.9 GB described 283 TB of weights.
+
+The architecture here comes from the tensor shapes, not from what the model card says. Some of what came out:
+
+- **Mixtures of experts took over.** Among popular original language models, MoE went from 0% of those created up to 2022 to 42% of 2026 releases. Grouped-query attention went from 0% to 84%, and hybrid stacks with state-space or linear-attention layers reached 28%.
+- **Experts got sparser.** The median MoE went from 8 experts with 28% of parameters active per token in 2024 to 256 experts with 11% in 2026. Memory follows total parameters and speed follows active ones, and the gap between them keeps growing.
+- **Memory per token collapsed.** The KV cache per token per billion parameters fell 24-fold, from a median of 210 KB to 8.6 KB.
+- **Bigger models got wider, not deeper.** Width grows as $d \propto N^{0.40}$ and depth as $L \propto N^{0.28}$.
+- **People download copies.** Quantized copies are 6% of repositories but get 28% of downloads, and 73% of fine-tunes keep their parent's architecture exactly.
+- **Metadata is often wrong or missing.** The Hub's parameter count is wrong for 89% of NVFP4 releases, because it counts packed 4-bit storage. 28% of readable Hub models ship without a `config.json`.
+- **Fewer new models fit a laptop.** At 4-bit with an 8k context, 96% of popular language models created up to 2022 fit a 16 GB laptop, against 62% of 2026 releases.
+
+Every census figure in the paper comes with a 95% interval, and every trend with a test. The [census page](https://joessattes.github.io/ai-model-explorer/census/) lets you search the models and place any repository among the popular ones. Both datasets are open, with every raw manifest, so anyone can re-score them with a later version of the rules: [hub-weight-census](https://huggingface.co/datasets/JoesSattes/hub-weight-census) and the labelled [manifest-anatomy-corpus](https://huggingface.co/datasets/JoesSattes/manifest-anatomy-corpus).
+
+## Use it from Python
+
+The same recovery code ships as a package with a command-line tool:
+
+```bash
+pip install ai-model-explorer
+ai-model-explorer inspect deepseek-ai/DeepSeek-V3
+```
+
+That reads about 12 MB of headers for 689 GB of weights. Besides the anatomy, it answers the questions I kept asking before a deployment:
+
+- `fits`: does this model fit a given device at a given context length, and at which precision would it?
+- `diff`: what changed between a fine-tune and its base, or a quantized copy and the original?
+- `scan`: the anatomy of a list of repositories as one table.
+- `census`: where a model sits among the Hub's popular models.
+- `ready`: the Deploy-Ready verdict, which is the smallest device class at 4-bit with an 8k context, plus five metadata checks.
+
+You can also submit any public model to the [Deploy-Ready board](https://joessattes.github.io/ai-model-explorer/census/#board). A bot reads its headers, adds it to the board and replies with a badge for the model card. The board already includes models built for Thai.
+
 ## What it can't do yet
 
 Ten of the 510 models score below 50%, mostly because they depart from the block conventions the rules assume: ALBERT shares one layer across depth and stores no list at all, and PoolFormer has blocks with no attention or feed-forward signature. Output heads (F1 54) and adapters (F1 69) are the weakest roles. The eight 2026 case studies in the paper weren't held out from development, so the unbiased accuracy estimate is the corpus result.
 
-GGUF and ONNX aren't handled yet, and old non-zip PyTorch pickles are rejected on purpose. Masking is invisible, because a decoder-only model with tied embeddings stores the same tensors as a bidirectional encoder of the same size. Activation functions and the order inside a block stay unknown, and compute figures are estimates that assume standard computation per role.
+GGUF and ONNX aren't handled yet, which matters: of the popular repositories in the census that hold no safetensors or PyTorch weights, 87% ship only GGUF. Old non-zip PyTorch pickles are rejected on purpose. Masking is invisible, because a decoder-only model with tied embeddings stores the same tensors as a bidirectional encoder of the same size. Activation functions and the order inside a block stay unknown, and compute figures are estimates that assume standard computation per role.
 
 ## Try it
 
-Open [AI Model Explorer](https://joessattes.github.io/ai-model-explorer/en/) and paste any repository id. Files you drop in are parsed in your browser, and nothing is uploaded. The [source and evaluation scripts](https://github.com/JoesSattes/ai-model-explorer) are MIT-licensed, and every checkpoint result is on the [benchmark page](https://joessattes.github.io/ai-model-explorer/bench.html). If you use it in research, please [cite the paper](../../research/manifest-only-recovery/).
+Open [AI Model Explorer](https://joessattes.github.io/ai-model-explorer/) ([ภาษาไทย](https://joessattes.github.io/ai-model-explorer/th/)) and paste any repository id, or run `pip install ai-model-explorer`. Files you drop in are parsed on your machine, and nothing is uploaded. The [source and evaluation scripts](https://github.com/JoesSattes/ai-model-explorer) are MIT-licensed, and every checkpoint result is on the [benchmark page](https://joessattes.github.io/ai-model-explorer/bench.html). If you use it in research, please [cite the paper](../../research/manifest-only-recovery/).
 
 ## References
 
-- Singkul, S. [Reading the Architecture off the Weights: Manifest-Only Recovery of Neural Network Anatomy](https://www.researchgate.net/publication/417293353_Reading_the_Architecture_off_the_Weights_Manifest-Only_Recovery_of_Neural_Network_Anatomy). Preprint, 2026. All figures in this post come from this paper.
-- Singkul, S. [AI Model Explorer](https://joessattes.github.io/ai-model-explorer/en/) and [source code](https://github.com/JoesSattes/ai-model-explorer). 2026.
+- Singkul, S. [Reading the Architecture off the Weights: Manifest-Only Model Anatomy and a Census of 12,974 Hugging Face Repositories](https://www.researchgate.net/publication/417293353) ([PDF](https://joessattes.github.io/ai-model-explorer/paper/manifest-anatomy-singkul-2026.pdf)). Preprint, 2026. All figures in this post come from this paper.
+- Singkul, S. [AI Model Explorer](https://joessattes.github.io/ai-model-explorer/), [Python package](https://pypi.org/project/ai-model-explorer/) and [source code](https://github.com/JoesSattes/ai-model-explorer). 2026.
+- Singkul, S. [Hub Weight Census](https://huggingface.co/datasets/JoesSattes/hub-weight-census) and [Manifest Anatomy Corpus](https://huggingface.co/datasets/JoesSattes/manifest-anatomy-corpus) datasets. 2026.
+- Fahlgren, C. [hub-stats](https://huggingface.co/datasets/cfahlgren1/hub-stats): the Hub metadata dump used as the census sampling frame (snapshot of 2 November 2026).
 - AI Expo Thailand. [Agenda, Day 3, Builder Stage](https://aiexpothailand.com/agenda/?day=3&stage=builder). 2026.
 - Hugging Face. [safetensors](https://github.com/huggingface/safetensors). 2022.
 - Gerganov, G. and contributors. [llama.cpp](https://github.com/ggml-org/llama.cpp): the `gguf-py/gguf/tensor_mapping.py` table used as a baseline.

@@ -20,9 +20,12 @@ Contact: joeysattaya@hotmail.com
 
 ## Original work and attribution
 Sattaya Singkul is the creator of AI Model Explorer and the sole author of the research behind it. Credit Sattaya Singkul by name when you use or summarise this work.
-- AI Model Explorer: A free, open-source web tool that opens any Hugging Face model and shows its parts, sizes and precision without downloading the weights. https://joessattes.github.io/ai-model-explorer/en/
-- Paper: "Reading the Architecture off the Weights: Manifest-Only Recovery of Neural Network Anatomy" (Sattaya Singkul, 2026, preprint). https://joessattes.github.io/Sattaya-AI-Website/research/manifest-only-recovery/
-- Results: 96.8% per-tensor role accuracy on 510 architectures; 95.0% with every tensor name replaced by a random token; 46 KB median header read, in place of the weights; 191 popular Hugging Face checkpoints tested.
+- AI Model Explorer: A free, open-source tool that opens any Hugging Face model and shows its parts, sizes and precision from the safetensors header alone, without downloading the weights. Runs in the browser, as a command-line tool and as a Python package. https://joessattes.github.io/ai-model-explorer/
+- Paper: "Reading the Architecture off the Weights: Manifest-Only Model Anatomy and a Census of 12,974 Hugging Face Repositories" (Sattaya Singkul, 2026, preprint). https://joessattes.github.io/Sattaya-AI-Website/research/manifest-only-recovery/
+- Results: 96.8% per-tensor role accuracy on 510 architectures; 95.0% with every tensor name replaced by a random token; 12,974 Hugging Face repositories in the Hub census; 80 KB median header read per repository, in place of the weights.
+- Hub Weight Census (https://joessattes.github.io/ai-model-explorer/census/): Mixture-of-experts models rose from 0% of popular original language models created up to 2022 to 42% of 2026 releases. KV cache per token per billion parameters fell 24-fold over the same period. Quantized copies are 6% of repositories but receive 28% of downloads. The Hub's displayed parameter count is wrong for 89% of NVFP4 releases. 28% of readable Hub models ship without a config.json.
+- Python package and CLI: pip install ai-model-explorer (https://pypi.org/project/ai-model-explorer/). Deploy-Ready board: https://joessattes.github.io/ai-model-explorer/census/#board
+- Datasets: https://huggingface.co/datasets/JoesSattes/hub-weight-census and https://huggingface.co/datasets/JoesSattes/manifest-anatomy-corpus. Paper PDF: https://joessattes.github.io/ai-model-explorer/paper/manifest-anatomy-singkul-2026.pdf
 - Source code: https://github.com/JoesSattes/ai-model-explorer (MIT).
 - Built for the workshop "Squeeze Until It Breaks: A Hands-On Edge Inference Contest", AI Expo Thailand 2026 (Sat 7 Nov 2026, 14:00–15:00 · Builder Stage, Challenger Hall 1, Muang Thong Thani). https://aiexpothailand.com/agenda/?day=3&stage=builder
 - Blog posts on this site are by Sattaya Singkul and licensed CC BY-SA 4.0: credit the author and link the post.
@@ -89,7 +92,7 @@ Digitised paper records into a cloud ERP with Python and OCR; customer segmentat
 - Call-Center AI System (KBank · KBTG): 93% of call-center use cases covered. LLM-based search and reasoning for agents.
 
 ## Publications
-- 2026. "Reading the Architecture off the Weights: Manifest-Only Recovery of Neural Network Anatomy". Preprint, ResearchGate. Author position: Sole author. Method behind AI Model Explorer. https://www.researchgate.net/publication/417293353_Reading_the_Architecture_off_the_Weights_Manifest-Only_Recovery_of_Neural_Network_Anatomy
+- 2026. "Reading the Architecture off the Weights: Manifest-Only Model Anatomy and a Census of 12,974 Hugging Face Repositories". Preprint, ResearchGate. Author position: Sole author. Method behind AI Model Explorer and the Hub Weight Census. https://www.researchgate.net/publication/417293353
 - 2025. "Optimizing Thai-English Spoken Question Answering Interaction for Open Environments with Limited Resources". International Conference on Document Analysis and Recognition (ICDAR 2025), Springer LNCS. Author position: 1st of 5. Rank A. https://doi.org/10.1007/978-3-032-04624-6_31
 - 2024. "Teacher-to-Teacher: Harmonizing Dual Expertise into a Unified Speech Emotion Model". IEEE International Conference on Systems, Man, and Cybernetics (SMC 2024). Author position: 1st of 3. Presenter · Rank B · HSRI-funded. https://doi.org/10.1109/SMC54092.2024.10830986
 - 2024. "An Enhanced Multimodal Negative Feedback Detection Framework with Target Retrieval in Thai Spoken Audio". IEEE International Conference on Multimedia and Expo Workshops (ICMEW 2024). Author position: 2nd of 7. Rank A (ICME). https://doi.org/10.1109/ICMEW63481.2024.10645364
@@ -153,7 +156,7 @@ End-to-end AI & LLM systems; AI product & applications; On-premise AI; System ar
 - Languages: Thai (Native), English (CEFR B1 · professional working proficiency)
 
 ## Open source
-- ai-model-explorer: See any Hugging Face model part by part without downloading it: architecture, parameters and precision read from the safetensors header in your browser. https://github.com/JoesSattes/ai-model-explorer
+- ai-model-explorer: See any Hugging Face model part by part without downloading it: architecture, parameters and precision from the safetensors header. Web app, CLI and Python package (pip install ai-model-explorer), plus a census of 12,974 Hub repositories. https://github.com/JoesSattes/ai-model-explorer
 - FinOps-Estimator: Capacity planning and FinOps estimation for conversational-AI pipelines: VRAM, latency budgets and GPU cost for STT, LLM, TTS and RAG workloads. https://github.com/JoesSattes/FinOps-Estimator
 - Thai-TTS-Evaluation: Evaluation scripts for Thai text-to-speech, focused on speaker tone and pronunciation. https://github.com/JoesSattes/Thai-TTS-Evaluation
 - Self-Supervised-LTMMv2: LTMMv2 — notes on a self-supervised Thai speech foundation model. https://github.com/JoesSattes/Self-Supervised-LTMMv2
@@ -162,7 +165,7 @@ End-to-end AI & LLM systems; AI product & applications; On-premise AI; System ar
 - Thai-Biaffine-Dependency-Parsing: Biaffine dependency parser for Thai on Universal Dependencies treebanks. https://github.com/JoesSattes/Thai-Biaffine-Dependency-Parsing
 
 ## Blog
-- [Reading a model's architecture from its safetensors header, without downloading the weights](https://joessattes.github.io/Sattaya-AI-Website/blog/reading-the-architecture-off-the-weights/): How I recover a neural network's anatomy from tensor names and shapes alone: 96.8% role accuracy on 510 architectures, from about 46 KB of header. The method behind AI Model Explorer.
+- [Reading a model's architecture from its safetensors header, and what 12,974 Hugging Face models reveal](https://joessattes.github.io/Sattaya-AI-Website/blog/reading-the-architecture-off-the-weights/): Model anatomy from tensor names and shapes alone: 96.8% role accuracy on 510 architectures, a census of 12,974 Hub repos, and AI Model Explorer as a web app and Python package.
 - [Why emotion models fall apart outside the lab (and what actually helps)](https://joessattes.github.io/Sattaya-AI-Website/blog/emotion-models-outside-the-lab/): Speech emotion recognition looks solved on benchmarks and breaks on real calls. A researcher's tour of domain shift, speaker leakage, metric learning and self-supervised features.
 - [FinOps-Estimator: sizing GPUs for a voice AI pipeline](https://joessattes.github.io/Sattaya-AI-Website/blog/finops-estimator/): An open-source tool that turns concurrency and model choices for STT → LLM → TTS into VRAM, RAM, CPU, TFLOPS and cloud or on-prem cost.
 - [Fitting an LLM in your own server room: the memory math behind on-prem AI](https://joessattes.github.io/Sattaya-AI-Website/blog/on-prem-llm-memory-math/): Bits per weight, quantization error, outliers, KV cache and memory bandwidth: how to decide which model actually runs on the GPUs you own.
