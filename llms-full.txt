@@ -27,7 +27,8 @@ Sattaya Singkul is the creator of AI Model Explorer and the sole author of the r
 - Python package and CLI: pip install ai-model-explorer (https://pypi.org/project/ai-model-explorer/). Deploy-Ready board: https://joessattes.github.io/ai-model-explorer/census/#board
 - Datasets: https://huggingface.co/datasets/JoesSattes/hub-weight-census and https://huggingface.co/datasets/JoesSattes/manifest-anatomy-corpus. Paper PDF: https://joessattes.github.io/ai-model-explorer/paper/manifest-anatomy-singkul-2026.pdf
 - Source code: https://github.com/JoesSattes/ai-model-explorer (MIT).
-- Built for the workshop "Squeeze Until It Breaks: A Hands-On Edge Inference Contest", AI Expo Thailand 2026 (Sat 7 Nov 2026, 14:00–15:00 · Builder Stage, Challenger Hall 1, Muang Thong Thani). https://aiexpothailand.com/agenda/?day=3&stage=builder
+- Follow-up paper: "The Vocabulary Tax: Safely Trimming Unused Tokens from LLMs for On-Device Use" (Sattaya Singkul, 2026, preprint, doi:10.13140/RG.2.2.10665.15200). https://joessattes.github.io/Sattaya-AI-Website/research/vocabulary-tax/ For a Thai and English deployment the unused rows are a median 4.4% of model bytes below 0.5B parameters and 2.1% above 8B; 1.93 GB in Gemma 4 E2B. Trimming with the user's own text removes a median 29.0% below 0.5B, but the usual way breaks BPE tokenizers: new text is split differently 1.9 times as often as the standard check reports. Merge closure repairs it for 5.9% more rows; the trim certificate predicts the real re-split rate from the trimming text alone (correlation 0.996, 300 settings, 22 languages). On six models from 270M to 3B in 11 languages, when the certificate passes, a median 89.7% of rows go and bits per character rise by at most 2.0%. Dataset: https://huggingface.co/datasets/JoesSattes/ai-vocabulary-tax
+- Built for the workshop "Squeeze Until It Breaks: A Hands-On Edge Inference Contest", AI Expo Thailand 2026 (Sat 7 Nov 2026, 14:00–15:00 · Builder Stage, Challenger Hall 1, Muang Thong Thani; held). https://aiexpothailand.com/agenda/?day=3&stage=builder
 - Blog posts on this site are by Sattaya Singkul and licensed CC BY-SA 4.0: credit the author and link the post.
 
 ## Experience
@@ -92,7 +93,8 @@ Digitised paper records into a cloud ERP with Python and OCR; customer segmentat
 - Call-Center AI System (KBank · KBTG): 93% of call-center use cases covered. LLM-based search and reasoning for agents.
 
 ## Publications
-- 2026. "Reading the Architecture off the Weights: Manifest-Only Model Anatomy and a Census of 12,974 Hugging Face Repositories". Preprint, ResearchGate. Author position: Sole author. Method behind AI Model Explorer and the Hub Weight Census. https://www.researchgate.net/publication/417293353
+- 2026. "The Vocabulary Tax: Safely Trimming Unused Tokens from LLMs for On-Device Use". Preprint, ResearchGate. Author position: Sole author. Follow-up to the Hub census; trimming built into AI Model Explorer. https://doi.org/10.13140/RG.2.2.10665.15200
+- 2026. "Reading the Architecture off the Weights: Manifest-Only Model Anatomy and a Census of 12,974 Hugging Face Repositories". Preprint, ResearchGate. Author position: Sole author. Method behind AI Model Explorer and the Hub Weight Census. https://doi.org/10.13140/RG.2.2.19473.19048
 - 2025. "Optimizing Thai-English Spoken Question Answering Interaction for Open Environments with Limited Resources". International Conference on Document Analysis and Recognition (ICDAR 2025), Springer LNCS. Author position: 1st of 5. Rank A. https://doi.org/10.1007/978-3-032-04624-6_31
 - 2024. "Teacher-to-Teacher: Harmonizing Dual Expertise into a Unified Speech Emotion Model". IEEE International Conference on Systems, Man, and Cybernetics (SMC 2024). Author position: 1st of 3. Presenter · Rank B · HSRI-funded. https://doi.org/10.1109/SMC54092.2024.10830986
 - 2024. "An Enhanced Multimodal Negative Feedback Detection Framework with Target Retrieval in Thai Spoken Audio". IEEE International Conference on Multimedia and Expo Workshops (ICMEW 2024). Author position: 2nd of 7. Rank A (ICME). https://doi.org/10.1109/ICMEW63481.2024.10645364
@@ -165,12 +167,230 @@ End-to-end AI & LLM systems; AI product & applications; On-premise AI; System ar
 - Thai-Biaffine-Dependency-Parsing: Biaffine dependency parser for Thai on Universal Dependencies treebanks. https://github.com/JoesSattes/Thai-Biaffine-Dependency-Parsing
 
 ## Blog
+- [The vocabulary tax: the token tables your users never touch, and how to trim them safely](https://joessattes.github.io/Sattaya-AI-Website/blog/the-vocabulary-tax/): After AI Expo Thailand 2026: how much of a small LLM is vocabulary a Thai deployment never uses, why the usual trimming breaks BPE tokenizers, and a certificate that says when a trim is safe.
 - [Reading a model's architecture from its safetensors header, and what 12,974 Hugging Face models reveal](https://joessattes.github.io/Sattaya-AI-Website/blog/reading-the-architecture-off-the-weights/): Model anatomy from tensor names and shapes alone: 96.8% role accuracy on 510 architectures, a census of 12,974 Hub repos, and AI Model Explorer as a web app and Python package.
 - [Why emotion models fall apart outside the lab (and what actually helps)](https://joessattes.github.io/Sattaya-AI-Website/blog/emotion-models-outside-the-lab/): Speech emotion recognition looks solved on benchmarks and breaks on real calls. A researcher's tour of domain shift, speaker leakage, metric learning and self-supervised features.
 - [FinOps-Estimator: sizing GPUs for a voice AI pipeline](https://joessattes.github.io/Sattaya-AI-Website/blog/finops-estimator/): An open-source tool that turns concurrency and model choices for STT → LLM → TTS into VRAM, RAM, CPU, TFLOPS and cloud or on-prem cost.
 - [Fitting an LLM in your own server room: the memory math behind on-prem AI](https://joessattes.github.io/Sattaya-AI-Website/blog/on-prem-llm-memory-math/): Bits per weight, quantization error, outliers, KV cache and memory bandwidth: how to decide which model actually runs on the GPUs you own.
 - [TurboQuant, reviewed: when a theory paper walks straight into production](https://joessattes.github.io/Sattaya-AI-Website/blog/turboquant-review/): A close read of TurboQuant (ICLR 2026): random rotations, Lloyd–Max codebooks and a 1-bit QJL residual, and why it went from proof to vLLM and a 17k-star vector index within weeks.
 - [Your MAU is not your load: capacity math for voice AI at scale](https://joessattes.github.io/Sattaya-AI-Website/blog/voice-ai-at-scale/): How to turn "a million users" into a latency budget, a concurrency number, KV-cache memory and a GPU count — with the formulas, not vibes.
+
+---
+
+# The vocabulary tax: the token tables your users never touch, and how to trim them safely
+
+By Sattaya Singkul, 16 November 2026. https://joessattes.github.io/Sattaya-AI-Website/blog/the-vocabulary-tax/
+
+**A Thai and English chatbot built on Gemma 4 E2B downloads 1.93 GB of rows it can never use.** Those rows sit in the token tables, the input embedding, the output head and the per-layer embeddings, and they belong to writing systems the deployment never sees. My new paper, [The Vocabulary Tax](../../research/vocabulary-tax/), measures that cost across the Hugging Face Hub without downloading any weights. It also shows that the usual way of trimming it breaks BPE tokenizers, fixes that, and adds a *trim certificate*: a number, computed from your own text before you touch the model, that says how much of your future input the trimmed tokenizer will split differently.
+
+It continues the work behind my workshop at AI Expo Thailand 2026. This post walks through the idea with diagrams, the numbers that matter and where I think it can go next.
+
+<p lang="th"><strong>สรุปภาษาไทย:</strong> หลังจบงาน AI Expo Thailand 2026 ผมต่อยอดคำถามจาก workshop “Squeeze Until It Breaks” ว่าจะบีบโมเดลตรงไหนก่อน เปเปอร์ใหม่ชื่อ The Vocabulary Tax วัดว่าโมเดล AI เก็บตาราง token ของภาษาที่ผู้ใช้ไม่เคยใช้ไว้มากแค่ไหน วัดจาก header ของไฟล์โดยไม่ต้องดาวน์โหลด weights ครอบคลุม 1,244 โมเดลบน Hugging Face ถ้าใช้งานแค่ภาษาไทยกับอังกฤษ ส่วนที่ไม่ได้ใช้คิดเป็นค่ากลาง 4.4% ของขนาดโมเดลที่เล็กกว่า 0.5B และ 2.1% ของโมเดลที่ใหญ่กว่า 8B ใน Gemma 4 E2B มีถึง 1.93 GB โมเดลเล็กที่ใช้บนมือถือจึงเสียมากที่สุด การตัดตามระบบตัวเขียน (อักษรไทย + ละติน) ปลอดภัยแน่นอน ส่วนการตัดตามข้อความจริงของผู้ใช้ตัดได้มากกว่ามาก แต่วิธีที่ใช้กันทั่วไปทำให้ tokenizer แบบ BPE ตัดคำผิดไปจากเดิม ผมจึงแก้ด้วย merge closure และเพิ่ม trim certificate ที่บอกล่วงหน้าว่าข้อความใหม่จะถูกตัดคำต่างไปเท่าไร และต้องใช้ข้อความเพิ่มอีกกี่บรรทัด ทดสอบกับ 6 โมเดลขนาด 270M–3B ใน 11 ภาษา เมื่อ certificate ผ่าน ตัดแถวออกได้ค่ากลาง 89.7% โดยคุณภาพแทบไม่เปลี่ยน ใช้ได้ทั้งบนเว็บ AI Model Explorer (หัวข้อ Where to cut) และผ่าน <code>pip install ai-model-explorer</code></p>
+
+## From the workshop to a second paper
+
+My session at AI Expo Thailand 2026 was *Squeeze Until It Breaks: A Hands-On Edge Inference Contest* ([Saturday 7 November, Builder Stage](https://aiexpothailand.com/agenda/?day=3&stage=builder)). The idea was simple: take a model, compress it for a device, and keep going until it fails. Before you can squeeze well, you need to know where the bytes are. That question produced [AI Model Explorer](https://joessattes.github.io/ai-model-explorer/) and my [first paper](../reading-the-architecture-off-the-weights/), which reads a model's anatomy from its weight headers.
+
+Once you can see the parts, one part stands out in small multilingual models. The vocabulary is huge, and every table indexed by it grows with it. So the follow-up question was obvious: how much of a model is vocabulary that a given deployment never uses, and can you remove it without breaking anything?
+
+[Figure: One workshop question, two papers. Both papers read the same raw material, the weight headers and tokenizer files of public models. Nothing is downloaded beyond a few kilobytes per model.]
+
+## What the vocabulary tax is
+
+Open models now ship vocabularies of up to 262k tokens. They have to: one checkpoint is meant to serve dozens of languages. But every table indexed by the vocabulary has one row per token:
+
+- the **input embedding**, which turns a token id into a vector;
+- the **output head**, which scores every token at each step, when it isn't tied to the input embedding;
+- **per-layer embeddings**, used by recent on-device models such as Gemma 3n and Gemma 4, which keep one extra table per layer.
+
+A deployment that serves Thai and English still downloads the rows for Cyrillic, Arabic, Devanagari, Hangul and the rest. I call those bytes the **vocabulary tax**. Formally, it's the bytes of the rows a deployment's keep rule removes, as a share of the stored model.
+
+[Figure: Gemma 4 E2B, served in Thai and English: one fifth of the weights are rows you never select. The Where to cut panel after loading google/gemma-4-E2B-it and counting the model's own tokenizer. Hover or tap a number.]
+
+The tax can be computed without downloading weights. The tensor manifest in the safetensors header gives the shape and storage type of every token table, and the tokenizer file says which piece each row belongs to. That's exactly what the census from the first paper already reads, so the paper measures the tax for **1,244 generative and speech-recognition models** in one pass.
+
+## Who pays it: small models, and the languages they serve
+
+The tax is **regressive**. For a Thai and English deployment, the median tax is:
+
+| Model size | Median tax (share of model bytes) |
+| :-- | --: |
+| below 0.5B parameters (116 models) | 4.4% |
+| 0.5–2B | 4.3% |
+| 2–8B | 2.8% |
+| above 8B (628 models) | 2.1% |
+
+The reason is structural. Token tables grow with the vocabulary times the width. Transformer layers grow with the width squared times the depth. So in a small model the tables are a much bigger slice: a median 41.2% of model bytes below 0.5B, against 13.1% across all 1,244 models. The 90th percentile below 0.5B pays 22.1%.
+
+At Hub scale this adds up. Qwen3 0.6B was downloaded 23 million times in the month before the census, and each copy carried 0.18 GB of rows that a Thai and English deployment never uses.
+
+[Interactive figure; see the post]
+
+### A memory tax or a compute tax: the tokenizer decides
+
+There's a trade-off hiding here. A tokenizer with a small, English-centred vocabulary wastes almost no memory, but it splits Thai into many more tokens, and every extra token costs compute and context. GPT-2's vocabulary leaves only 0.5% of rows unused by Thai and English, but a Thai sentence needs 8.29 times as many tokens as its English translation. Gemma's leaves 35.0% unused at 1.53 times. GPT-OSS's `o200k` sits between them at 27.1% and 1.84 times. No family in the census avoids both. **A Thai user pays a compute tax or a memory tax, and the tokenizer picks which.**
+
+[Interactive figure; see the post]
+
+The tax barely depends on which language you keep: below 0.5B it is 4.4–4.5% for 35 of 40 languages. The exceptions are telling. For Lao and Punjabi the script rule keeps no more rows than for English alone, because the reference vocabularies hold hardly any pieces in those scripts. Their speakers don't pay the memory tax. They pay the compute tax in full.
+
+## Rule 1: keep your writing systems. It's exact
+
+The safest trim keeps every piece whose characters all belong to your scripts, plus Latin, plus the shared character classes (the Unicode *Common* and *Inherited* scripts, and format characters such as zero-width spaces). Special tokens, byte fallbacks, digits and punctuation are always kept.
+
+Text in those scripts then tokenizes exactly as before, as long as the tokenizer is rebuilt consistently. The paper checks this:
+
+- Over 189 language and tokenizer pairs, **at most 0.008%** of held-out tokens fall in removed rows, and those are rare symbols outside any declared script.
+- After a full rebuild and trim to Thai and English for five tokenizer families, **100% of sentences** tokenize identically and round-trip back to the input.
+
+**Latin is not optional.** Thai text is full of Latin: names, numbers, URLs, English words. Trimming to the Thai script alone removes 91–95% of rows instead of 12–35%, but 3.5–6.6% of the tokens in Thai text are then lost. With Latin kept, none are.
+
+Each inclusion in the rule fixes a failure I actually hit. The Japanese long-vowel mark and the Arabic tatweel belong to the Common script. Combining marks belong to Inherited. Zero-width spaces are format characters.
+
+## Rule 2: keep what your users write. It removes far more, and the usual way breaks
+
+If you have text from your users, you can go much further: keep only the pieces that appear when you tokenize it. Several papers and tools do exactly this. With 15,000 lines of Thai, the median removable share below 0.5B rises from 7.9% to **29.0%**, and Gemma 4 E2B can lose 4.87 GB of its 10.25 GB.
+
+But there's a trap, and it's specific to BPE, the tokenizer type most open models use. In BPE, every piece except a single character is built by **merging two smaller pieces**. Many of those smaller pieces never appear as tokens in real text, because they always get merged further. A rule that keeps "pieces seen as tokens" removes them. Every piece built on them becomes unreachable.
+
+[Interactive figure; see the post]
+
+The orphan's row is still in the model, so it still costs memory, but the rebuilt tokenizer can never select it. Words that used it fall apart into smaller pieces. The usual check misses this. It counts held-out tokens whose row was removed (the **nominal** rate), not how much text actually gets split differently after the rebuild (the **real** rate).
+
+Measured across 22 languages and four BPE families (Gemma, Qwen, Llama 3 and GPT-2):
+
+- A median **828 kept rows per setting (5.0%)** are orphans.
+- The real re-split rate is a median **1.9 times** the nominal rate, and more than 1.2 times in 95 of 101 measurable settings.
+- For German on Qwen, the nominal rate is 2.4% but the real rate is 7.1%. For English web text, the real rate is 23–27% against a nominal 9%, and sequences grow by 49–62%.
+
+### The fix: merge closure
+
+The repair is to close the keep set under merges: for every kept piece, also keep the two pieces it was merged from, recursively. The parents come from the merge list in `tokenizer.json` or GGUF. For tiktoken and Tekken vocabularies, which store ranks instead of merges, they come from the last merge BPE performs when it encodes the piece on its own.
+
+Closure costs a median **5.9% more rows**, a small price next to the 80–90% that the corpus rule removes. With it, the real re-split rate falls to a median 0.94 of the nominal rate, and sequences grow by a median 0.9% instead of 2.5%. Against the keep rules of prior work, at the same compression, the others re-split 1.30–1.32 times as much new text, and only ours keeps no unreachable rows.
+
+## The trim certificate: know before you deploy
+
+Merge closure makes the trim correct. The remaining question is whether you had **enough text**. If your sample missed pieces your users will need, their words get split into smaller pieces. The model still works, but on input it saw less often.
+
+Holding out part of your text to test this costs text and, as it turns out, overestimates the error. Instead, the certificate estimates it from the trimming text itself, using an old idea from statistics: the **Good–Turing estimate**. It says that the chance the next token is something you've never seen is about the share of tokens you've seen exactly once. With the default minimum count of one, the certificate is simply:
+
+> estimated re-split rate = (tokens of pieces seen exactly once) ÷ (all tokens)
+
+To say how much more text a target needs, it computes the same estimate on the first half of your text and on all of it, fits the decay (the form Heaps' law gives for Zipf-like text) and extrapolates. It runs in the time it takes to tokenize your text.
+
+[Interactive figure; see the post]
+
+How well it works:
+
+- Across 300 settings (22 languages, four families, 1k–15k lines), the estimate agrees with the real rate after rebuilding with **correlation 0.996**, and falls on the right side of a 1% threshold in 297 of 300.
+- Its median relative error is **4.5–6.6%**. A 20% hold-out gets 22.6–25.9%, and five-fold cross-validation about 25–27%.
+- **The deployed comparison is the one that matters.** Users of prior rules check the nominal rate on held-out test text and keep the most aggressive setting that passes. At a 2% target, they overshoot in 9 to 13 of 44 settings. Choosing by the certificate, with no test text at all, overshoots in **0 of 44** while removing about as many rows (68.2% against 68.1–68.5%).
+
+How much text you need depends on the language, by two orders of magnitude:
+
+[Interactive figure; see the post]
+
+The order follows how much of a language's vocabulary it shares with English. Pieces in a script used by few languages are few and frequent, so a few thousand lines see nearly all of them. Latin pieces are numerous and spread across every Latin-script language. English, whose pieces are the bulk of most vocabularies, is the extreme.
+
+[Figure: From a model id to a trim you can trust. No model is run to decide the trim. In the paper, the certificate also predicted the quality cost.]
+
+## Does the trimmed model still work?
+
+Tokenizer experiments are only half the story, so the paper also runs six edge-sized models with different tokenizers (Gemma 3 270M and 1B, Qwen3 0.6B and 1.7B, Llama 3.2 1B, SmolLM3 3B) in 11 languages. A trimmed model can be evaluated exactly without editing any weights: map the trimmed tokenizer's ids to the original rows and take every softmax over the kept rows only.
+
+- **Script rule:** bits per character change by between −0.71% and +0.55%, at least 93% of greedy continuations are identical to the original model's (median 100%), and Belebele answers are identical in 61 of 66 cases.
+- **Corpus rule, where the certificate passes** (68 settings): a median **89.7% of rows removed**, bits per character change by a median −0.65% and at most +1.99%, and a median 91% of greedy continuations are identical.
+- **Corpus rule, where it asks for more text** (54 settings): the median change is +3.41%, and the worst case, English with 4,000 lines, reaches +23.3%. This is the certificate doing its job.
+
+The change in bits per character follows the re-split rate almost linearly, roughly 2.5% per percent of re-split tokens. So the certificate, computed before any model is run, also predicts the quality cost.
+
+One caution I didn't expect. SmolLM3 shares Llama 3's tokenizer, yet where the re-split rate is under 0.2% its bits per character *drop* by 8–14% after trimming, against at most 2.3% for Llama 3.2 1B. Trimming renormalises the model over the kept rows. SmolLM3 put a lot of probability on pieces that never occur in the target language, so removing them looks like an improvement. It isn't: Belebele accuracy doesn't rise. Read a drop in bits per character together with the re-split rate.
+
+## Does it change what fits on a device?
+
+For weight files, yes. Of the 182 edge-sized models (under 4B parameters) in the paper's population that exceed a 1 GB budget at their stored precision, 3 fit after the script rule and 25 after the corpus rule. At INT4 and 1 GB, 10 and 21 of 54. Qwen3 0.6B (1.50 GB) fits in 1 GB only after the corpus rule, and so does Qwen3 1.7B at INT4.
+
+These are bytes on disk. Runtimes that memory-map weights only page in the embedding rows they touch, so for them the input embedding costs download size more than RAM. The output head is different: it's read in full at every decoding step, so trimming an untied head saves memory bandwidth and compute too.
+
+## Which rule should you use?
+
+| Your situation | Use | What the paper measured |
+| :-- | :-- | :-- |
+| No text from your users | Script rule | Exact for your scripts; bits per character moved by at most 0.71% |
+| Text, certificate below your target | Corpus rule + merge closure | A median 89.7% of rows removed; bits per character at most +1.99% |
+| Text, certificate above your target | Add the lines it asks for, or fall back to the script rule | Uncertified trims: median +3.41%, worst +23.3% |
+| Any trim, before release | Check 200 lines of real deployment text | Domain shift raised the real rate a median 1.7× |
+
+The last box matters. The certificate describes new text **from the same source** as your trimming text. When the paper trained the keep set on one domain and tested on another, the real rate was a median 1.7 times higher, up to 3.4 times for Korean. The cheap guard is to check the nominal rate on just 200 lines of real deployment text. With a merge-closed keep set, that number is honest: a median 0.86 of the real rate on 1,000 lines. Without closure, it would understate the damage about twofold.
+
+Most real deployments are mixed. For Thai with Chinese and English, the script-rule tax below 0.5B falls to 3.3%, because Chinese pieces are a big part of most vocabularies. The pooled certificate can hide a weak language (French reaches 8.1% next to Arabic's 0.5% on Gemma), so it's computed per language too, and it predicts each language's real rate with a median ratio of 1.03.
+
+## The potential: where I think this goes
+
+The paper measures. This section is my view of what it opens up, so read it as direction rather than result.
+
+- **Regional on-device AI.** Southeast Asian apps usually serve one or two local languages plus English. The tax hits exactly the small models those apps can afford to run, and Thai needs only about 4,000 lines of real text for a certified trim. A phone app, a kiosk or an in-car assistant can ship a smaller model with no retraining.
+- **Faster downloads and updates.** Even where RAM is not the limit, a quarter to half off the file (26–55% for the small reference models above, with 15,000 Thai lines) means faster installs and over-the-air updates, and less storage on cheap devices.
+- **Call centres and on-prem servers.** A server that handles a fixed set of languages doesn't need to stream an untied output head over the whole vocabulary at every step. That is bandwidth and compute on the hottest path.
+- **A pre-flight check for model choice.** Because the tax is read from headers, you can compare candidate models *before* downloading any of them. The memory tax against compute tax trade-off becomes a number you can read off, per language.
+- **Draft models for speculative decoding.** Smaller vocabularies already help draft models (Ben Shoham, 2026). Merge closure and the certificate apply there unchanged.
+- **The other side: low-resource scripts.** Lao, Punjabi, Amharic, Burmese and Khmer pay almost no memory tax because their scripts are barely in the vocabularies. They pay in sequence length instead. The same census can show which models treat which language fairly, which is useful data for anyone building or extending a vocabulary.
+
+## Try it on your own model
+
+On the web, open [AI Model Explorer](https://joessattes.github.io/ai-model-explorer/) and use **Where to cut**. It tokenizes text you paste in the browser with the model's own tokenizer, without uploading it. The [census page](https://joessattes.github.io/ai-model-explorer/census/#vtax) lists the tax for 2,061 models in any of 41 languages.
+
+[Figure: Look up any model before you download it]
+
+From the command line:
+
+```bash
+pip install ai-model-explorer
+ai-model-explorer tax Qwen/Qwen3-0.6B --lang th --corpus my_text.txt --export out/
+```
+
+From Python:
+
+```python
+from ai_model_explorer import explore
+
+explore("Qwen/Qwen3-0.6B").vocab_tax(["th"], corpus=["my_text.txt"])  # rows and bytes you never use, plus the certificate
+```
+
+`--export` writes the trimmed tokenizer and the list of kept ids, so the token tables can be sliced with one indexing operation. Every table behind the paper is in the [ai-vocabulary-tax](https://huggingface.co/datasets/JoesSattes/ai-vocabulary-tax) dataset.
+
+## What it doesn't cover yet
+
+- **Model size and quality.** Quality is measured without retraining on models up to 3B, on text from the same source as the trimming text. Larger models, human judgement of generation and fine-tuning after trimming are not covered, and Belebele has little power at this scale.
+- **Domain shift.** The certificate is for in-domain text. Keep the 200-line check.
+- **Newest tokenizers.** Families distributed only through the Hub (Qwen3.5 and later, Nemotron-H, GLM-5, DeepSeek-V3.2 and V4) are not in the census populations. The package computes their tax directly from their own tokenizer files.
+- **Other tokenizer types.** The corpus experiments cover four BPE families. The package also closes tiktoken, Tekken and SentencePiece-BPE vocabularies, but those extensions aren't part of the measured experiments.
+- **Encoders and multimodal towers** are outside the populations studied.
+
+If you use this in research, please [cite the paper](../../research/vocabulary-tax/).
+
+## References
+
+- Singkul, S. [The Vocabulary Tax: Safely Trimming Unused Tokens from LLMs for On-Device Use](https://doi.org/10.13140/RG.2.2.10665.15200). Preprint, 2026. doi:10.13140/RG.2.2.10665.15200. All figures in this post come from this paper.
+- Singkul, S. [Reading the Architecture off the Weights: Manifest-Only Model Anatomy and a Census of 12,974 Hugging Face Repositories](https://doi.org/10.13140/RG.2.2.19473.19048). Preprint, 2026. doi:10.13140/RG.2.2.19473.19048.
+- Singkul, S. [AI Model Explorer](https://joessattes.github.io/ai-model-explorer/), [Python package](https://pypi.org/project/ai-model-explorer/), [source code](https://github.com/JoesSattes/ai-model-explorer) and the [ai-vocabulary-tax](https://huggingface.co/datasets/JoesSattes/ai-vocabulary-tax) dataset. 2026.
+- AI Expo Thailand. [Agenda, Day 3, Builder Stage](https://aiexpothailand.com/agenda/?day=3&stage=builder). 2026.
+- Sennrich, R., Haddow, B. and Birch, A. Neural Machine Translation of Rare Words with Subword Units. ACL 2016.
+- Kudo, T. and Richardson, J. SentencePiece: A simple and language independent subword tokenizer and detokenizer for Neural Text Processing. EMNLP 2018 System Demonstrations.
+- Good, I. J. The population frequencies of species and the estimation of population parameters. Biometrika 40(3–4):237–264, 1953.
+- Gale, W. A. and Sampson, G. Good-Turing frequency estimation without tears. Journal of Quantitative Linguistics 2(3):217–237, 1995.
+- Heaps, H. S. Information Retrieval: Computational and Theoretical Aspects. Academic Press, 1978.
+- Ushio, A., Zhou, Y. and Camacho-Collados, J. Efficient Multilingual Language Model Compression through Vocabulary Trimming. Findings of EMNLP 2023.
+- Bogoychev, N., Chen, P., Haddow, B. and Birch, A. The Ups and Downs of Large Language Model Inference with Vocabulary Trimming by Language and by Frequency. Workshop on Insights from Negative Results in NLP, 2024.
+- SqueezeBits. [Vocabulary trimming: an easy and effective method for SLM acceleration](https://blog.squeezebits.com/vocabulary-trimming-methods). 2025.
+- Petrov, A., La Malfa, E., Torr, P. H. S. and Bibi, A. Language Model Tokenizers Introduce Unfairness Between Languages. NeurIPS 2023.
+- Ahia, O. et al. Do All Languages Cost the Same? Tokenization in the Era of Commercial Language Models. EMNLP 2023.
+- Land, S. and Bartolo, M. Fishing for Magikarp: Automatically Detecting Under-trained Tokens in Large Language Models. EMNLP 2024.
+- Ben Shoham, O. Balancing coverage and draft latency in vocabulary trimming for faster speculative decoding. arXiv:2603.05210, 2026.
+- Bandarkar, L. et al. The Belebele Benchmark: a Parallel Reading Comprehension Dataset in 122 Language Variants. ACL 2024.
+- The Unicode Consortium. [Unicode Standard Annex #24: Unicode Script Property](https://www.unicode.org/reports/tr24/).
+- Hugging Face. [safetensors](https://github.com/huggingface/safetensors). 2022.
 
 ---
 
@@ -181,6 +401,8 @@ By Sattaya Singkul, 2 November 2026. https://joessattes.github.io/Sattaya-AI-Web
 **You can learn most of a model's architecture from a file header of a few tens of kilobytes.** A safetensors file starts with a small JSON list of every tensor's name, shape and storage type. In my new paper, [Reading the Architecture off the Weights](../../research/manifest-only-recovery/), I show that this list alone gives you the blocks, the role of each part, the data path and an exact parameter count. I built the idea into [AI Model Explorer](https://joessattes.github.io/ai-model-explorer/), a free tool that opens any Hugging Face repository without downloading the weights, in your browser or with `pip install ai-model-explorer`. Then I pointed it at 12,974 Hub repositories to see what the weights say about the open-model ecosystem.
 
 *Updated 6 November 2026 for version 2 of the paper: the Hub census, the Python package and the Deploy-Ready board.*
+
+*Follow-up, 16 November 2026: [The vocabulary tax](../the-vocabulary-tax/) uses this census to measure the token tables a deployment never uses, and how to trim them safely.*
 
 <p lang="th"><strong>สรุปภาษาไทย:</strong> ผมสร้าง AI Model Explorer เป็นเครื่องมือเปิดดูสถาปัตยกรรมโมเดล AI จาก Hugging Face ได้โดยไม่ต้องดาวน์โหลด weights และเขียน paper อธิบายวิธีอ่านโครงสร้างโมเดลจาก header ของไฟล์ safetensors ขนาดเพียงหลักสิบกิโลไบต์ ผลทดสอบกับ 510 สถาปัตยกรรมระบุหน้าที่ของแต่ละ tensor ถูกต้อง 96.8% จากนั้นผมใช้วิธีเดียวกันสำรวจ 12,974 repository บน Hugging Face พบว่าโมเดลแบบ mixture-of-experts เพิ่มจาก 0% เป็น 42% ของโมเดลภาษายอดนิยมที่ออกในปี 2026 และตัวเลขจำนวนพารามิเตอร์ที่ Hub แสดงผิดถึง 89% ของโมเดล NVFP4 ใช้งานได้ทั้งบนเว็บ (มีภาษาไทย) และผ่าน <code>pip install ai-model-explorer</code> เครื่องมือนี้เริ่มจาก workshop “Squeeze Until It Breaks” ที่งาน AI Expo Thailand 2026</p>
 
@@ -205,8 +427,7 @@ That second point is what surprised me. Names help to break ties, but most of th
 
 ## How the recovery works
 
-![The pipeline: tensor manifest, storage normalisation, module tree, shape algebra and width matching, with config.json filling the gaps and being checked against the weights](./flow.svg)
-_Only descriptive bytes are fetched. Everything else runs in the browser._
+[Figure: From header bytes to a model's anatomy, in five steps. Only descriptive bytes are fetched. Everything else runs in the browser.]
 
 **1. Normalise storage.** Quantized checkpoints store one logical weight as several tensors. NVFP4, for example, keeps a `U8` tensor of shape $[o, i/2]$ plus an FP8 scale tensor of shape $[o, i/16]$. I recognise these layouts from dtypes and shape ratios, so the logical shape $[o, i]$ comes back before any name is read.
 
@@ -228,12 +449,7 @@ A mismatch is reported, not resolved. Every value in the explorer says where it 
 
 I evaluated on 510 architectures from the `transformers` library, using the Python class of each module as ground truth. The algorithm never sees those classes.
 
-| Condition | Role accuracy (macro) | Block lists found | Exact parameter counts |
-| :-- | --: | --: | --: |
-| Names and shapes | 96.8% | 98.6% | 510/510 |
-| Shapes only, names hashed | 95.0% | 98.6% | 510/510 |
-| Best name-rule baseline | 82.3% | 60.7% | n/a |
-| llama.cpp name table | 29.7% | 60.7% | n/a |
+[Figure: Hide every name and the method still gets 95% of roles right. Ground truth is the Python class of each module, which the method never sees. Switch the measure to see how often each approach finds the block lists. Parameter totals are exact for all 510 models in both of my conditions.]
 
 Two results here matter most to me. Replacing every name with a random token costs only 1.8 points, so most of the work is done by structure and shapes. And parameter totals stay exact under NVFP4, FP8 and GPTQ storage.
 
@@ -243,7 +459,13 @@ Head geometry shows the honest limit. From shapes alone, the head count is right
 
 ## What it tells you in practice
 
-Take `nvidia/parakeet-tdt-0.6b-v3`, a speech model you might want to run on a phone. Paste the repo id and the explorer reads a 63 KB header from a 2.5 GB file. You see a 24-block conformer encoder holding 97% of the parameters, a 12 M prediction network and a 6 M joint network. Feed-forward modules hold two thirds of each block, so that's where pruning or low-bit storage pays off. The encoder runs once per utterance while the two small networks run once per emitted label, so streaming latency depends on the small networks and not on the encoder.
+Here is what that looks like on a real repository. I pasted `Qwen/Qwen3-30B-A3B` into the explorer:
+
+[Figure: A 61 GB mixture-of-experts model, read from 2.3 MB of headers. The Anatomy view after pasting Qwen/Qwen3-30B-A3B. Hover or tap a number.]
+
+[Figure: Five parts, one stack, one loop per token. The same model in the parts view, with the Weights lens on. Press Play in the app to walk through the parts.]
+
+Or take `nvidia/parakeet-tdt-0.6b-v3`, a speech model you might want to run on a phone. Paste the repo id and the explorer reads a 63 KB header from a 2.5 GB file. You see a 24-block conformer encoder holding 97% of the parameters, a 12 M prediction network and a 6 M joint network. Feed-forward modules hold two thirds of each block, so that's where pruning or low-bit storage pays off. The encoder runs once per utterance while the two small networks run once per emitted label, so streaming latency depends on the small networks and not on the encoder.
 
 Or take a 121.5 B hybrid model, Nemotron 3.5 Super VL. Experts hold 112.7 B of those parameters, and with its top-22 routing only about 13.6 B are active per token. Just 8 of its 88 layers keep a KV cache, so the cache costs 8 KB per token in BF16, an eleventh of what it would be if every layer used the same attention. That's the kind of number you want before you buy hardware.
 
@@ -252,6 +474,8 @@ Or take a 121.5 B hybrid model, Nemotron 3.5 Super VL. Experts hold 112.7 B of t
 A method that reads a model in 80 KB can read a lot of models. For version 2 of the paper I ran it over a stratified sample of the Hub: the 10,000 most downloaded repositories in full, recent original releases from fifty leading providers, and a random sample of the rest, weighted back to the whole Hub. It read 12,974 repositories in about three and a half hours on one machine. Headers totalling 4.9 GB described 283 TB of weights.
 
 The architecture here comes from the tensor shapes, not from what the model card says. Some of what came out:
+
+[Figure: In four years, MoE and grouped-query attention went from nothing to normal, and fewer new models fit a laptop. Share of popular original language models created up to 2022 against those released in 2026. Laptop: fits 16 GB at 4-bit with an 8k context. Hover or tap a row.]
 
 - **Mixtures of experts took over.** Among popular original language models, MoE went from 0% of those created up to 2022 to 42% of 2026 releases. Grouped-query attention went from 0% to 84%, and hybrid stacks with state-space or linear-attention layers reached 28%.
 - **Experts got sparser.** The median MoE went from 8 experts with 28% of parameters active per token in 2024 to 256 experts with 11% in 2026. Memory follows total parameters and speed follows active ones, and the gap between them keeps growing.
@@ -294,7 +518,7 @@ Open [AI Model Explorer](https://joessattes.github.io/ai-model-explorer/) ([ภ�
 
 ## References
 
-- Singkul, S. [Reading the Architecture off the Weights: Manifest-Only Model Anatomy and a Census of 12,974 Hugging Face Repositories](https://www.researchgate.net/publication/417293353) ([PDF](https://joessattes.github.io/ai-model-explorer/paper/manifest-anatomy-singkul-2026.pdf)). Preprint, 2026. All figures in this post come from this paper.
+- Singkul, S. [Reading the Architecture off the Weights: Manifest-Only Model Anatomy and a Census of 12,974 Hugging Face Repositories](https://doi.org/10.13140/RG.2.2.19473.19048) ([PDF](https://joessattes.github.io/ai-model-explorer/paper/manifest-anatomy-singkul-2026.pdf)). Preprint, 2026. All figures in this post come from this paper.
 - Singkul, S. [AI Model Explorer](https://joessattes.github.io/ai-model-explorer/), [Python package](https://pypi.org/project/ai-model-explorer/) and [source code](https://github.com/JoesSattes/ai-model-explorer). 2026.
 - Singkul, S. [Hub Weight Census](https://huggingface.co/datasets/JoesSattes/hub-weight-census) and [Manifest Anatomy Corpus](https://huggingface.co/datasets/JoesSattes/manifest-anatomy-corpus) datasets. 2026.
 - Fahlgren, C. [hub-stats](https://huggingface.co/datasets/cfahlgren1/hub-stats): the Hub metadata dump used as the census sampling frame (snapshot of 2 November 2026).
