@@ -224,13 +224,13 @@ The reason is structural. Token tables grow with the vocabulary times the width.
 
 At Hub scale this adds up. Qwen3 0.6B was downloaded 23 million times in the month before the census, and each copy carried 0.18 GB of rows that a Thai and English deployment never uses.
 
-[Interactive figure; see the post]
+[Figure: Interactive bar chart: removable share of stored bytes for seven reference models, script rule against 15,000 Thai lines (paper Table 13).]
 
 ### A memory tax or a compute tax: the tokenizer decides
 
 There's a trade-off hiding here. A tokenizer with a small, English-centred vocabulary wastes almost no memory, but it splits Thai into many more tokens, and every extra token costs compute and context. GPT-2's vocabulary leaves only 0.5% of rows unused by Thai and English, but a Thai sentence needs 8.29 times as many tokens as its English translation. Gemma's leaves 35.0% unused at 1.53 times. GPT-OSS's `o200k` sits between them at 27.1% and 1.84 times. No family in the census avoids both. **A Thai user pays a compute tax or a memory tax, and the tokenizer picks which.**
 
-[Interactive figure; see the post]
+[Figure: Interactive scatter: rows unused by Thai and English against Thai-to-English token ratio for 19 tokenizer families (paper Table 1).]
 
 The tax barely depends on which language you keep: below 0.5B it is 4.4–4.5% for 35 of 40 languages. The exceptions are telling. For Lao and Punjabi the script rule keeps no more rows than for English alone, because the reference vocabularies hold hardly any pieces in those scripts. Their speakers don't pay the memory tax. They pay the compute tax in full.
 
@@ -253,7 +253,7 @@ If you have text from your users, you can go much further: keep only the pieces 
 
 But there's a trap, and it's specific to BPE, the tokenizer type most open models use. In BPE, every piece except a single character is built by **merging two smaller pieces**. Many of those smaller pieces never appear as tokens in real text, because they always get merged further. A rule that keeps "pieces seen as tokens" removes them. Every piece built on them becomes unreachable.
 
-[Interactive figure; see the post]
+[Figure: Interactive BPE merge tree for "there": without merge closure the parent "th" is dropped and the word splits into 4 tokens.]
 
 The orphan's row is still in the model, so it still costs memory, but the rebuilt tokenizer can never select it. Words that used it fall apart into smaller pieces. The usual check misses this. It counts held-out tokens whose row was removed (the **nominal** rate), not how much text actually gets split differently after the rebuild (the **real** rate).
 
@@ -279,7 +279,7 @@ Holding out part of your text to test this costs text and, as it turns out, over
 
 To say how much more text a target needs, it computes the same estimate on the first half of your text and on all of it, fits the decay (the form Heaps' law gives for Zipf-like text) and extrapolates. It runs in the time it takes to tokenize your text.
 
-[Interactive figure; see the post]
+[Figure: Interactive line chart: real re-split rate of new Thai text against trimming lines for four tokenizer families (paper Table 5).]
 
 How well it works:
 
@@ -289,7 +289,7 @@ How well it works:
 
 How much text you need depends on the language, by two orders of magnitude:
 
-[Interactive figure; see the post]
+[Figure: Interactive dot plot: lines of own text needed for a 1% re-split rate in 20 languages (paper Table 9).]
 
 The order follows how much of a language's vocabulary it shares with English. Pieces in a script used by few languages are few and frequent, so a few thousand lines see nearly all of them. Latin pieces are numerous and spread across every Latin-script language. English, whose pieces are the bulk of most vocabularies, is the extreme.
 
@@ -576,8 +576,7 @@ Every emotion counts equally, however rare it is. If a product is going to act o
 
 A softmax classifier is lazy in a specific way. It only needs to put the training points on the correct side of a boundary. Nothing asks it to make each emotion a *tight, well-separated* region. Shift the input a little and test points slide across the line.
 
-![Two embedding spaces: a softmax classifier with points near the boundaries, and angular metric learning with tight, well-separated clusters](./embedding.svg)
-_Metric learning gives each emotion its own direction in embedding space, with room to spare._
+[Figure: Interactive: synthetic emotion embeddings under a domain shift; tight angular clusters stay correct where softmax clusters cross boundaries.]
 
 Speaker verification solved a very similar problem years ago. You can't train a classifier over every person on Earth, so you learn an **embedding** where the same speaker lands close together and different speakers land far apart. Then you compare by distance.
 
@@ -672,6 +671,8 @@ By Sattaya Singkul, 13 October 2026. https://joessattes.github.io/Sattaya-AI-Web
 
 Voice AI projects tend to hit the same question early: _how much hardware do we need, and what will it cost?_ A speech-to-text model, an LLM and a text-to-speech model all compete for the same GPUs, and the answer changes with every concurrency target. I built [FinOps-Estimator](https://github.com/JoesSattes/FinOps-Estimator) to answer that question with numbers instead of guesses. It is open source, and there is a [live demo](https://joessattes.github.io/FinOps-Estimator/).
 
+[Figure: Fifty concurrent voice sessions on an 8B model fit one 80 GB GPU. The calculator with its default pipeline: Whisper large-v3, Llama 3 8B and XTTS-v2, 50 concurrent sessions, 4,096 tokens of context, FP16 weights. Hover or tap a number.]
+
 ## What it estimates
 
 Most calculators stop at GPU memory. A production voice pipeline also needs host memory and CPU, so the tool tracks all three:
@@ -742,8 +743,7 @@ $$
 
 A 70B model in bf16 (16 bits) is $70 \times 10^9 \times 2 = 140$ GB. That's two 80 GB cards before you've served a single request. The same model in 4-bit is a different story.
 
-![Weight memory for 8B and 70B models at bf16, int8 and 4-bit](./memory.svg)
-_Weights only. Real deployments also need room for the KV cache and activations._
+[Figure: The same 70B model needs 140 GB in bf16 and about 36 GB in 4-bit. N × bits ÷ 8, in GB of 10⁹ bytes. 4-bit includes 0.125 bits per weight for group scales. Real deployments also need room for the KV cache and activations.]
 
 One detail people miss: 4-bit formats don't cost exactly 4 bits. Weights are quantized in small groups, and each group stores its own scale, often a 16-bit number per 128 weights. That adds
 
@@ -770,6 +770,8 @@ Rounding error is at most half a step, and if you treat it as uniform noise (the
 $$
 \mathbb{E}\!\left[(x - \hat{x})^2\right] \approx \frac{s^2}{12}.
 $$
+
+[Figure: Interactive: 16 weights quantized to 4 bits with one scale; raising one outlier coarsens the grid for all others.]
 
 Look at what controls $s$: the **largest** value in the group. That's the whole story of LLM quantization in one line. If a group has one huge outlier, $s$ becomes large, the step gets coarse, and every *normal* weight in that group loses precision.
 
@@ -804,7 +806,11 @@ $$
 \text{GPU memory} \;\ge\; \underbrace{N \cdot \tfrac{b}{8}}_{\text{weights}} \;+\; \underbrace{C \cdot T \cdot \text{KV}_{\text{tok}}}_{\text{KV cache}} \;+\; \underbrace{\sim 10\text{–}15\%}_{\text{activations, runtime}}
 $$
 
-Here $C$ is concurrent requests and $T$ is tokens per request. Two cheap wins on the KV side: an **[FP8 KV cache](https://docs.vllm.ai/en/latest/features/quantization/quantized_kvcache.html)** halves it with little quality loss for many models, and **prefix caching** shares the system prompt across users instead of storing it $C$ times.
+Here $C$ is concurrent requests and $T$ is tokens per request. Try it with your own numbers:
+
+[Figure: Calculator: weights + KV cache + 12% runtime for Llama 3 8B/70B shapes against GPU memory, with the single-stream speed ceiling.]
+
+ Two cheap wins on the KV side: an **[FP8 KV cache](https://docs.vllm.ai/en/latest/features/quantization/quantized_kvcache.html)** halves it with little quality loss for many models, and **prefix caching** shares the system prompt across users instead of storing it $C$ times.
 
 ## Speed is a bandwidth problem
 
@@ -879,8 +885,7 @@ So the real question the paper asks is: **can you quantize a vector the moment i
 
 ## The trick: make every vector look the same
 
-![TurboQuant pipeline: random rotation, scalar quantization with b−1 bits, then 1-bit QJL on the residual](./pipeline.svg)
-_Two stages, no calibration. The rotation does the heavy lifting._
+[Figure: Rotate, round with one fixed codebook, then spend one bit on what is left. No calibration data, no learned codebook, no per-block scales to store. The proven error is within about 2.7× of what any quantizer can reach.]
 
 ### Step 1: rotate
 
@@ -894,6 +899,8 @@ f_X(x) = \frac{\Gamma(d/2)}{\sqrt{\pi}\,\Gamma\!\left(\frac{d-1}{2}\right)} \lef
 $$
 
 This is the key insight. After rotation you don't need to *learn* the data distribution, because you already know it. In high dimensions the coordinates are also nearly independent. So a hard vector problem becomes $d$ easy scalar problems.
+
+[Figure: Interactive: a 16-dimensional vector with one outlier before and after a Walsh-Hadamard rotation; the peak falls from 4.0x to 1.3x the RMS.]
 
 ### Step 2: one fixed codebook for everyone
 
@@ -1026,8 +1033,7 @@ Voice is unforgiving. In a text chat, a 3-second wait feels fine. In a conversat
 
 So before any GPU math I write down a **voice-to-voice budget**: the time from the moment the user stops talking to the moment they hear the first syllable back.
 
-![Latency budget split across end-of-turn detection, ASR, LLM first token, TTS first chunk and network](./latency-budget.svg)
-_A budget of about 800 ms. Every stage streams, and only the LLM slice grows with load._
+[Figure: Interactive latency budget: end-of-turn 250 ms, ASR 100 ms, LLM first token 300 ms, TTS 100 ms, network 50 ms against an 800 ms target.]
 
 Two things fall out of this picture straight away.
 
@@ -1061,9 +1067,6 @@ Let's walk the example:
 | Session length $W$ | 4 minutes | 240 s |
 | **Live sessions $L$** | $\lambda W$ | **≈ 2,000** |
 
-![1M monthly users becomes 200K daily users, about 2,000 live sessions at peak, and about 150 LLM requests in flight](./capacity.svg)
-_From the scary number to the one you actually provision for._
-
 A million users became about two thousand live conversations at the busiest hour of the day. That's still a lot, but it's a different conversation from "a million".
 
 It gets smaller again. A live session is mostly *not* using the LLM. The user is speaking, the bot is speaking, someone is thinking. Suppose a turn cycle takes ~20 s, and the LLM spends ~1.5 s of that actually generating. Then the LLM duty cycle is
@@ -1074,7 +1077,11 @@ $$
 L_{\text{LLM}} \approx 2{,}000 \times 0.075 = 150 .
 $$
 
-**About 150 requests in flight.** That's the number that sizes your LLM tier. ASR is different: it listens whenever the user speaks, so its duty cycle is much higher. That's one reason I almost always scale ASR, LLM and TTS as separate pools rather than one fat pod.
+**About 150 requests in flight.** That's the number that sizes your LLM tier. Here is the whole chain with your own assumptions:
+
+[Figure: Calculator: monthly users to daily users, peak arrivals, live sessions (Little's law) and LLM requests in flight, then KV memory.]
+
+ ASR is different: it listens whenever the user speaks, so its duty cycle is much higher. That's one reason I almost always scale ASR, LLM and TTS as separate pools rather than one fat pod.
 
 ## How much memory do 150 requests need?
 
