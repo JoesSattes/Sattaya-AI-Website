@@ -15,7 +15,8 @@ Contact: joeysattaya@hotmail.com
 ## Pages
 - [Home](https://joessattes.github.io/Sattaya-AI-Website/): profile, selected work, experience, research highlights
 - [Research](https://joessattes.github.io/Sattaya-AI-Website/research/): full publication list
-- [Blog](https://joessattes.github.io/Sattaya-AI-Website/blog/): blog
+- [Blog](https://joessattes.github.io/Sattaya-AI-Website/blog/): interactive explainers on LLM serving, quantization, tokenizers, voice AI and on-premise AI
+- [Interactive explainers](https://joessattes.github.io/Sattaya-AI-Website/blog/interactive/): every interactive chart, calculator and simulation, with a one-line description each; full text descriptions are in llms-full.txt
 - [Full text for AI tools](https://joessattes.github.io/Sattaya-AI-Website/llms-full.txt): this profile plus every blog post
 
 ## Original work and attribution
@@ -169,11 +170,152 @@ End-to-end AI & LLM systems; AI product & applications; On-premise AI; System ar
 ## Blog
 - [The vocabulary tax: the token tables your users never touch, and how to trim them safely](https://joessattes.github.io/Sattaya-AI-Website/blog/the-vocabulary-tax/): How much of a small LLM is vocabulary a Thai deployment never uses, why frequency trimming breaks BPE tokenizers, and how to trim safely.
 - [Reading a model's architecture from its safetensors header, and what 12,974 Hugging Face models reveal](https://joessattes.github.io/Sattaya-AI-Website/blog/reading-the-architecture-off-the-weights/): How to read a model's anatomy from its safetensors header (96.8% role accuracy on 510 architectures), and what a census of 12,974 Hugging Face repos shows.
+- [Vocabulary trimming, compared: what SqueezeBits measured on the phone, and the tokenizer check that makes it safe](https://joessattes.github.io/Sattaya-AI-Website/blog/vocabulary-trimming-compared/): SqueezeBits measured on-device speedups from vocabulary trimming. My paper found what frequency trimming does to BPE tokenizers. A recipe that keeps both.
 - [Why emotion models fall apart outside the lab (and what actually helps)](https://joessattes.github.io/Sattaya-AI-Website/blog/emotion-models-outside-the-lab/): Speech emotion recognition looks solved on benchmarks and breaks on real calls: domain shift, speaker leakage, metric learning and SSL features.
 - [FinOps-Estimator: sizing GPUs for a voice AI pipeline](https://joessattes.github.io/Sattaya-AI-Website/blog/finops-estimator/): An open-source tool that turns concurrency and model choices for STT → LLM → TTS into VRAM, RAM, CPU, TFLOPS and cloud or on-prem cost.
 - [Fitting an LLM in your own server room: the memory math behind on-prem AI](https://joessattes.github.io/Sattaya-AI-Website/blog/on-prem-llm-memory-math/): Bits per weight, quantization error, outliers, KV cache and memory bandwidth: how to decide which model actually runs on the GPUs you own.
 - [TurboQuant, reviewed: when a theory paper walks straight into production](https://joessattes.github.io/Sattaya-AI-Website/blog/turboquant-review/): A close read of TurboQuant (ICLR 2026): random rotations, Lloyd–Max codebooks and a 1-bit QJL residual, and why it reached vLLM within weeks.
 - [Your MAU is not your load: capacity math for voice AI at scale](https://joessattes.github.io/Sattaya-AI-Website/blog/voice-ai-at-scale/): How to turn "a million users" into a latency budget, a concurrency number, KV-cache memory and a GPU count — with the formulas, not vibes.
+
+---
+
+# Vocabulary trimming, compared: what SqueezeBits measured on the phone, and the tokenizer check that makes it safe
+
+By Sattaya Singkul, 17 November 2026. https://joessattes.github.io/Sattaya-AI-Website/blog/vocabulary-trimming-compared/
+
+**Two pieces of work looked at the same idea from opposite ends.** In August 2025, SqueezeBits published [a clear, practical post](https://blog.squeezebits.com/vocabulary-trimming-methods) on trimming the vocabulary of small language models. It measures what really matters on a device: latency on an iPhone, with quantized models, plus benchmark accuracy in English and Korean. My paper, [The Vocabulary Tax](../../research/vocabulary-tax/), doesn't measure speed at all. It measures what happens *inside the tokenizer* when you trim, and it found a failure that frequency-based trimming walks straight into.
+
+This post sets the two side by side: where they agree, where they differ, and a combined recipe that keeps their speed and adds the checks.
+
+<p lang="th"><strong>สรุปภาษาไทย:</strong> SqueezeBits (บริษัทด้าน model compression จากเกาหลี) เขียนบทความเรื่องการตัด vocabulary ของโมเดลเล็กเพื่อให้รันบนมือถือเร็วขึ้น โดยวัดความเร็วจริงบน iPhone กับโมเดล 4-bit ส่วนเปเปอร์ The Vocabulary Tax ของผมไม่ได้วัดความเร็ว แต่วัดว่าการตัดทำอะไรกับ tokenizer สองงานนี้เห็นตรงกันว่าการตัดตามภาษา (ตัวเขียน) แทบไม่เสียอะไร แต่ขั้นที่สองที่ตัด token ที่ใช้น้อยออกเป็นเปอร์เซ็นต์ตายตัว มีจุดอ่อนใน tokenizer แบบ BPE เพราะชิ้นส่วนที่ใช้ประกอบคำมักไม่เคยโผล่เป็น token เดี่ยวๆ จึงมีความถี่ต่ำสุดและถูกตัดก่อน คำที่สร้างจากชิ้นนั้นจะแตกเป็นชิ้นเล็ก ในเปเปอร์ วิธีตัดตามความถี่แบบนี้ทำให้ข้อความใหม่ถูกตัดคำผิดจากเดิม 1.32 เท่าของวิธีผมที่การบีบอัดเท่ากัน ทางแก้คือ merge closure กับ trim certificate ที่บอกจุดหยุดแทนการเดาเปอร์เซ็นต์ บทความนี้เสนอสูตรรวม: เอาความเร็วแบบ SqueezeBits มาบวกกับการตรวจแบบของผม</p>
+
+## What SqueezeBits did
+
+Their argument is easy to follow. Vocabularies have grown to 128k tokens in Llama 3, about 150k in Qwen 3 and about 256k in Gemma 3. In a 0.5–2B model the embedding is a large share of the weights, and weight-only 4-bit quantization (GPTQ, AWQ) usually leaves it in 16 bits, so after quantization its share grows further. A service that only handles English and Korean still carries the rows for Chinese, Japanese, Arabic and the rest, which they call dead tokens. Most small models tie the embedding to the output head, so a smaller vocabulary also makes the logit computation cheaper at every decoding step.
+
+Their own figure makes the quantization point well. The embedding is 26.1% of Qwen3 0.6B and 30.2% of Gemma 3 1B. After 4-bit GPTQ on everything else, it is 57.49% and 59.94%. For Llama 3.3 70B the same step only moves it from 1.49% to 5.28%. This is a small-model problem, the same pattern my paper calls a regressive tax.
+
+[Figure: Interactive diagram of Qwen3-0.6B: input embedding and tied output head drawn to scale against 28 unchanged layers, for the original vocabulary (151,669 rows), the language step (109,357) and frequency trims of 20% (87,498) and 60% (43,755).]
+
+They trim in two stages:
+
+1. **By language.** Look at the Unicode characters of each token, keep tokens in the target languages plus special tokens, rebuild the vocabulary and copy the kept embedding rows into a smaller table. They describe this as nearly lossless.
+2. **By frequency.** Tokenize a large corpus (1B tokens, half English C4 and half Korean textbooks), count every token, and remove the least frequent n% of what's left, with n from 5 to 60. They describe this as lossy, with a tunable cutoff.
+
+They test four models in 4-bit (W4A16): Qwen3 0.6B, Gemma 3 1B, Llama 3.2 1B and EXAONE 3.5 2.4B, whose vocabulary is already built for English and Korean. Quality comes from six zero-shot benchmarks (ARC-Challenge, MMLU, HellaSwag, HAE-RAE, KOBEST, KMMLU). Speed comes from an iPhone 15 Pro running MLX-Swift, in a prefill-heavy and a decode-heavy setting.
+
+[Figure: The bigger the vocabulary, the more trimming buys on a phone. Gains in the decode-heavy setting (64 tokens in, 512 out) as stated in the SqueezeBits post. Their text calls some of these latency reductions and some speedups, so read them as rough sizes, not exact ratios. Their headline figures are 1.585× for Gemma 3 1B and 1.491× for Qwen3 0.6B. LF60 removes 60% of the tokens left after the language step.]
+
+Their quality findings: the language step changed accuracy negligibly. Frequency trimming kept scores close up to about 40% removal on the multilingual models, and quality dropped clearly at 60%. EXAONE was the exception: its Korean scores started to fall at the lightest frequency setting, 5%. Their advice is to always do the language step, and to add the frequency step only with careful validation.
+
+This is exactly the measurement my paper is missing. I report bytes, rows and quality, but no milliseconds on a real device.
+
+Credit for the drawing, too: their overview diagram of the model as embedding, layers and LM head, with the two tables shrinking and the middle untouched, is the clearest way I've seen to explain where trimming acts. The figure above is my version of it, drawn to scale.
+
+## Where we agree: trim by writing system first
+
+Their language step is what my paper calls the **script rule**, and both of us find it close to free. The paper puts numbers on "nearly lossless" and adds three details that matter in practice:
+
+- **It is exact when done right.** Over 189 language and tokenizer pairs, at most 0.008% of held-out tokens fall in removed rows. After a full rebuild to Thai and English for five tokenizer families, 100% of sentences tokenize identically.
+- **Keep Latin, whatever your language.** Names, numbers, URLs and code are Latin. Trimming to the Thai script alone loses 3.5–6.6% of the tokens in Thai text; with Latin kept, none. Their English plus Korean setup keeps Latin by design, but a Korean-only or Thai-only service has to add it explicitly.
+- **Shared characters need a rule.** Digits, punctuation, the Japanese long-vowel mark, combining marks and zero-width spaces belong to no single language. The script rule keeps Unicode's Common and Inherited scripts and format characters for this reason. Their post doesn't say how it classifies these, and each one caused a real failure in my tests.
+
+The two implementations also land in the same place. Their language step keeps English and Korean; my paper's numbers are for Thai and English. Still, the share of rows removed is within about three points:
+
+| Tokenizer | SqueezeBits, English + Korean | My paper, Thai + English |
+| :-- | --: | --: |
+| Qwen 3 | 27.9% (151,669 → 109,357) | 28.8% |
+| Gemma 3 | 32.1% (262,145 → 177,983) | 35.0% |
+| Llama 3 | 15.4% (128,256 → 108,531) | 15.7% |
+
+Two independent pipelines, written for different languages, agree on how much of each vocabulary a two-language service never needs. That is a good sign the step is well defined.
+
+## Where we differ: the frequency step and BPE merges
+
+In a BPE tokenizer, which all four of their models use, every token longer than one character is built by **merging two smaller tokens**, and many of those smaller tokens almost never appear on their own in text, because the tokenizer always merges them further.
+
+Now look at what a frequency count sees. It counts tokens as they come out of the tokenizer. The intermediate pieces have a count near zero, so they sit at the very bottom of the ranking, and a "remove the least frequent n%" rule removes them **first**. Their row is gone, the rebuilt tokenizer can no longer form the longer tokens built on them, and words that used them fall apart into smaller pieces. The longer tokens' rows are still in the model, costing memory, but nothing can reach them.
+
+[Figure: Interactive BPE merge tree for "there": without merge closure the parent "th" is dropped and the word splits into 4 tokens.]
+
+The usual check doesn't see this. It counts held-out tokens whose row was removed (the nominal rate). What matters is how much text gets split differently after the rebuild (the real rate). Benchmarks don't see it clearly either: a model can still answer a multiple-choice question with some words split oddly, and the cost shows up in longer sequences and in generation.
+
+My paper compares the keep rules of prior work on the same text, with the same rebuild. The closest one to the SqueezeBits frequency step is **frequency top-N**: keep the N most frequent pieces of your text.
+
+[Figure: Same compression, more broken text, and no warning before you ship. Re-split: how much new text the rule splits differently, at the same number of rows removed, as a multiple of the merge-closed rule (median). Unreachable rows: kept rows the rebuilt tokenizer can never select (median). Overshoots: settings out of 44 where a user who checks the nominal rate on 1,000 test lines ends above a 2% real re-split target. My rule picks its setting from the trimming text alone, with no test lines, and removes about as many rows (68.2% against 68.1–68.5%).]
+
+The effect is largest for Latin-script text, where long words are built from long chains of merges. For German on Qwen, the nominal rate is 2.4% but the real rate is 7.1%. For English web text, the real rate reaches 23–27% against a nominal 9%, and sequences grow by 49–62%. Across all settings, the real rate is a median 1.9 times the nominal one.
+
+## What their own tables show
+
+Their tables have one more lesson, and it's about how trimming is checked. These are their zero-shot scores, picked from the full tables:
+
+| Model and benchmark | Guessing | Original | Language | LF5 | LF20 | LF60 |
+| :-- | --: | --: | --: | --: | --: | --: |
+| Qwen3 0.6B, MMLU | 0.25 | 0.2295 | 0.2295 | 0.2295 | 0.2295 | 0.2295 |
+| Qwen3 0.6B, KMMLU | 0.25 | 0.1069 | 0.1070 | 0.1070 | 0.1072 | 0.0988 |
+| Gemma 3 1B, ARC-Challenge | ≈0.25 | 0.3345 | 0.3336 | 0.3242 | 0.3140 | 0.2739 |
+| Gemma 3 1B, HellaSwag | 0.25 | 0.3848 | 0.3847 | 0.3792 | 0.3615 | 0.3167 |
+| Gemma 3 1B, KMMLU | 0.25 | 0.2619 | 0.2614 | 0.2615 | 0.2614 | 0.2604 |
+| Llama 3.2 1B, MMLU | 0.25 | 0.3179 | 0.3177 | 0.3175 | 0.3180 | 0.2679 |
+
+Two things stand out.
+
+- **Some benchmarks can't see anything at this size.** Qwen3 0.6B scores exactly 0.2295 on MMLU in all seven settings, below the 0.25 you'd get by guessing, and its KMMLU score is lower still. A model answering at chance can't show a tokenizer problem, so "no change" there means "no signal", not "no damage". The same goes for Gemma's KMMLU, which sits at 0.26.
+- **Where there is signal, English moves first.** Gemma's English scores fall from the very first frequency step: ARC-Challenge by 3% relative at LF5 and 6% at LF20, HellaSwag by 6% at LF20. Gemma has the most orphans of the four families in my paper (a median 1,146 per setting), and Latin-script text is where they hurt most, because long English words are built from long chains of merges. Their data fits that, though it doesn't prove it.
+
+That's the practical argument for checking the tokenizer directly. A re-split rate is measured on the text itself, needs no model run and doesn't depend on a benchmark the model can answer.
+
+**A guess about EXAONE, clearly labelled.** Their EXAONE result fits this mechanism. Its vocabulary is already English and Korean, so the language step removes only 3.7% (102,400 → 98,605 rows) and there are almost no dead tokens left. The bottom 5% by frequency (down to 93,692) must then be tokens Korean actually needs, and merge parents with a count near zero are first in line. I haven't rerun their setup, so this is a hypothesis, not a finding. It would be easy to test: count how many of the tokens removed at LF5 are parents of kept tokens.
+
+## Two fixes, and one fewer knob
+
+**Merge closure.** For every kept token, also keep the two tokens it was merged from, recursively. The parents come from the merge list in `tokenizer.json`. Closure costs a median 5.9% more rows, small next to what the frequency step removes, and brings the real rate down to a median 0.94 of the nominal one. Your existing check becomes honest again.
+
+**A trim certificate instead of a fixed percentage.** Their cutoff is a free parameter: 5%, 10%, 20% and so on, each one validated with benchmarks. The paper replaces it with a number computed from your trimming text alone, before any model is run: the share of tokens that appear exactly once (the Good–Turing estimate) predicts the real re-split rate on new text. Against the real rate after rebuilding, it has a correlation of 0.996 over 300 settings. You pick a target, say 1% of tokens split differently, and the certificate says whether your text supports it, or how many more lines it needs.
+
+Two consequences matter for their setup:
+
+- **You probably need much less than 1B tokens.** How much text a language needs varies by two orders of magnitude, and Thai needs about 4,000 lines for a 1% target. English, whose pieces are the bulk of most vocabularies, needs by far the most.
+- **The certificate also predicts the quality cost.** In the paper's model runs (six models from 270M to 3B, 11 languages including Korean), where the certificate passed, a median 89.7% of rows were removed and bits per character changed by a median −0.65% (at most +1.99%). Where it asked for more text, the median change was +3.41% and the worst +23.3%. Bits per character moved about 2.5% per percent of re-split tokens.
+
+## A combined recipe
+
+Put the two together and each covers the other's gap: their pipeline knows what trimming buys on a phone, mine knows when it is safe.
+
+[Figure: Trim like SqueezeBits, check like the vocabulary tax. Steps 1–4 need no model run. Step 5 is the measurement SqueezeBits already does well; step 6 catches the one thing the certificate can't see, text from a different domain.]
+
+The order also matters for their main point about quantization. Trimming first and then quantizing means the large, 16-bit embedding that 4-bit methods leave alone is already small when you quantize the rest.
+
+Steps 1–4 are already in the open-source package, and the web version runs in the browser:
+
+```bash
+pip install ai-model-explorer
+ai-model-explorer tax google/gemma-3-1b-it --lang ko --corpus my_korean_text.txt --export out/
+```
+
+`--export` writes the merge-closed tokenizer and the kept ids. In [AI Model Explorer](https://joessattes.github.io/ai-model-explorer/), the **Where to cut** panel does the same for any Hugging Face model, with your text tokenized locally.
+
+## What neither of us has shown yet
+
+- **Speed for certified trims.** My paper has no latency numbers; theirs has no tokenizer checks. The obvious next experiment is to run merge-closed, certified trims through their iPhone benchmark and plot speed against the real re-split rate, instead of against a fixed percentage.
+- **Generation quality at scale.** Both works evaluate small models without retraining and with automatic metrics. Human judgement of generated text and larger models are open.
+- **Domain shift.** Their frequency corpus (C4 and Korean textbooks) is general text. A deployment's own text can differ a lot, which is why the last step checks real lines.
+
+Credit where it's due: the SqueezeBits post is one of the clearest explanations of why vocabulary size matters for small models on devices, and its device measurements are what convinced me this is worth doing. The point of this comparison is to keep that speed while making the trimmed tokenizer provably the same on the text you care about.
+
+## References
+
+- SqueezeBits (Kim, S.). [Vocabulary Trimming: An Easy and Effective Method for SLM Acceleration](https://blog.squeezebits.com/vocabulary-trimming-methods). SqueezeBits Tech blog, 4 August 2025. All SqueezeBits numbers in this post come from its text, figures and tables.
+- Singkul, S. [The Vocabulary Tax: Safely Trimming Unused Tokens from LLMs for On-Device Use](https://doi.org/10.13140/RG.2.2.10665.15200). Preprint, 2026. doi:10.13140/RG.2.2.10665.15200. All other numbers in this post come from this paper.
+- Singkul, S. [AI Model Explorer](https://joessattes.github.io/ai-model-explorer/), [Python package](https://pypi.org/project/ai-model-explorer/) and [source code](https://github.com/JoesSattes/ai-model-explorer). 2026.
+- Ushio, A., Zhou, Y. and Camacho-Collados, J. Efficient Multilingual Language Model Compression through Vocabulary Trimming. Findings of EMNLP 2023.
+- Bogoychev, N., Chen, P., Haddow, B. and Birch, A. The Ups and Downs of Large Language Model Inference with Vocabulary Trimming by Language and by Frequency. Workshop on Insights from Negative Results in NLP, 2024.
+- Sennrich, R., Haddow, B. and Birch, A. Neural Machine Translation of Rare Words with Subword Units. ACL 2016.
+- Land, S. and Bartolo, M. Fishing for Magikarp: Automatically Detecting Under-trained Tokens in Large Language Models. EMNLP 2024.
+- Good, I. J. The population frequencies of species and the estimation of population parameters. Biometrika 40(3–4):237–264, 1953.
+- Frantar, E. et al. GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers. ICLR 2023.
+- Lin, J. et al. AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration. MLSys 2024.
 
 ---
 

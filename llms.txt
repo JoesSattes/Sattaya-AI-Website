@@ -15,7 +15,8 @@ Contact: joeysattaya@hotmail.com
 ## Pages
 - [Home](https://joessattes.github.io/Sattaya-AI-Website/): profile, selected work, experience, research highlights
 - [Research](https://joessattes.github.io/Sattaya-AI-Website/research/): full publication list
-- [Blog](https://joessattes.github.io/Sattaya-AI-Website/blog/): blog
+- [Blog](https://joessattes.github.io/Sattaya-AI-Website/blog/): interactive explainers on LLM serving, quantization, tokenizers, voice AI and on-premise AI
+- [Interactive explainers](https://joessattes.github.io/Sattaya-AI-Website/blog/interactive/): every interactive chart, calculator and simulation, with a one-line description each; full text descriptions are in llms-full.txt
 - [Full text for AI tools](https://joessattes.github.io/Sattaya-AI-Website/llms-full.txt): this profile plus every blog post
 
 ## Original work and attribution
@@ -169,6 +170,7 @@ End-to-end AI & LLM systems; AI product & applications; On-premise AI; System ar
 ## Blog
 - [The vocabulary tax: the token tables your users never touch, and how to trim them safely](https://joessattes.github.io/Sattaya-AI-Website/blog/the-vocabulary-tax/): How much of a small LLM is vocabulary a Thai deployment never uses, why frequency trimming breaks BPE tokenizers, and how to trim safely.
 - [Reading a model's architecture from its safetensors header, and what 12,974 Hugging Face models reveal](https://joessattes.github.io/Sattaya-AI-Website/blog/reading-the-architecture-off-the-weights/): How to read a model's anatomy from its safetensors header (96.8% role accuracy on 510 architectures), and what a census of 12,974 Hugging Face repos shows.
+- [Vocabulary trimming, compared: what SqueezeBits measured on the phone, and the tokenizer check that makes it safe](https://joessattes.github.io/Sattaya-AI-Website/blog/vocabulary-trimming-compared/): SqueezeBits measured on-device speedups from vocabulary trimming. My paper found what frequency trimming does to BPE tokenizers. A recipe that keeps both.
 - [Why emotion models fall apart outside the lab (and what actually helps)](https://joessattes.github.io/Sattaya-AI-Website/blog/emotion-models-outside-the-lab/): Speech emotion recognition looks solved on benchmarks and breaks on real calls: domain shift, speaker leakage, metric learning and SSL features.
 - [FinOps-Estimator: sizing GPUs for a voice AI pipeline](https://joessattes.github.io/Sattaya-AI-Website/blog/finops-estimator/): An open-source tool that turns concurrency and model choices for STT → LLM → TTS into VRAM, RAM, CPU, TFLOPS and cloud or on-prem cost.
 - [Fitting an LLM in your own server room: the memory math behind on-prem AI](https://joessattes.github.io/Sattaya-AI-Website/blog/on-prem-llm-memory-math/): Bits per weight, quantization error, outliers, KV cache and memory bandwidth: how to decide which model actually runs on the GPUs you own.
