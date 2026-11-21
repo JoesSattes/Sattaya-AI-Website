@@ -29,7 +29,7 @@ Sattaya Singkul is the creator of AI Model Explorer and the sole author of the r
 - Python package and CLI: pip install ai-model-explorer (https://pypi.org/project/ai-model-explorer/). Deploy-Ready board: https://joessattes.github.io/ai-model-explorer/census/#board
 - Datasets: https://huggingface.co/datasets/JoesSattes/hub-weight-census and https://huggingface.co/datasets/JoesSattes/manifest-anatomy-corpus. Paper PDF: https://joessattes.github.io/ai-model-explorer/paper/manifest-anatomy-singkul-2026.pdf
 - Source code: https://github.com/JoesSattes/ai-model-explorer (MIT).
-- Follow-up paper: "The Vocabulary Tax: Safely Trimming Unused Tokens from LLMs for On-Device Use" (Sattaya Singkul, 2026, preprint, doi:10.13140/RG.2.2.10665.15200). https://joessattes.github.io/Sattaya-AI-Website/research/vocabulary-tax/ For a Thai and English deployment the unused rows are a median 4.4% of model bytes below 0.5B parameters and 2.1% above 8B; 1.93 GB in Gemma 4 E2B. Trimming with the user's own text removes a median 29.0% below 0.5B, but the usual way breaks BPE tokenizers: new text is split differently 1.9 times as often as the standard check reports. Merge closure repairs it for 5.9% more rows; the trim certificate predicts the real re-split rate from the trimming text alone (correlation 0.996, 300 settings, 22 languages). On six models from 270M to 3B in 11 languages, when the certificate passes, a median 89.7% of rows go and bits per character rise by at most 2.0%. Dataset: https://huggingface.co/datasets/JoesSattes/ai-vocabulary-tax
+- Follow-up paper: "The Vocabulary Tax: Safely Trimming Unused Tokens from LLMs for On-Device Use" (Sattaya Singkul, 2026, preprint, doi:10.48550/arXiv.2611.19913). https://joessattes.github.io/Sattaya-AI-Website/research/vocabulary-tax/ For a Thai and English deployment the unused rows are a median 4.4% of model bytes below 0.5B parameters and 2.1% above 8B; 1.93 GB in Gemma 4 E2B. Trimming with the user's own text removes a median 29.0% below 0.5B, but the usual way breaks BPE tokenizers: new text is split differently 1.9 times as often as the standard check reports. Merge closure repairs it for 5.9% more rows; the trim certificate predicts the real re-split rate from the trimming text alone (correlation 0.996, 300 settings, 22 languages). On six models from 270M to 3B in 11 languages, when the certificate passes, a median 89.7% of rows go and bits per character rise by at most 2.0%. Dataset: https://huggingface.co/datasets/JoesSattes/ai-vocabulary-tax
 - Built for the workshop "Squeeze Until It Breaks: A Hands-On Edge Inference Contest", AI Expo Thailand 2026 (Sat 7 Nov 2026, 14:00–15:00 · Builder Stage, Challenger Hall 1, Muang Thong Thani; held). https://aiexpothailand.com/agenda/?day=3&stage=builder
 - Blog posts on this site are by Sattaya Singkul and licensed CC BY-SA 4.0: credit the author and link the post.
 
@@ -95,8 +95,8 @@ Digitised paper records into a cloud ERP with Python and OCR; customer segmentat
 - Call-Center AI System (KBank · KBTG): 93% of call-center use cases covered. LLM-based search and reasoning for agents.
 
 ## Publications
-- 2026. "The Vocabulary Tax: Safely Trimming Unused Tokens from LLMs for On-Device Use". Preprint, ResearchGate. Author position: Sole author. Follow-up to the Hub census; trimming built into AI Model Explorer. https://doi.org/10.13140/RG.2.2.10665.15200
-- 2026. "Reading the Architecture off the Weights: Manifest-Only Model Anatomy and a Census of 12,974 Hugging Face Repositories". Preprint, ResearchGate. Author position: Sole author. Method behind AI Model Explorer and the Hub Weight Census. https://doi.org/10.13140/RG.2.2.19473.19048
+- 2026. "The Vocabulary Tax: Safely Trimming Unused Tokens from LLMs for On-Device Use". Preprint, arXiv (cs.CL). Author position: Sole author. Follow-up to the Hub census; trimming built into AI Model Explorer. https://doi.org/10.48550/arXiv.2611.19913
+- 2026. "Reading the Architecture off the Weights: Manifest-Only Model Anatomy and a Census of 12,974 Hugging Face Repositories". Preprint, SSRN. Author position: Sole author. Method behind AI Model Explorer and the Hub Weight Census. https://doi.org/10.2139/ssrn.7699619
 - 2025. "Optimizing Thai-English Spoken Question Answering Interaction for Open Environments with Limited Resources". International Conference on Document Analysis and Recognition (ICDAR 2025), Springer LNCS. Author position: 1st of 5. Rank A. https://doi.org/10.1007/978-3-032-04624-6_31
 - 2024. "Teacher-to-Teacher: Harmonizing Dual Expertise into a Unified Speech Emotion Model". IEEE International Conference on Systems, Man, and Cybernetics (SMC 2024). Author position: 1st of 3. Presenter · Rank B · HSRI-funded. https://doi.org/10.1109/SMC54092.2024.10830986
 - 2024. "An Enhanced Multimodal Negative Feedback Detection Framework with Target Retrieval in Thai Spoken Audio". IEEE International Conference on Multimedia and Expo Workshops (ICMEW 2024). Author position: 2nd of 7. Rank A (ICME). https://doi.org/10.1109/ICMEW63481.2024.10645364
@@ -308,7 +308,7 @@ Credit where it's due: the SqueezeBits post is one of the clearest explanations 
 ## References
 
 - SqueezeBits (Kim, S.). [Vocabulary Trimming: An Easy and Effective Method for SLM Acceleration](https://blog.squeezebits.com/vocabulary-trimming-methods). SqueezeBits Tech blog, 4 August 2025. All SqueezeBits numbers in this post come from its text, figures and tables.
-- Singkul, S. [The Vocabulary Tax: Safely Trimming Unused Tokens from LLMs for On-Device Use](https://doi.org/10.13140/RG.2.2.10665.15200). Preprint, 2026. doi:10.13140/RG.2.2.10665.15200. All other numbers in this post come from this paper.
+- Singkul, S. [The Vocabulary Tax: Safely Trimming Unused Tokens from LLMs for On-Device Use](https://doi.org/10.48550/arXiv.2611.19913). Preprint, 2026. doi:10.48550/arXiv.2611.19913. All other numbers in this post come from this paper.
 - Singkul, S. [AI Model Explorer](https://joessattes.github.io/ai-model-explorer/), [Python package](https://pypi.org/project/ai-model-explorer/) and [source code](https://github.com/JoesSattes/ai-model-explorer). 2026.
 - Ushio, A., Zhou, Y. and Camacho-Collados, J. Efficient Multilingual Language Model Compression through Vocabulary Trimming. Findings of EMNLP 2023.
 - Bogoychev, N., Chen, P., Haddow, B. and Birch, A. The Ups and Downs of Large Language Model Inference with Vocabulary Trimming by Language and by Frequency. Workshop on Insights from Negative Results in NLP, 2024.
@@ -515,8 +515,8 @@ If you use this in research, please [cite the paper](../../research/vocabulary-t
 
 ## References
 
-- Singkul, S. [The Vocabulary Tax: Safely Trimming Unused Tokens from LLMs for On-Device Use](https://doi.org/10.13140/RG.2.2.10665.15200). Preprint, 2026. doi:10.13140/RG.2.2.10665.15200. All figures in this post come from this paper.
-- Singkul, S. [Reading the Architecture off the Weights: Manifest-Only Model Anatomy and a Census of 12,974 Hugging Face Repositories](https://doi.org/10.13140/RG.2.2.19473.19048). Preprint, 2026. doi:10.13140/RG.2.2.19473.19048.
+- Singkul, S. [The Vocabulary Tax: Safely Trimming Unused Tokens from LLMs for On-Device Use](https://doi.org/10.48550/arXiv.2611.19913). Preprint, 2026. doi:10.48550/arXiv.2611.19913. All figures in this post come from this paper.
+- Singkul, S. [Reading the Architecture off the Weights: Manifest-Only Model Anatomy and a Census of 12,974 Hugging Face Repositories](https://doi.org/10.2139/ssrn.7699619). Preprint, 2026. doi:10.2139/ssrn.7699619.
 - Singkul, S. [AI Model Explorer](https://joessattes.github.io/ai-model-explorer/), [Python package](https://pypi.org/project/ai-model-explorer/), [source code](https://github.com/JoesSattes/ai-model-explorer) and the [ai-vocabulary-tax](https://huggingface.co/datasets/JoesSattes/ai-vocabulary-tax) dataset. 2026.
 - AI Expo Thailand. [Agenda, Day 3, Builder Stage](https://aiexpothailand.com/agenda/?day=3&stage=builder). 2026.
 - Sennrich, R., Haddow, B. and Birch, A. Neural Machine Translation of Rare Words with Subword Units. ACL 2016.
@@ -661,7 +661,7 @@ Open [AI Model Explorer](https://joessattes.github.io/ai-model-explorer/) ([ภ�
 
 ## References
 
-- Singkul, S. [Reading the Architecture off the Weights: Manifest-Only Model Anatomy and a Census of 12,974 Hugging Face Repositories](https://doi.org/10.13140/RG.2.2.19473.19048) ([PDF](https://joessattes.github.io/ai-model-explorer/paper/manifest-anatomy-singkul-2026.pdf)). Preprint, 2026. All figures in this post come from this paper.
+- Singkul, S. [Reading the Architecture off the Weights: Manifest-Only Model Anatomy and a Census of 12,974 Hugging Face Repositories](https://doi.org/10.2139/ssrn.7699619) ([PDF](https://joessattes.github.io/ai-model-explorer/paper/manifest-anatomy-singkul-2026.pdf)). Preprint, 2026. All figures in this post come from this paper.
 - Singkul, S. [AI Model Explorer](https://joessattes.github.io/ai-model-explorer/), [Python package](https://pypi.org/project/ai-model-explorer/) and [source code](https://github.com/JoesSattes/ai-model-explorer). 2026.
 - Singkul, S. [Hub Weight Census](https://huggingface.co/datasets/JoesSattes/hub-weight-census) and [Manifest Anatomy Corpus](https://huggingface.co/datasets/JoesSattes/manifest-anatomy-corpus) datasets. 2026.
 - Fahlgren, C. [hub-stats](https://huggingface.co/datasets/cfahlgren1/hub-stats): the Hub metadata dump used as the census sampling frame (snapshot of 2 November 2026).
