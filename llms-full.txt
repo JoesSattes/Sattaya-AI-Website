@@ -4,7 +4,8 @@
 
 AI engineer with 6+ years of experience building production-grade AI products with LLMs, NLP, voice, multi-agent and on-premise AI systems. I design and deploy end-to-end systems that serve large user bases — conversational AI, voice assistants and intelligent automation — and turn research into products with measurable user and business impact.
 
-Contact: joeysattaya@hotmail.com
+Contact: sattaya.singk@gmail.com
+Founder of AI Model Explorer Lab (https://joessattes.github.io/amelab/): An open, non-commercial research lab in Bangkok on model anatomy, on-device AI, human-AI interaction and language equity, starting with Southeast Asian languages.
 - linkedin: https://www.linkedin.com/in/sattaya-singkul/
 - github: https://github.com/JoesSattes
 - scholar: https://scholar.google.com/citations?user=kJj-LQsAAAAJ
