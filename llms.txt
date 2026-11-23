@@ -140,7 +140,8 @@ Digitised paper records into a cloud ERP with Python and OCR; customer segmentat
 - Chulalongkorn University — IT Security; Intro to Data Analytics and Big Data
 
 ## Service
-- Technical program committee & reviewer, IEEE Access, ACM TALLIP, IJEECS · IEEE ICITEE 2025, Springer ICONIP 2025, ACM ICMR 2024 (2021 – present): Reviewing NLP, audio and vision research.
+- Program committee, ICONIP 2025 (Springer LNCS & CCIS) · ACM ICMR 2024 (2024 – 2025): International conferences on neural information processing and multimedia retrieval.
+- Reviewer, IEEE Access, ACM TALLIP, IJEECS · IEEE ICITEE 2025 (2021 – present): Reviewing NLP, audio and vision research for international journals and conferences.
 - AI technical committee & teaching assistant, AIAT — Super AI Engineer, seasons 2–5 (2022 – 2025): Mentored teams on Thai NLP, speech and LLMs; several went on to win hackathons and team awards.
 - Guest lecturer, Huachiew Chalermprakiet University (2022 – 2025): AI futures, speech recognition, image processing and AI frameworks for undergraduates.
 - Head of Data Science Camp, IT Camp #14, KMITL (2018): Planned the camp and taught data preparation and modelling.
